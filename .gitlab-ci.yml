@@ -1,14 +1,27 @@
-image: python:latest
+image: python:3.8-slim
 
 before_script:
-  - pip install -r requirements.txt
+  - time apt update && apt-get install -y git
+  - time pip install -r requirements.txt
+
+test:
+  stage: test
+  script:
+  - time mkdocs build --site-dir test
+  artifacts:
+    paths:
+    - test
+  except:
+  - master
 
 pages:
   stage: deploy
-  only:
-    - master
+  variables:
+    GIT_DEPTH: 1000
   script:
-    - mkdocs build --site-dir public
+  - time mkdocs build --site-dir public
   artifacts:
     paths:
-      - public
+    - public
+  only:
+  - master
