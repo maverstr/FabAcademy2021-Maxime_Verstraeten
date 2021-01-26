@@ -1,8 +1,8 @@
 # Replace the text below to customize your site
 site_name: Maxime Verstraeten - FabAcademy 2021
 site_description: My FabAcademy Documentation Website
-site_url: https://fablab-ulb.gitlab.io/enseignements/2020-2021/fabacademy/students/maxime-verstraeten
-repo_url: https://gitlab.com/fablab-ulb/enseignements/2020-2021/fabacademy/students/maxime-verstraeten.git
+site_url: http://fabacademy.org/2021/labs/ulb/students/maxime-verstraeten
+repo_url: https://gitlab.fabcloud.org/academany/fabacademy/2021/labs/ulb/students/maxime-verstraeten.git
 google_analytics:
     - G-W95SS0KBVE
     - auto
