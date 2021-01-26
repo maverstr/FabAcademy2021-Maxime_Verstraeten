@@ -1,29 +1,14 @@
-image: python:3.8-slim
+image: python:latest
 
 before_script:
-  # install Git for the mkdocs revision plugin
-  - time apt update && apt-get install -y git
-  # Install mkdocs and theme
-  - time pip install -r requirements.txt
-
-test:
-  stage: test
-  script:
-  - time mkdocs build --site-dir test
-  artifacts:
-    paths:
-    - test
-  except:
-  - master
+  - pip install -r requirements.txt
 
 pages:
   stage: deploy
-  variables:
-    GIT_DEPTH: 1000
+  only:
+    - master
   script:
-  - time mkdocs build --site-dir public
+    - mkdocs build --site-dir public
   artifacts:
     paths:
-    - public
-  only:
-  - master
+      - public

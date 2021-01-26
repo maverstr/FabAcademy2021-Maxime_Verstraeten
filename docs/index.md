@@ -1,24 +1,25 @@
-# Home
 
-## Hello, new student!
+#<div align="center">Hello and welcome to my Student page !</div>
 
-![](./images/week01/assignment-photo.jpg)
+## About me
 
-## Welcome to your new Fab Academy site
+TODO
 
-This is an example student blog for the Fab Academy.
+## My background
 
-## How to edit it
+TODO
+## Previous work
 
-You can edit it on [Gitlab](http://gitlab.fabcloud.org). The software used turns simple text files
-written in [Markdown](https://en.wikipedia.org/wiki/Markdown) format, into the site you are navigating.
+TODO
+### Project A
 
-No worries, you can't break anything, all the changes you make are saved under [Version Control](https://en.wikipedia.org/wiki/Version_control) using [GIT](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control). This means that you have all the different versions of your page saved and available all the time in the Gitlab interface.
+TODO
 
-## In short
 
-- This website is built automatically by gitlab every time you edit the files in the docs folder
-- It does so thanks to [Mkdocs](https://mkdocs.org) a static site generator written in Python
-- You must start customizing the file `mkdocs.yml` with your information
-- You can change the looks of your website using mkdocs themes, you can find in the `mkdocs.yml` the options for the [Material Mkdocs theme](https://squidfunk.github.io/mkdocs-material/)
-- If you want to start from scratch, you can delete everything (using [git-rm](https://git-scm.com/docs/git-rm)) in this repository and push any other static website
+##License
+the license for this project is Creative Commons license. You are free to use everyting on this website for non-commercial use as long as you credit the author ([that's me!](index.md#about-me)) and that you license your new creations under identical terms. Please see the [project license](./about/license.md) for more details.
+##Release notes
+Any changes to this website will be listed on the [Release Notes](./about/release-notes.md) page.
+
+##Student agreement
+this website has been created for the purpose of the [FabAcademy course](http://fabacademy.org/). Feel free to have a look around ! I agreed to the _Student Agreement_ that you can see [here](./about/agreement.md). 

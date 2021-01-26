@@ -1,50 +1,74 @@
 # Replace the text below to customize your site
-site_name: Your name - Fab Academy
-site_description: Fab Academy documentation site for Your Name
-site_author: Your name
-copyright: Copyright 2021 Your name - Creative Commons Attribution Non Commercial
+site_name: Maxime Verstraeten - FabAcademy 2021
+site_description: My FabAcademy Documentation Website
+site_url: https://fablab-ulb.gitlab.io/enseignements/2020-2021/fabacademy/students/maxime-verstraeten
+repo_url: https://gitlab.com/fablab-ulb/enseignements/2020-2021/fabacademy/students/maxime-verstraeten.git
+google_analytics:
+    - G-W95SS0KBVE
+    - auto
+site_author: Maxime Verstraeten
+docs_dir: docs
+site_dir: _site
+copyright: Creative Commons Attribution Non Commercial - Copyright &copy; 2021 Maxime Verstraeten
+edit_uri: "" #comment to get the edit button on each page
 
-site_url: http://fabacademy.org/2021/labs/ulb/students/maxime-verstraeten
 
-extra:
-  social:
-    # For other social icons at https://squidfunk.github.io/mkdocs-material/setup/adding-social-links/
-    - icon: fontawesome/brands/instagram
-      link: https://instagram.com/fabacademany
-    - icon: fontawesome/brands/facebook
-      link: https://facebook.com/fabacademany
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/fabacademany
-    - icon: fontawesome/brands/linkedin
-      link: "https://linkedin.com/in/academany"
+nav:
+    - Home: index.md
+    - Final Project: './project/final-project.md'
+    - My FabAcademy Journey: 
+        - Week 1. Etat de l'art et documentation : './modules/module01.md'
+    - About:
+        - License: './about/license.md'
+        - Release Notes: './about/release-notes.md'
+        - Student Agreement: './about/agreement.md'
+    
+    - external Site: https://www.mkdocs.org/user-guide/configuration/
 
 theme:
-  name: material
-  palette:
-    # try other colors https://squidfunk.github.io/mkdocs-material/getting-started/#primary-colors
-    primary: deep
-    accent: indigo
-  font:
-    # See available fonts at https://fonts.google.com/
-    text: Ubuntu
-    code: Ubuntu Mono
-  icon:
-    logo: material/school
-  favicon: images/favicon.svg
-  features:
-    - navigation.tabs
-    - navigation.instant
+    name: material    #using material UI framework
+    palette:
+        scheme: slate #slate/default
+        primary: green
+        accent: teal
+    font:
+        text: Noto Sans JP
+    language: en
+    favicon: img/favicon.png
+    icon:
+        logo: material/library
+        repo: fontawesome/brands/gitlab
+    features:
+        - navigation.instant
+        #- navigation.tabs 
+        #- toc.integrate
+        - header.autohide
+    extra:
+        include_sidebar: true
+        
+extra:
+    social:
+        - icon: fontawesome/brands/linkedin
+          link : https://www.linkedin.com/in/maverstr/
+        - icon: fontawesome/brands/github
+          link : https://github.com/maverstr
+        - icon: fontawesome/solid/paper-plane
+          link: mailto:<maxime.verstraeten@ulb.be>
 
-plugins:
-  - search
-  - git-revision-date-localized:
-      fallback_to_build_date: true
+
 
 markdown_extensions:
-  - extra
-  - smarty
-  - admonition
-  - codehilite:
-      guess_lang: false
-  - toc:
-      permalink: true
+    - meta
+    - admonition
+    - codehilite:
+        guess_lang: false
+    - toc:
+        permalink: true #generates perma link at the end of each header, can be set to '#'
+    - extra
+    - smarty #converts ASCII dashes, quotes and ellipses to their HTML equivalents
+    - sane_lists #alter the behavior for lists to be less surprising...
+
+plugins:
+  - git-revision-date-localized:
+      type: datetime
+      fallback_to_build_date: true
