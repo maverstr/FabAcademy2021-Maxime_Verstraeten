@@ -16,13 +16,13 @@ edit_uri: "" #comment to get the edit button on each page
 nav:
     - Home: index.md
     - Final Project: './project/final-project.md'
-    - My FabAcademy Journey: 
+    - My FabAcademy Journey:
         - Week 1. Etat de l'art et documentation : './modules/module01.md'
     - About:
         - License: './about/license.md'
         - Release Notes: './about/release-notes.md'
         - Student Agreement: './about/agreement.md'
-    
+
     - external Site: https://www.mkdocs.org/user-guide/configuration/
 
 theme:
@@ -40,12 +40,12 @@ theme:
         repo: fontawesome/brands/gitlab
     features:
         - navigation.instant
-        #- navigation.tabs 
+        #- navigation.tabs
         #- toc.integrate
         - header.autohide
     extra:
         include_sidebar: true
-        
+
 extra:
     social:
         - icon: fontawesome/brands/linkedin
@@ -54,8 +54,6 @@ extra:
           link : https://github.com/maverstr
         - icon: fontawesome/solid/paper-plane
           link: mailto:<maxime.verstraeten@ulb.be>
-
-
 
 markdown_extensions:
     - meta
@@ -72,3 +70,6 @@ plugins:
   - git-revision-date-localized:
       type: datetime
       fallback_to_build_date: true
+
+extra_css:
+  - css/extra.css

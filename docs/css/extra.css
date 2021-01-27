@@ -1,0 +1,14 @@
+.md-typeset h1 {
+  color: lightgreen;
+  font-size: 80px;
+  font-style: oblique;
+}
+
+.md-typeset h2 {
+  color: lightgreen;
+  font-style: oblique;
+}
+
+h3 {
+  color: lightgreen;
+}
