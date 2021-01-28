@@ -28,7 +28,10 @@ TODO
 
 `here is some code`
 > and here is a quote
+
+
 ## Why the FabAcademy ?
+
 I always felt like I lacked practical experience, especially during my studies. I got familiar with several tools and processes that exist but I never got close to using them in practice. I feel like the FabAcademy is the place and time to switch from the theoretical point of view to a real hands-on experience with the idea to learn through mistakes and making.
 
  I want to learn transferrable skills that will be useful during my PhD and, subsequently, my whole career but most importantly I want to be able to build anything that comes to mind. Either for me, or for my friends.

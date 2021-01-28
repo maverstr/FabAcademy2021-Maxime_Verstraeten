@@ -23,7 +23,7 @@ nav:
         - Release Notes: './about/release-notes.md'
         - Student Agreement: './about/agreement.md'
 
-    - external Site: https://www.mkdocs.org/user-guide/configuration/
+    #- external Site: https://www.mkdocs.org/user-guide/configuration/
 
 theme:
     name: material    #using material UI framework
