@@ -15,6 +15,8 @@ This week I worked on defining my final project idea and started to getting used
 - [Markdown](https://en.wikipedia.org/wiki/Markdown)
 
 
+++ctrl+alt+del++
+
 ## Code Example
 
 Use the three backticks to separate code.

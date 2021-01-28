@@ -17,7 +17,7 @@ nav:
     - Home: index.md
     - Final Project: './project/final-project.md'
     - My FabAcademy Journey:
-        - Week 1. Etat de l'art et documentation : './modules/module01.md'
+        - './modules/module01.md'
     - About:
         - License: './about/license.md'
         - Release Notes: './about/release-notes.md'
@@ -56,13 +56,16 @@ extra:
           link: mailto:<maxime.verstraeten@ulb.be>
 
 markdown_extensions:
-    - meta
-    - admonition
-    - codehilite:
-        guess_lang: false
+    - meta #page-specific context
+    - admonition #pretty notes
+    - pymdownx.superfences
+    - pymdownx.highlight:
+        linenums: true
+        guess_lang: true
+    - pymdownx.inlinehilite
+    - pymdownx.keys
     - toc:
-        permalink: true #generates perma link at the end of each header, can be set to '#'
-    - extra
+        permalink: true #insert an anchor
     - smarty #converts ASCII dashes, quotes and ellipses to their HTML equivalents
     - sane_lists #alter the behavior for lists to be less surprising...
 

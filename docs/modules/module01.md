@@ -21,7 +21,8 @@ With everything installed, a simple `mkdocs new MyFabAcProject` and there we go,
 To preview the website, the command `mkdocs serve` will create a local dev-server that updates in real-time as changes are made in the source files. The server can obviously be accessed by the classical address localhost:8000 or 127.0.0.1.
 
 To deploy it, `mkdocs build --clean` will generate the html files and remove any stale files that may remain. Note that these generated files should not be pushed directly for version control. GitLab _Continous Integration (CI)_ is the best way to publish the website.
-Any dependencies required for MkDocs can be set in a .txt file and `pip install -r myfile.txt` in the continuous integration will do the trick perfectly fine.
+!!!note
+    Any dependencies required for MkDocs can be set in a .txt file and `pip install -r myfile.txt` in the continuous integration will do the trick perfectly fine.
 
 #### Theme
 Multiple themes exist. I first hesitated between [Bootstrap](https://mkdocs.github.io/mkdocs-bootstrap/) and [Material](https://squidfunk.github.io/mkdocs-material/), finally going for the latter.
@@ -49,7 +50,6 @@ Here is an example to override some headers:
 }
 ```
 
-
 ### Atom
 Writing in all these files can be cumbersome in basic editors. Atom is an open-source text editor that features multiple packages, written by its userbase. Among these packages, one can install themes or other scripts. [Atom](https://atom.io/) is amazing to write Markdown files as it features syntax highlighting and some very useful packages such has:
 - Markdown-writer: Provides many keybinds and presets for Markdown-style features such as **bold** and _italic_ (though I first learned how to use them manually in notepad to get the hang of it!).
@@ -61,7 +61,8 @@ The cool thing with Atom is you never stop customizing your workspace. You just 
 
 It also natively features version control GUI for Git (see below) which just makes it a breeze to commit and push any part of your work.
 
-**Atom: 5☆/5☆ would recommend to a friend anytime!**
+!!!success
+    **Atom: 5☆/5☆: would recommend to a friend anytime!**
 
 ### Git
 TODO
