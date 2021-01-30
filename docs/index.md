@@ -1,5 +1,15 @@
-# <div align="center">Hello and welcome to my Student page !</div>
+<div class="homeTitle">
+  <h1>Hello and welcome to my Student page !</h1>
+  <p style=font-size:20px;">Click on the buttons below to see my FabAc Journey...</p>
+  <p style=font-size:20px;">...Or scroll to learn more about me</p>
+</div>
 ---
+<center style="font-size:35px;">
+[My Final Project :fontawesome-solid-tools:](./project/final-project.md){: .md-button .md-button--primary}
+
+
+[My Weekly Assignments :fontawesome-solid-lightbulb:](./modules/){: .md-button .md-button--primary}
+</center>
 ## About me
 Born during the terrible 1997 winter that all Belgians remember (or so my parents told me) in the big city that is _Brussels_, I later grew up in the countryside. This allowed me to build things every week-end in my backyard and make *a lot* of things ~~explode~~ disassemble very quickly under the quite worried, but very proud eyes of my father who taught me almost everything about tinkering.
 >  When we come home, hide this scar from your mother or she's gonna scold me !
