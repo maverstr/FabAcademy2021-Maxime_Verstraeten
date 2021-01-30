@@ -1,14 +1,38 @@
 .md-typeset h1 {
-  color: lightgreen;
-  font-size: 80px;
-  font-style: oblique;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  font-size: 50px;
+  font-style: italic;
+  margin-bottom: 0px;
+  background: #536DFE;
+  border-bottom: 2px solid currentColor;
+  border-radius: 100px;
 }
 
+.homeTitle {
+  padding: 60px;
+  text-align: center;
+  background: #536DFE;
+  color: white;
+  font-size: 30px;
+  border-radius: 50px;
+}
 .md-typeset h2 {
-  color: lightgreen;
+  color: #328afc;
+  font-size: 40px;
+  font-weight: bolder;
   font-style: oblique;
+  border-bottom: 2px solid currentColor;
+  line-height: 0.80
+  display: inline-block;
 }
 
 .md-typeset h3 {
-  color: lightgreen;
+  color: #328afc;
+  font-size: 25px;
+  font-weight: bold;
+  font-style: normal;
+  border-bottom: 2px solid currentColor;
+  display: inline-block;
 }
