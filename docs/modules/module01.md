@@ -65,6 +65,18 @@ It also natively features version control GUI for Git (see below) which just mak
     **Atom: 5☆/5☆: would recommend to a friend anytime!**
 
 ### Git
+Git is a version-control system, meaning that we can track changes in a set of files (who did the change, where and when). Moreover, Git allows multiple branches of a project in parallel (non-linear workflow). This eases the development of a project and the cooperation inside a developer team.
+
+I personally used Git **a lot** in [my personal projects](https://github.com/maverstr). It just makes it super easy to work on multiple computers, work with different people and if you make any mistake, you _always_ just revert back to that last working commit.
+
+Also, it's a nice way to store your different projects online and update them over multiple years (either when you need to make a change or when someone proposes a change: _a pull request_).
+
+For the FabAcademy, we have a dedicated repository per student on GitLab. GitLab is a web-based DevOps tool that provides Git-repository but also features issue tracking, continuous integration and deployment pipelines which makes it possible to build our website and publish it on Git.
+
+This week's assignment was also to work through a git Tutorial. As I said before, I have used Git a lot before so I have already a bit of knowledge about it but let's note here the most important commands and some things that I learned.
+
+Git commands can be run either through a GUI (Git Tower, Kraken, Git-Cola, Guitar, ...) or through a command-line interpreter (Git Bash). I personally prefer the latter but I got to admit when you have a lot going on, being able to easily commit chunks of your code independently in a GUI of the rest is very useful.
+
 TODO
 
 ### Adding SSH authentication
