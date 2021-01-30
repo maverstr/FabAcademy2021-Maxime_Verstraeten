@@ -29,8 +29,8 @@ theme:
     name: material    #using material UI framework
     palette:
         scheme: slate #slate/default
-        primary: green
-        accent: teal
+        primary: deep purple
+        accent: deep orange
     font:
         text: Noto Sans JP
     language: en
@@ -58,21 +58,29 @@ extra:
 markdown_extensions:
     - meta #page-specific context
     - admonition #pretty notes
-    - pymdownx.superfences
-    - pymdownx.highlight:
+    - pymdownx.superfences #nested code blocks
+    - pymdownx.highlight: #code blocks syntax highlighting
         linenums: true
         guess_lang: true
-    - pymdownx.inlinehilite
-    - pymdownx.keys
+    - pymdownx.inlinehilite #inline code blocks highlighting
+    - pymdownx.keys #maj, control, windows, ... key icons
+    - pymdownx.caret #enables nice sub- and superscript
+    - pymdownx.mark
+    - pymdownx.tilde
+    - abbr #allwos to add text that appears when hovered: the test here *[test]: this is a test
     - toc:
         permalink: true #insert an anchor
     - smarty #converts ASCII dashes, quotes and ellipses to their HTML equivalents
     - sane_lists #alter the behavior for lists to be less surprising...
-
+    - attr_list #can add html attributes to markdown elements
+    - pymdownx.emoji: #add icons and emoji
+       emoji_index: !!python/name:materialx.emoji.twemoji
+       emoji_generator: !!python/name:materialx.emoji.to_svg
 plugins:
-  - git-revision-date-localized:
+  - git-revision-date-localized: #adds a revision or build time info at the bottom of each page
       type: datetime
       fallback_to_build_date: true
+  - search
 
 extra_css:
-  - css/extra.css
+  - css/extra.css #override theme font, style, colors, ...
