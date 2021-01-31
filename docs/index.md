@@ -62,3 +62,10 @@ Any changes to this website will be listed on the [Release Notes](./about/releas
 
 ## Student agreement
 this website has been created for the purpose of the [FabAcademy course](http://fabacademy.org/). Feel free to have a look around ! I agreed to the _Student Agreement_ that you can see [here](./about/agreement.md).
+
+## Get involved !
+If you want to discuss about my work or propose any idea, feel free to send me an email, I'll be glad to have a chat with you !
+
+<center>
+[Send me a mail ! :fontawesome-solid-envelope:](mailto:maxime.verstraeten@ulb.be){: .md-button .md-button--primary}
+</center>

@@ -5,6 +5,7 @@
 	* Added week/module 1 page and completed it
 	* Finished introduction about me
 	* Added multiple markdown_extensions in the configuration file
+	* Changed UI theme
 * ### *Known issues:*
 	None
 * ### *Changelog:*
