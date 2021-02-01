@@ -63,7 +63,7 @@ My objective, in a 6-years timeframe, is to develop an implant that is able to m
 During an internship in Leeds, UK, I developed an I2C-based thermography system that is able to monitor the respiratory rate of experiment mice during olfactory tests. That was a very interesting project where I learned a lot about I2C communication protocol, electronics, C++ and many other things.
 <center>
 <figure>
-  <img src="./img/Thermography.jpg" width="600" />
+  <img src="./img/thermography.jpg" width="600" />
   <figcaption>Thermography box</figcaption>
 </figure>
 </center>
