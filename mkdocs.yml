@@ -34,7 +34,7 @@ theme:
     font:
         text: Noto Sans JP
     language: en
-    favicon: img/favicon.png
+    favicon: img/favicon.jpg
     icon:
         logo: material/library
         repo: fontawesome/brands/gitlab
