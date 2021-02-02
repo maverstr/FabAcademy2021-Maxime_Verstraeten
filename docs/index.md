@@ -51,8 +51,6 @@ Here's what I've done in the past/what I can do:
     - Basic and more advanced electronics principles
     - Eagle and Altium
     - PCB design and good practice (CAM and chemical/UV)
-
-
 <center>
 <figure>
   <img src="./img/PCBs.jpg" width="600" />
