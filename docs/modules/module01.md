@@ -1,5 +1,15 @@
 # 1. Project Management
 
+## Objectives
+- Build a personal website that will serve as a documentation of the assignments and the final project
+- Go through a Git Tutorial
+
+This week I worked on project and time management.
+The latter is pretty much the biggest issue I'll have during my FabAcademy as I am working full-time and I'll only have nights and week-ends to work on it. This is big for me, as I always tend to want to do "too much" in my projects.
+
+This especially startled me as Neil said "You will probably never finish your planned project" or something along these lines. To avoid handing out a half completed project, it's important to plan the main features and tasks ahead of time and document everything on the go. That's the reason for this website ! Document everything related to  assignments or my project !
+
+Moreover, the best management method would be to plan how much time I have to work on the FabAcademy and try to deliver something finished in this period and at least, it will be delivered on time. This is the whole balance between **supply-side** (i.e. I'll work on it for how long I can and the best I can in this time) and **demand-side** (i.e. I'll work on it until I reached this level of perfection which will basically never happen) time-management.
 
 ## Tools for developing my Website
 I will be listing here the main tools that I used to build my website and the main steps to get to this result.
@@ -65,19 +75,55 @@ It also natively features version control GUI for Git (see below) which just mak
     **Atom: 5☆/5☆: would recommend to a friend anytime!**
 
 ### Git
-Git is a version-control system, meaning that we can track changes in a set of files (who did the change, where and when). Moreover, Git allows multiple branches of a project in parallel (non-linear workflow). This eases the development of a project and the cooperation inside a developer team.
+Git is a version-control system, meaning that we can track changes in a set of files (who did the change, where and when). Note however that Git is used to track relatively small-size files. For larger files, we can use [Git Large File Storage (LFS)](https://git-lfs.github.com/) which replaces those files with pointers to these files but stored on a remote server.
+
+Moreover, Git allows multiple branches of a project in parallel (non-linear workflow). This eases the development of a project and the cooperation inside a developer team and creates easy backup as it is possible to revert changes to any previously committed state.
 
 I personally used Git **a lot** in [my personal projects](https://github.com/maverstr). It just makes it super easy to work on multiple computers, work with different people and if you make any mistake, you _always_ just revert back to that last working commit.
 
 Also, it's a nice way to store your different projects online and update them over multiple years (either when you need to make a change or when someone proposes a change: _a pull request_).
 
+The main concepts of Git are:
+- Repository: the place where you store your files.
+- Branches: the fact that you can work in parallel on the same project before merging them.
+- Commit: the act to stage your changes to a specific commit.
+- Fetching/Pulling: The fact of fetching and incorporating committed changes to your local version.
+- Pushing: Pushing your local commits to the remote repository.
+- Pull-request: Allows to include changes of another branch (a development branch for example) to the main branch (that can be set to read-only for security)
+- Tags and releases: The ability to tag a specific commit as being an important history point (a release e.g.). Some platforms like GitHub also propose the ability to download such releases in the specific section reserved for it. This gives the ability to have multiple releases for different operating systems or alpha/beta/stable, ... all on the same page for the user to choose.
+
 For the FabAcademy, we have a dedicated repository per student on GitLab. GitLab is a web-based DevOps tool that provides Git-repository but also features issue tracking, continuous integration and deployment pipelines which makes it possible to build our website and publish it on Git.
 
-This week's assignment was also to work through a git Tutorial. As I said before, I have used Git a lot before so I have already a bit of knowledge about it but let's note here the most important commands and some things that I learned.
+This week's assignment was also to work through a git Tutorial. As I said before, I have used Git a lot before so I have already a bit of knowledge about it but decided to get through the [Git-it](https://github.com/jlord/git-it-electron#what-to-install) app to learn more about it.
+
+!!!note
+    Let's note here the most important commands and some things that I learned or tips and tricks that I always tend to forget !
+
+- To create an empty folder inside a local repository: `create a .gitkeep file inside of it.`
+- To avoid committing useless files (for CVS) and/or large files, use `.gitignore`
+- To setup git, use : `git config -gobal user.name "Maxime Verstraeten"`
+- Git pull is the combination of git fetch and git merge.
+- To undo changes: `git checkout` or `git reset HEAD`
+- To revert back to the last commit and amend it: `git commit -amend -m "message"`
+- To go back to a previous commit stage: `git checkout <commit SHA>`
+- Soft resets only move the HEAD pointer but leave everything else as is: `git reset -soft <SHA>`
+- Mixed resets also makes the staging index look the same as the repository, i.e. changes need to be re-staged and re-commited.
+- Hard reset just throw everything away and makes the working directory the same as the repository.
+- `git clean` remove untracked files.
+- `git checkout -v 'name'` creates a new branch and switch to it. `git checkout master` goes back to master branch.
+- Delete a branch: `git branch -d 'name'`
+- Merging a branch: `git merge 'branchName' git commit -a -m "commit message"`
+- In case of merge conflicts (no fast-forward): `git merge -abort` or manual merge.
+- The stash is a separate place to store changes that we do not want to commit (yet) but work like commits. `git stash save "message"`
+- To retrieve a stash change: `git stash pop 'stash@{i}'` with i being the stash index (starting at 0)
+- To delete stashed changes: `git stash drop 'stash@{i}'` or `git stash clear`
 
 Git commands can be run either through a GUI (Git Tower, Kraken, Git-Cola, Guitar, ...) or through a command-line interpreter (Git Bash). I personally prefer the latter but I got to admit when you have a lot going on, being able to easily commit chunks of your code independently in a GUI of the rest is very useful.
 
-TODO
+
+
+
+
 
 ### Adding SSH authentication
 In order to secure the connection, I used the **SSH protocol** that GitLab provides. This option allows to authenticate to the GitLab remote server without having to enter my login details every time I'm trying to push my work.
@@ -110,3 +156,7 @@ Once done, we can use that command again and GitLab should be able to authentica
 
 With this, no need to log in for every push.
 For increased security, SSH could also be used for 2FA (2-factor authentication).
+
+
+## File and video compression
+TODO
