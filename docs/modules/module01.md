@@ -16,7 +16,7 @@ I will be listing here the main tools that I used to build my website and the ma
 
 ### MkDocs
 A website is usually made out of HTML code. You can either write it yourself, which allows you to basically do anything you want if you take the time, or you can go the easiest route to use a HTML generator from Markdown files.
-That's what Mkdocs (short for Make Docs I assume) does ! [MkDocs](https://www.mkdocs.org/) a static site generator that build static HTML sites out of .md files. It is highly customizable and [configurable](https://www.mkdocs.org/user-guide/configuration/) by changing the `mkdocs.yml` file.
+That's what Mkdocs (short for Make Docs I assume) does ! [MkDocs](https://www.mkdocs.org/) is a static site generator that build static HTML sites out of .md files. It is highly customizable and [configurable](https://www.mkdocs.org/user-guide/configuration/) by changing the `mkdocs.yml` file.
 
 Installing MkDocs is pretty much straightforward with a Python package manager such as [pip](https://pypi.org/project/pip/) (natively installed with [Anaconda](https://www.anaconda.com/), an open-source Python distribution):
 It is always a good practice to update everything before starting a new project:

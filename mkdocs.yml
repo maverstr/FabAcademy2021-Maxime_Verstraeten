@@ -17,6 +17,7 @@ nav:
     - Home: index.md
     - Final Project: './project/final-project.md'
     - My FabAcademy Journey:
+        - './modules/module00.md'
         - './modules/module01.md'
     - About:
         - License: './about/license.md'
