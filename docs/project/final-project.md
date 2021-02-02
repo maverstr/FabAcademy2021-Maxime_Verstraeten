@@ -1,4 +1,6 @@
 # Final Project
+
+## Intro
 Because I'm doing my PhD full-time concurrently with the FabAcademy, I'll try to stay in the scope of my PhD subject.
 
 Currently, I have a barely working silicone bladder phantom that I would like to improve and test several sensors that could be implanted inside.
@@ -9,20 +11,6 @@ I will also need to design the electronics to measure my sensors' outputs and co
 
 I have only a few ideas at the moment but it is extremely likely that things will evolve over time.
 
-## Research
+## Bladder phantom
 
 ## Project Management
-
-### triage
-
-### documentation during developments
-
-### demand vs supply-side time Management
-
-### spiral development
-
-### serial vs parallel tasks
-
-### system integration
-
-### finish quality
