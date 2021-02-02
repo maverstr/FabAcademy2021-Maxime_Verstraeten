@@ -34,19 +34,25 @@ Since my early childhood, I spent time developing small applications on my calcu
 Studying biomedical engineering, I learned a lot about electronics, mechanics and I got the basics of biology and anatomy down. However, I'm lacking in regards to the practical use of my hands and I know I'll have a lot to learn in that regards.
 
 Here's what I've done in the past/what I can do:
-- 3D modelling/vector-graphics:
-  - SolidWorks
-  - Blender
-  - OpenGL: [here's a short-video of my OpenGL project](https://www.youtube.com/watch?v=6TVJTZ06IqM)
 
+- 3D modelling/vector-graphics:
+    - SolidWorks
+    - Blender
+    - OpenGL: [here's a short-video of my OpenGL project](https://www.youtube.com/watch?v=6TVJTZ06IqM)
 
 <center>
   <figure>
     <img src="./img/3DModelling.jpg" width="600" />
     <figcaption>Stargate Jumper and Stargate models in Blender, OpenGL videogame, Solidworks project</figcaption>
   </figure>
-    </center>
+</center>
+
 - Electronics and soldering:
+    - Basic and more advanced electronics principles
+    - Eagle and Altium
+    - PCB design and good practice (CAM and chemical/UV)
+
+
 <center>
 <figure>
   <img src="./img/PCBs.jpg" width="600" />
