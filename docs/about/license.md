@@ -6,4 +6,4 @@ Permission is hereby granted, free of charge, for any non-commercial use of my d
 
 All files are provided "as is" without warranty of any kind, express or implied.
 
-The favicon has been created by Eucalyp from Noun Project. Thanks to him.
+The favicon has been created by Berkah from Noun Project. Thanks to him.
