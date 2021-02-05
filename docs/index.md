@@ -12,11 +12,13 @@
 </center>
 ## About me
 <center>
-<img src="./img/picID.jpg" alt="Avatar" style="width:300px; border-radius: 40%;">
+<img src="./img/home/picID.jpg" alt="Avatar" style="width:300px; border-radius: 40%;">
 </center>
 
 Born during the terrible 1997 winter that all Belgians remember (or so my parents told me) in the big city that is _Brussels_, I later grew up in the countryside. This allowed me to build things every week-end in my backyard and make *a lot* of things ~~explode~~ disassemble very quickly under the quite worried, but very proud eyes of my father who taught me almost everything about tinkering.
->  When we come home, hide this scar from your mother or she's gonna scold me !
+
+!!! quote
+    When we come home, hide this scar from your mother or she's gonna scold me !
 
 I knew very early that I wanted to make a career out of building _things_ but most importantly I wanted to understand _everything_. Yeah, I was this annoying kid at the mall asking its aunt what is every single item made of...
 
@@ -42,7 +44,7 @@ Here's what I've done in the past/what I can do:
 
 <center>
   <figure>
-    <img src="./img/3DModelling.jpg" width="600" />
+    <img src="./img/home/3DModelling.jpg" width="600" />
     <figcaption>Stargate Jumper and Stargate models in Blender, OpenGL videogame, Solidworks project</figcaption>
   </figure>
 </center>
@@ -67,7 +69,7 @@ My objective, in a 6-years timeframe, is to develop an implant that is able to m
 During an internship in Leeds, UK, I developed an I2C-based thermography system that is able to monitor the respiratory rate of experiment mice during olfactory tests. That was a very interesting project where I learned a lot about I2C communication protocol, electronics, C++ and many other things.
 <center>
 <figure>
-  <img src="./img/thermography.jpg" width="600" />
+  <img src="./img/home/thermography.jpg" width="600" />
   <figcaption>Thermography box</figcaption>
 </figure>
 </center>
@@ -77,7 +79,7 @@ For the same lab, I developed an automatic water delivery for behavioral experim
 
 <center>
 <figure>
-  <img src="./img/lickSensor.jpg" width="400" />
+  <img src="./img/home/lickSensor.jpg" width="400" />
   <figcaption>Lick-sensor box</figcaption>
 </figure>
 </center>
@@ -86,7 +88,7 @@ For the same lab, I developed an automatic water delivery for behavioral experim
 For my master thesis, I investigated the possibility to use Triboelectricity as a new type of passive sensor for mini-invasive surgeries or endoscopy. Triboelectricity is the fact that materials can exchange electrical charges on contact. With a specific design, it is possible to measure the elongation, bending, twisting of the sensor as well as the contact with the skin.
 <center>
 <figure>
-  <img src="./img/tribo.jpg" width="600" />
+  <img src="./img/home/tribo.jpg" width="600" />
   <figcaption>Triboelectric sensor on the test-bench</figcaption>
 </figure>
 </center>
