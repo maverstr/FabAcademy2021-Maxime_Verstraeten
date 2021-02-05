@@ -18,6 +18,7 @@
   font-size: 30px;
   border-radius: 50px;
 }
+
 .md-typeset h2 {
   color: #66ff99 ;
   font-size: 40px;
@@ -35,4 +36,97 @@
   font-style: normal;
   border-bottom: 2px solid currentColor;
   display: inline-block;
+}
+
+.md-typeset h4 {
+  color: #ffc64d;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  display: inline-block;
+  display: list-item;
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.objectivePanel {
+    margin: auto;
+    border-radius: 30px;
+    width: 95%;
+    border: 2px solid #ddd;
+    padding: 20px;
+    background-color: #6e6a65;
+    color: #ffc64d
+}
+
+.dottedLine{
+    height: 1px;
+    border-top: 1px dotted #aaa;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+
+/* Container needed to position the button. Adjust the width as needed */
+.container {
+  position: relative;
+  width: 50%;
+}
+
+/* Make the image responsive */
+.container img {
+  width: 50%;
+  height: auto;
+}
+
+.gallery {
+  margin: 5px;
+  border: 0px solid transparent;
+  float: left;
+  width: 22%;
+  position: relative;
+}
+
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border:  1px solid transparent;
+  margin: 0px;
+  opacity: 0.75;
+}
+
+.gallery img:hover {
+  opacity: 0.1
+}
+
+.desc {
+  padding-left: 20px;
+  padding-right: 20px;
+  position: absolute;
+  bottom: 0px;
+  padding: 1px;
+  text-align: center;
+  font-weight: bold;
+  background-color: rgba(38, 63, 140, 0.75);
+  font-size: large;
+  color: #fcfcfc;
+}
+
+
+.gallery2 {
+  margin: 5px;
+  border: 0px solid transparent;
+  float: left;
+  width: 100%;
+  position: relative;
+}
+
+
+gallery2 img {
+  width: 100%;
+  height: auto;
+  border:  1px solid transparent;
+  margin: 0px;
+  opacity: 0.75;
 }
