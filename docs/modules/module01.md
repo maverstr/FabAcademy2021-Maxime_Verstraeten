@@ -1,8 +1,14 @@
 # 1. Project Management
 
 ## Objectives
-- Build a personal website that will serve as a documentation of the assignments and the final project
-- Go through a Git Tutorial
+<div class="objectivePanel">
+  <ul>
+    <li> Build a personal website that will serve as a documentation of the assignments and the final project </li>
+    <li> Go through a Git Tutorial </li>
+  </ul>
+</div>
+
+<div class="dottedLine"></div>
 
 This week I worked on project and time management.
 The latter is pretty much the biggest issue I'll have during my FabAcademy as I am working full-time and I'll only have nights and week-ends to work on it. This is big for me, as I always tend to want to do "too much" in my projects.
@@ -10,6 +16,10 @@ The latter is pretty much the biggest issue I'll have during my FabAcademy as I 
 This especially startled me as Neil said "You will probably never finish your planned project" or something along these lines. To avoid handing out a half completed project, it's important to plan the main features and tasks ahead of time and document everything on the go. That's the reason for this website ! Document everything related to  assignments or my project !
 
 Moreover, the best management method would be to plan how much time I have to work on the FabAcademy and try to deliver something finished in this period and at least, it will be delivered on time. This is the whole balance between **supply-side** (i.e. I'll work on it for how long I can and the best I can in this time) and **demand-side** (i.e. I'll work on it until I reached this level of perfection which will basically never happen) time-management.
+
+It's also important to work in parallel rather in series to avoid getting blocked by one task. Working in spiral also helps with this. Every project should start with the basic tasks and simply grow like an onion, adding layers of complexity as you go.
+
+To help parallelize tasks, it's important to work in modules and hierarchy (_that's the power of object-oriented programming_ ;)) and that will surely help debugging when things will eventually fail.
 
 ## Tools for developing my Website
 I will be listing here the main tools that I used to build my website and the main steps to get to this result.
@@ -34,12 +44,18 @@ To deploy it, `mkdocs build --clean` will generate the html files and remove any
 !!!note
     Any dependencies required for MkDocs can be set in a .txt file and `pip install -r myfile.txt` in the continuous integration will do the trick perfectly fine.
 
+!!!info "Alternatives"
+    - [Pandoc](https://pandoc.org/) can convert files from one markup format into another.
+    - [Hugo](https://gohugo.io/) is another framework to build websites with multiple starting themes that are extremely elegant.
+    - [VuePress](https://vuepress.vuejs.org/) is another static-site generator based on markdown files.
+    - [Jekyll](https://jekyllrb.com/)
+
 #### Theme
 Multiple themes exist. I first hesitated between [Bootstrap](https://mkdocs.github.io/mkdocs-bootstrap/) and [Material](https://squidfunk.github.io/mkdocs-material/), finally going for the latter.
 
 The theme is set in the mkdocs.yml file. The font, the color palette, the icon,... can all be set in there as well
 
-##### Extra CSS
+#### Extra CSS
 To not be limited only by the theme classical palette and styles, one can add an `extra_css:` option in the configuration file and then add a `extra.css` file in the docs folder. In there, I can override the default theme values to customize my website even more.
 
 Here is an example to override some headers:
@@ -122,9 +138,6 @@ Git commands can be run either through a GUI (Git Tower, Kraken, Git-Cola, Guita
 
 
 
-
-
-
 ### Adding SSH authentication
 In order to secure the connection, I used the **SSH protocol** that GitLab provides. This option allows to authenticate to the GitLab remote server without having to enter my login details every time I'm trying to push my work.
 
@@ -158,5 +171,76 @@ With this, no need to log in for every push.
 For increased security, SSH could also be used for 2FA (2-factor authentication).
 
 
-## File and video compression
-TODO
+### Image and video compression
+To avoid storing huge photos on the repository, we can compress videos and images. Moreover, to access a webpage, a user needs to download the images on that page and that can take quite a while if the files are huge.
+> No one wants to wait 10 seconds to navigate a webpage !
+
+Compression consists of optimizing the size of the file by changing how it's encoded or change slightly the file (e.g. slightly altering colors) so that it can be more optimally encoded.
+In particular, compressing images can take advantage of the visual perception and the statistical properties of the images to obtain results that are often better than with generic data compression algorithm that can be used for other types of files.
+Moreover, since we are using the images here on the website and they will therefore be viewed online on a navigator, there is no interest in having very high resolution images anyway. So resizing images is usually the first step in compressing them.
+
+#### Lossy VS lossless compression
+Lossless compression is obviously less optimized since it does not alter the image to compress it. It must be used for medical imaging, technical drawings, pattern recognition, archiving, ...
+Lossy compression will introduce [artifacts](https://en.wikipedia.org/wiki/Compression_artifact). Hopefully, for natural images such as photographs, losses can be so minor that they are imperceptible to the human eye (visually lossless) but still result in very high compression rate.
+
+I won't go into the details of the multiple algorithms that can be used to compress files but it is still a very interesting subject :)
+
+#### SVG files
+As a side note, Scalable Vector Graphics is a vector image format that is now a standard for web browsing.
+Vector graphics are a way to define images not as a set of pixels (raster graphics), but rather as a series of lines and curves to form polygons or other shapes.
+The big advantage of vector graphics is that they can be scaled up and down without any limit and without any change in the file size. They are therefore perfect for logos and such and are usually not very heavy.
+
+#### Tools for image compression
+First of all, Mac users have [Preview](https://support.apple.com/guide/preview/welcome/mac) natively installed on their computer and it can be used to resize and convert images very easily.
+For Windows users, [IrFanView](https://www.irfanview.com/) is an image viewer that is freeware, very compact and simple but proposes many features including cropping, resizing, converting and optimizing images. [GIMP](https://www.gimp.org/) is also an open source, powerful image editor.
+Finally, for all Linux lovers here: [gThumb](https://wiki.gnome.org/Apps/Gthumb) will basically allow you to do the same.
+
+Personally, I chose to use [ImageMagick](https://imagemagick.org/) which is an extremely powerful tool with a very long list of features but note that it lacks a GUI.
+I found a very nice batch script online that allows me to optimize all the files of a given directory.
+````
+@echo off
+
+set size=800x
+set quality=85
+
+if "%1" == "" (
+    echo Please specify an absolute path
+    exit /b
+)
+
+pushd %1
+magick mogrify -format jpg *.png
+magick mogrify -resize %size% *.jpg
+magick mogrify -strip -quality %quality% *.jpg
+popd
+````
+
+Just for in case I need to clean up whiteboard pictures (we never know and I find it so powerful I want to use it one day), here is a nice script to do it
+````
+convert "$1" -resize %50 -morphology Convolve DoG:15,100,0 -negate -normalize -blur 0x1 -channel RBG -level 60%,91%,0.1 "$2"
+#use it with
+./whiteboardClean.sh example1.jpg output1.png
+#credits to u/lelandbatey on Reddit
+````
+
+[OptiPNG](http://optipng.sourceforge.net/) is another tool but only for PNG files that can lossless compress them to a smaller size. Note that PNG files are made to be faitful, unlike jpeg which are made to be compressed but with imperceptible changes.
+It can be run using the command line:
+`optipng -o <optimization level 1-7> -dir <the output directory> <theFileToCompress>`
+
+_The main advantage of command line being that it can be used on a web server to automatically convert and compress images or videos using those script on the server side!_
+
+#### Tools for video compression
+[ffmpeg](https://ffmpeg.org/) is a video converter that through command line. It is extremely powerful and can highly compress videos.
+[Handbrake](https://handbrake.fr/) is a free, open-source, cross-platform tool that comes with a GUI for video conversion. It is way more user friendly and comes with a variety of presets
+
+#### Video editing
+I always used Premiere Pro when it comes to video editing but [kdenLive](https://handbrake.fr/) is an open source alternative that I will probably use in the future.
+
+
+### To go further
+This week I didn't have time to investigate in details HTML and CSS. Sure I did include some but I wish I could use it more. I will probably include more of it in the next few weeks whenever I find time.
+I also want to use [jQuery](https://jquery.com/), a javascript library to handle events and animations on my website.
+
+
+### Useful links
+By exploring other repos I found [Asciinema](https://asciinema.org/) which can record terminal inputs ! That looks extremely nice !

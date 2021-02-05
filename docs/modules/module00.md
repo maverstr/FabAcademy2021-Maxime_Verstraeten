@@ -1,7 +1,18 @@
 # 0. Principles and practices
 
 ## Objectives
-- Plan and sketch a final project
+
+<div class="objectivePanel">
+  <ul>
+    <li> Plan and sketch a final project. </li>
+    <li> Describe what it will do and who will use it.</li>
+    <li> Read the Fab Charter </li>
+  </ul>
+</div>
+
+<div class="dottedLine"></div>
+
+This week I tried to establish a sketch of my project. It's quite hard as I don't really know what will be possible and I will probably need to revisit my ideas multiple time during my FabAc journey.
 
 
 ## Intro
@@ -16,5 +27,6 @@ I will also need to design the electronics to measure my sensors' outputs and co
 I have only a few ideas at the moment but it is extremely likely that things will evolve over time.
 
 ## Bladder phantom
+
 
 ## Project Management

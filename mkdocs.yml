@@ -17,6 +17,7 @@ nav:
     - Home: index.md
     - Final Project: './project/final-project.md'
     - My FabAcademy Journey:
+        - './modules/index.md'
         - './modules/module00.md'
         - './modules/module01.md'
     - About:
@@ -35,7 +36,7 @@ theme:
     font:
         text: Noto Sans JP
     language: en
-    favicon: img/favicon.jpg
+    favicon: img/logo/favicon.svg
     icon:
         logo: material/library
         repo: fontawesome/brands/gitlab
