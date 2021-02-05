@@ -1,4 +1,4 @@
-# Weekly assignments
+# Weekly Assignments Overview
 
 
 Here are displayed my weekly assignments:
@@ -32,3 +32,16 @@ Here are displayed my weekly assignments:
 [Week 18](./module18.md){: .md-button .md-button--primary}
 [Week 19](./module19.md){: .md-button .md-button}
 [Week 20](./module20.md){: .md-button .md-button--primary}
+
+
+<div class="container">
+  <img src="./../img/home/picID.jpg" alt="interest" style="width:100%">
+  <button class="btn">Button</button>
+</div>
+
+<div class="gallery">
+  <a href="./module01">
+    <img src="./../img/home/picID.jpg" alt="Week 01">
+    <div class="desc">Week1 </div>
+  </a>
+</div>
