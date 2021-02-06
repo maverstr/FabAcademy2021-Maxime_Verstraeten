@@ -50,7 +50,7 @@
 }
 
 .objectivePanel {
-    margin: auto;
+    margin: auto; /* to center*/
     border-radius: 30px;
     width: 95%;
     border: 2px solid #ddd;
@@ -67,66 +67,50 @@
 }
 
 
-/* Container needed to position the button. Adjust the width as needed */
-.container {
-  position: relative;
-  width: 50%;
+.GalleryBlockHeight{
+  display: inline-block;
 }
 
-/* Make the image responsive */
-.container img {
-  width: 50%;
-  height: auto;
-}
-
-.gallery {
-  margin: 5px;
+.moduleContainer {
+  display: inline-block;
+  margin: 5px; /*to get a space between blocks*/
   border: 0px solid transparent;
   float: left;
-  width: 22%;
+  width: 32%; /*3 per line*/
   position: relative;
+  overflow: hidden;
 }
 
 
-.gallery img {
+.moduleContainer img {
+  object-fit: cover; /*crop image rather than resize it*/
+  filter: grayscale(100%);
+  border-radius: 25px;
   width: 100%;
-  height: auto;
+  height: 200px;
   border:  1px solid transparent;
   margin: 0px;
-  opacity: 0.75;
+  opacity: 0.6;
 }
 
-.gallery img:hover {
-  opacity: 0.1
+.moduleContainer img:hover {
+  opacity: 1.0;
+  filter: grayscale(0%);
 }
 
-.desc {
-  padding-left: 20px;
-  padding-right: 20px;
-  position: absolute;
-  bottom: 0px;
-  padding: 1px;
+.modulecontainerText {
+  display: flex;
+  justify-content: center; /* align horizontal */
+  align-items: center; /* align vertical */
+  height: 100px;
+  border-radius: 25px;
+  margin-top: 0px;
+  padding-left: 5px;
+  padding-right: 5px;
+  position: relative;
   text-align: center;
   font-weight: bold;
-  background-color: rgba(38, 63, 140, 0.75);
+  background-color: #536DFE ;
   font-size: large;
-  color: #fcfcfc;
-}
-
-
-.gallery2 {
-  margin: 5px;
-  border: 0px solid transparent;
-  float: left;
-  width: 100%;
-  position: relative;
-}
-
-
-gallery2 img {
-  width: 100%;
-  height: auto;
-  border:  1px solid transparent;
-  margin: 0px;
-  opacity: 0.75;
+  color: white;
 }
