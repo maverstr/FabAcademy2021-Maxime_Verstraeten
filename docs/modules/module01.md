@@ -87,6 +87,11 @@ The cool thing with Atom is you never stop customizing your workspace. You just 
 
 It also natively features version control GUI for Git (see below) which just makes it a breeze to commit and push any part of your work.
 
+<figure> <center>
+  <img src="./../../img/mod01/atom.jpg" alt="atomception" width="80%" />
+  <figcaption>That's what it looks like writing this page ! <p style="font-size:10px"> AtomCeption</p> </figcaption>
+</figure>
+
 !!!success
     **Atom: 5☆/5☆: would recommend to a friend anytime!**
 
@@ -100,6 +105,7 @@ I personally used Git **a lot** in [my personal projects](https://github.com/mav
 Also, it's a nice way to store your different projects online and update them over multiple years (either when you need to make a change or when someone proposes a change: _a pull request_).
 
 The main concepts of Git are:
+
 - Repository: the place where you store your files.
 - Branches: the fact that you can work in parallel on the same project before merging them.
 - Commit: the act to stage your changes to a specific commit.
@@ -153,14 +159,14 @@ The _SSH-keygen_ is a tool that can create those kind of pairs and the OpenSSH c
 
 Multiple types of encryptions exist, among these the most known RSA and the ED25519. The latter is suggested more secure (others are also deprecated like the DSA, as they present security issues) so we'll go on with ED25519 but the process is mostly the same for whatever type of keys.
 
-###### Generating a new key pair
+##### Generating a new key pair
 
 `ssh-keygen -t ed25519 -C "MyKeyName"`
 created my pair of keys in the folder of my choice.
 I then selected my public key and set it up on my GitLab settings.
 It is also possible to use a passphrase to further encode the private key in case it gets divulgated.
 
-###### Listing GitLab as a known host
+##### Listing GitLab as a known host
 When connecting to a new host, we first must verify that this host can be trusted.
 `ssh -T git@gitlab.fabcloud.org`
 We can also consult the SSH host keys fingerprints to further ensure that we are connecting to the host we want but I did not find those fingerprints for the FabAcademy GitLab instance.
@@ -215,7 +221,7 @@ magick mogrify -strip -quality %quality% *.jpg
 popd
 ````
 
-Just for in case I need to clean up whiteboard pictures (we never know and I find it so powerful I want to use it one day), here is a nice script to do it
+Just in case I need to clean up whiteboard pictures (we never know and I find it so powerful I want to use it one day), here is a nice script to do it:
 ````
 convert "$1" -resize %50 -morphology Convolve DoG:15,100,0 -negate -normalize -blur 0x1 -channel RBG -level 60%,91%,0.1 "$2"
 #use it with
@@ -243,4 +249,4 @@ I also want to use [jQuery](https://jquery.com/), a javascript library to handle
 
 
 ### Useful links
-By exploring other repos I found [Asciinema](https://asciinema.org/) which can record terminal inputs ! That looks extremely nice !
+By exploring other repos I found [Asciinema](https://asciinema.org/) which can record terminal inputs ! That looks extremely nice. [PowerSession](https://github.com/ibigbug/PowerSession) is an alternative for Windows PowerShell.

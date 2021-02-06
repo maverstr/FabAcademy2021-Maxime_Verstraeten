@@ -14,7 +14,7 @@ Here are displayed my weekly assignments:
 
   <div class="moduleContainer">
     <a href="./module01">
-      <img src="./../img/home/picID.jpg" alt="Week 01">
+      <img src="./../img/modulesGallery/mod01.jpg" alt="Week 01">
       <div class="modulecontainerText"> Week 1: <br> Project Management </div>
     </a>
   </div>
