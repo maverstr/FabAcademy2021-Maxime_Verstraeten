@@ -26,7 +26,57 @@ I will also need to design the electronics to measure my sensors' outputs and co
 
 I have only a few ideas at the moment but it is extremely likely that things will evolve over time.
 
-## Bladder phantom
+## Needs
+A "Neurogenic" bladder defines bladder and sphincter dysfunctions related to a neurological disease or a condition such as a spinal cord injury (SCI). Clincal manifestations include detrusor (the main muscle of the bladder) overactivity leading to incontinence and detrusor sphincter dyssynergia which can result in irreversible kidney damage.
+
+#### Consequences
+A neurogenic bladder has therefore tremendous repercussions on patient's physical and psychological well-being and constitute a financial burden on healthcare systems.
+
+#### Management techniques
+To prevent most of these issues, patients rely on uncomfortable bladder management techniques such as clear intermittent catheterization (CIC) which often lead to urinary-tract infections and subsequent renal failure if managed incorrectly or in poor conditions.
 
 
-## Project Management
+#### Bladder monitoring
+Being able to monitor and predict bladder contractions as well as rising intravesical pressure would allow patients to adapt their management techniques and increase their quality of life. Moreover, it would be possible to stimulate the afferent nerves in a closed-feedback loop to refrain their urge to urinate. Monitoring bladder activity in SCI patients is therefore today a top research priority.
+
+##Project requirements
+
+### Bladder phantom
+The fist step in the development of a medical device is tot test it on a phantom. The state-of-the-art bladder phantom, still today, it a rubber balloon. Needless to say that is not a very good model of the bladder itself.
+The first step is therefore to mold a new phantom in silicone. I plan to use 3D-printing to make molds for it. Also, it would be nice if I could segment 3D scan of patient's bladder to enhance my model.
+
+### Bladder activity simulation
+Having a simple silicone phantom will be of no use if it does not represent the bladder activity, especially in the case of a neurogenic Bladder
+
+The main parameters that I aim to simulate:
+
+- Physiological filling: The bladder can naturally fill with a flow rate of about 1-2mL/min and is usually filled with between 50 to 600mL. Most cystometry (procedures where a physician artificially fills the bladder) occur at 50mL/min which is supposed to influence the bladder response. I would like to develop a simple system that can fill my phantom at those physiological rate.
+
+PIC OF A SOLENOID VALVE
+
+- Pressure: The intravesical pressure is the main symptom we are looking to treat. In particular, contractions lead to sudden increase in pressure that can be detected. Being able top simulate these contractions would be extremely interesting. It could also be simulated by placing the phantom in a hermetic box where the pressure can be externally-controlled.
+
+PIC OF A PRESSURE GRAPH + hermetic box ?
+
+- Deformation: Over time, the bladder deforms as it is made of various visco-elastic fibers. By choosing the right material (silicone : which one ? or other materials) we could reach the same mechanical properties and be able to simulate the bladder deformation.
+
+PIC OF DEFORMATION
+
+- Temperature: To be honest this is more for fun as I don't think it will impact my measurements at all but still, it would be nice to have the water filling my phantom at the correct temperature.
+
+### Measurements
+The whole goal of making this phantom is to be able to test different sensors.
+Based on the section just above, I intent to test:
+- A pressure sensor
+- A deformation sensor
+- A temperature sensor
+- Something else ? Maybe simulate the bladder electrical activity and try to place electrode to act as an EMG ?
+
+### Signal amplification and processing
+The sensors will obviously need to be powered and to transmit their data to a 'brain'. I will therefore need to use a micro-controller but also several amplifiers and filter if I hope to get nice signals that I can then process to monitor the bladder activity.
+Ideally, I would like to transmit most of the data and power wirelessly (through an inductive link ?) as in real-life, the sensors would be implanted inside the patient.
+
+### Anchoring and encapsulation
+Those sensors will need to be encapsulated and anchored to my phantom. I will need to find innovative ways to place the sensors on the phantom while trying to respect the surgical constraints.
+The sensors but also all the electronics will have to be isolated from the patient.
+I'll have to test multiple types of encapsulation (silicone, epoxy, parylene, solid encapsulation, ...) in order to find the one that holds my implant in place the best while also ensuring that no water can slowly reach the electronics and ensure that no part of the encapsulation tends to peel or unstuck itself.
