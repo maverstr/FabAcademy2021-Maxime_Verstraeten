@@ -19,7 +19,7 @@ Moreover, the best management method would be to plan how much time I have to wo
 
 It's also important to work in parallel rather in series to avoid getting blocked by one task. Working in spiral also helps with this. Every project should start with the basic tasks and simply grow like an onion, adding layers of complexity as you go.
 
-To help parallelize tasks, it's important to work in modules and hierarchy (_that's the power of object-oriented programming_ ;)) and that will surely help debugging when things will eventually fail.
+To help parallelize tasks, it's important to work in modules and hierarchy (_that's the power of object-oriented programming_ :wink: ) and that will surely help debugging when things will eventually fail.
 
 ## Tools for developing my Website
 I will be listing here the main tools that I used to build my website and the main steps to get to this result.
@@ -78,6 +78,7 @@ Here is an example to override some headers:
 
 ### Atom
 Writing in all these files can be cumbersome in basic editors. Atom is an open-source text editor that features multiple packages, written by its userbase. Among these packages, one can install themes or other scripts. [Atom](https://atom.io/) is amazing to write Markdown files as it features syntax highlighting and some very useful packages such has:
+
 - Markdown-writer: Provides many keybinds and presets for Markdown-style features such as **bold** and _italic_ (though I first learned how to use them manually in notepad to get the hang of it!).
 - Markdown-preview: it creates an auto-updating preview of the markdown file in a separate pane.
 - Toolbar: It can be added as an extension of Markdown-writer to show a Toolbar at the top of the document.
@@ -89,7 +90,7 @@ It also natively features version control GUI for Git (see below) which just mak
 
 <figure> <center>
   <img src="./../../img/mod01/atom.jpg" alt="atomception" width="80%" />
-  <figcaption>That's what it looks like writing this page ! <p style="font-size:10px"> AtomCeption</p> </figcaption>
+  <figcaption>That's what it looks like writing this page ! <p style="font-size:10px"> AtomCeption </p> </figcaption>
 </figure>
 
 !!!success
@@ -189,7 +190,7 @@ Moreover, since we are using the images here on the website and they will theref
 Lossless compression is obviously less optimized since it does not alter the image to compress it. It must be used for medical imaging, technical drawings, pattern recognition, archiving, ...
 Lossy compression will introduce [artifacts](https://en.wikipedia.org/wiki/Compression_artifact). Hopefully, for natural images such as photographs, losses can be so minor that they are imperceptible to the human eye (visually lossless) but still result in very high compression rate.
 
-I won't go into the details of the multiple algorithms that can be used to compress files but it is still a very interesting subject :)
+I won't go into the details of the multiple algorithms that can be used to compress files but it is still a very interesting subject :smile:
 
 #### SVG files
 As a side note, Scalable Vector Graphics is a vector image format that is now a standard for web browsing.
