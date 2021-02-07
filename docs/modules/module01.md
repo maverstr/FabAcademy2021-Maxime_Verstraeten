@@ -117,7 +117,20 @@ The main concepts of Git are:
 
 For the FabAcademy, we have a dedicated repository per student on GitLab. GitLab is a web-based DevOps tool that provides Git-repository but also features issue tracking, continuous integration and deployment pipelines which makes it possible to build our website and publish it on Git.
 
-This week's assignment was also to work through a git Tutorial. As I said before, I have used Git a lot before so I have already a bit of knowledge about it but decided to get through the [Git-it](https://github.com/jlord/git-it-electron#what-to-install) app to learn more about it.
+This week's assignment was also to work through a git Tutorial. As I said before, I have used Git a lot before so I have already a bit of knowledge about it but decided to get through the [Git-it](https://github.com/jlord/git-it-electron#what-to-install) app to learn more about it and get more used to branching and merging which are my main difficulties.
+
+
+<figure> <center>
+  <img src="./../../img/mod01/gitit.jpg" alt="atomception" width="80%" />
+  <figcaption>First challenge of Git-it. It really guides you towards step completion while teaching you basics and advanced commands.</figcaption>
+</figure>
+
+I also took some time to familiarize myself with Vim ! I remember how panicked I was when I unexpectedly entered Vim editor and I couldn't get out ! This is all in the past now :smile: !
+
+<figure> <center>
+  <img src="./../../img/mod01/vim.jpg" alt="atomception" width="50%" />
+  <figcaption>Edition of hello.txt in Vim</figcaption>
+</figure>
 
 !!!note
     Let's note here the most important commands and some things that I learned or tips and tricks that I always tend to forget !
