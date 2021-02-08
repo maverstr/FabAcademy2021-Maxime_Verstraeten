@@ -216,32 +216,40 @@ For Windows users, [IrFanView](https://www.irfanview.com/) is an image viewer th
 Finally, for all Linux lovers here: [gThumb](https://wiki.gnome.org/Apps/Gthumb) will basically allow you to do the same.
 
 Personally, I chose to use [ImageMagick](https://imagemagick.org/) which is an extremely powerful tool with a very long list of features but note that it lacks a GUI.
-I found a very nice batch script online that allows me to optimize all the files of a given directory.
+Here is a simple batch script that converts all .png files in the directory to .jpg files, resize them and reduce their quality.
 ````
 @echo off
 
 set size=800x
 set quality=85
 
-if "%1" == "" (
-    echo Please specify an absolute path
-    exit /b
-)
-
-pushd %1
 magick mogrify -format jpg *.png
 magick mogrify -resize %size% *.jpg
 magick mogrify -strip -quality %quality% *.jpg
-popd
 ````
 
 Just in case I need to clean up whiteboard pictures (we never know and I find it so powerful I want to use it one day), here is a nice script to do it:
 ````
-convert "$1" -resize %50 -morphology Convolve DoG:15,100,0 -negate -normalize -blur 0x1 -channel RBG -level 60%,91%,0.1 "$2"
+convert "$1" -morphology Convolve DoG:15,100,0 -negate -normalize -blur 0x1 -channel RBG -level 60%,91%,0.1 "$2"
+
 #use it with
 ./whiteboardClean.sh example1.jpg output1.png
-#credits to u/lelandbatey on Reddit
 ````
+
+I voluntarily chose a badly-written, badly-lighted, blurry picture and the result is still impressive.
+
+<figure>
+  <img src="./../../img/mod01/initWhiteboard.jpg" alt="atomception" width="100%" />
+  <figcaption>Before</figcaption>
+</figure>
+
+<figure>
+  <img src="./../../img/mod01/whiteboardOutput.jpg" alt="atomception" width="100%" />
+  <figcaption>After</figcaption>
+</figure>
+
+
+A fork of ImageMagick in 2002 gave birth to a new project that, according to them is more powerful (i.e. faster) than ImageMagick. This is [GraphicsMagick](http://www.graphicsmagick.org/).
 
 [OptiPNG](http://optipng.sourceforge.net/) is another tool but only for PNG files that can lossless compress them to a smaller size. Note that PNG files are made to be faitful, unlike jpeg which are made to be compressed but with imperceptible changes.
 It can be run using the command line:
@@ -255,12 +263,14 @@ _The main advantage of command line being that it can be used on a web server to
 
 #### Video editing
 I always used Premiere Pro when it comes to video editing but [kdenLive](https://handbrake.fr/) is an open source alternative that I will probably use in the future.
-
+Other free alternatives include [Olive](https://www.olivevideoeditor.org/), [Shotcut](https://shotcut.org/), [OpenShot](https://www.openshot.org/).
 
 ### To go further
 This week I didn't have time to investigate in details HTML and CSS. Sure I did include some but I wish I could use it more. I will probably include more of it in the next few weeks whenever I find time.
-I also want to use [jQuery](https://jquery.com/), a javascript library to handle events and animations on my website.
+I also want to use [jQuery](https://jquery.com/), a Javascript library to handle events and animations on my website.
 
 
 ### Useful links
 By exploring other repos I found [Asciinema](https://asciinema.org/) which can record terminal inputs ! That looks extremely nice. [PowerSession](https://github.com/ibigbug/PowerSession) is an alternative for Windows PowerShell.
+
+[Converseen](https://converseen.fasterland.net/) is a Qt application (cross-platform) that can convert, resize and rotate a batch of images and even transform a PDF document in a series of images.
