@@ -21,7 +21,7 @@ Here are displayed my weekly assignments:
 
   <div class="moduleContainer">
     <a href="./module02">
-      <img src="./../img/home/picID.jpg" alt="Week 02">
+      <img src="./../img/mod02/phoneHolder1.png" alt="Week 02">
       <div class="modulecontainerText"> Week 2: <br> Computer-Aided Design </div>
     </a>
   </div>
