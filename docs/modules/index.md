@@ -7,7 +7,7 @@ Here are displayed my weekly assignments:
 
   <div class="moduleContainer">
     <a href="./module00">
-      <img src="./../img/modulesGallery/mod01.jpg" alt="Week 00">
+      <img src="./../img/mod00/neurogenicBladder.jpg" alt="Week 00">
       <div class="modulecontainerText"> Week 0: <br> Principles and Practices </div>
     </a>
   </div>
