@@ -29,6 +29,11 @@ I have only a few ideas at the moment but it is extremely likely that things wil
 ## Needs
 A "Neurogenic" bladder defines bladder and sphincter dysfunctions related to a neurological disease or a condition such as a spinal cord injury (SCI). Clincal manifestations include detrusor (the main muscle of the bladder) overactivity leading to incontinence and detrusor sphincter dyssynergia which can result in irreversible kidney damage.
 
+<figure> <center>
+  <img src="./../../img/mod00/neurogenicBladder.jpg" alt="neurogenic Bladder" width="80%" />
+  <figcaption> </figcaption>
+</figure>
+
 #### Consequences
 A neurogenic bladder has therefore tremendous repercussions on patient's physical and psychological well-being and constitute a financial burden on healthcare systems.
 
@@ -45,6 +50,12 @@ Being able to monitor and predict bladder contractions as well as rising intrave
 The fist step in the development of a medical device is tot test it on a phantom. The state-of-the-art bladder phantom, still today, it a rubber balloon. Needless to say that is not a very good model of the bladder itself.
 The first step is therefore to mold a new phantom in silicone. I plan to use 3D-printing to make molds for it. Also, it would be nice if I could segment 3D scan of patient's bladder to enhance my model.
 
+<figure> <center>
+  <img src="./../../img/mod00/phantom.jpg" alt="phantom" width="80%" />
+  <figcaption> A silicone phantom </figcaption>
+</figure>
+
+
 ### Bladder activity simulation
 Having a simple silicone phantom will be of no use if it does not represent the bladder activity, especially in the case of a neurogenic Bladder
 
@@ -52,15 +63,22 @@ The main parameters that I aim to simulate:
 
 - Physiological filling: The bladder can naturally fill with a flow rate of about 1-2mL/min and is usually filled with between 50 to 600mL. Most cystometry (procedures where a physician artificially fills the bladder) occur at 50mL/min which is supposed to influence the bladder response. I would like to develop a simple system that can fill my phantom at those physiological rate.
 
-PIC OF A SOLENOID VALVE
+<figure> <center>
+  <img src="./../../img/mod00/phantomDrawing.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption> Basic scheme of the filling through a solenoid valve and some sensors on the phantom </figcaption>
+</figure>
 
-- Pressure: The intravesical pressure is the main symptom we are looking to treat. In particular, contractions lead to sudden increase in pressure that can be detected. Being able top simulate these contractions would be extremely interesting. It could also be simulated by placing the phantom in a hermetic box where the pressure can be externally-controlled.
+
+- Pressure: The intravesical pressure is the main symptom we are looking to treat. In particular, contractions lead to sudden increase in pressure that can be detected. Being able top simulate these contractions (a net of contractile wires ?) would be extremely interesting. It could also be simulated by placing the phantom in a hermetic box where the pressure can be externally-controlled.
 
 PIC OF A PRESSURE GRAPH + hermetic box ?
 
 - Deformation: Over time, the bladder deforms as it is made of various visco-elastic fibers. By choosing the right material (silicone : which one ? or other materials) we could reach the same mechanical properties and be able to simulate the bladder deformation.
 
-PIC OF DEFORMATION
+<figure> <center>
+  <img src="./../../img/mod00/bladderDeformation.gif" alt="neurogenic Bladder" width="100%" />
+  <figcaption> Deformation of the bladder </figcaption>
+</figure>
 
 - Temperature: To be honest this is more for fun as I don't think it will impact my measurements at all but still, it would be nice to have the water filling my phantom at the correct temperature.
 
