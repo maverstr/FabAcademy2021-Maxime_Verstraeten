@@ -74,7 +74,7 @@ Getting a design is one thing but then you need to "inject" your design in the c
 
 So I used my newly acquired skill to slightly adjust the logo of my last year promotion.
 <figure> <center>
-  <img src="./../../img/mod03/logoInitial.jpg" alt="inkscape text" width="80%" />
+  <img src="./../../img/mod03/logoInitial.jpg" alt="logo text" width="80%" />
   <figcaption></figcaption>
 </figure>
 
@@ -84,8 +84,8 @@ I was left with some unwanted pixels (due to the image rasterization) that I qui
 
 And that's it !
 <figure> <center>
-  <img src="./../../img/mod03/logoBiomed.jpg" alt="inkscape text" width="80%" />
-  <figcaption></figcaption>
+  <img src="./../../img/mod03/logoBiomed.png" alt="logo text" width="80%" />
+  <figcaption> The adapated logo !</figcaption>
 </figure>
 
 
