@@ -63,7 +63,20 @@ The main parameters that I aim to simulate:
 
 - Pressure: The intravesical pressure is the main symptom we are looking to treat. In particular, contractions lead to sudden increase in pressure that can be detected. Being able top simulate these contractions (a net of contractile wires ?) would be extremely interesting. It could also be simulated by placing the phantom in a hermetic box where the pressure can be externally-controlled.
 
-PIC OF A PRESSURE GRAPH + hermetic box ?
+<figure> <center>
+  <img src="./../../img/finalProject/pressureGraph.jpg" alt="neurogenic Bladder" width="100%" />
+  <figcaption> Intravesical pressure in the bladder during filling and during detrusor contractions </figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/finalProject/siliconeRings.jpg" alt="neurogenic Bladder" width="100%" />
+  <figcaption> Intravesical pressure in the bladder during filling and during detrusor contractiosn </figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/finalProject/hermeticBox.jpg" alt="neurogenic Bladder" width="100%" />
+  <figcaption> Hermetic box to simulate homogenous pressure from the detrusor on the bladder (Weaver et al.)</figcaption>
+</figure>
 
 - Deformation: Over time, the bladder deforms as it is made of various visco-elastic fibers. By choosing the right material (silicone : which one ? or other materials) we could reach the same mechanical properties and be able to simulate the bladder deformation.
 
@@ -74,12 +87,15 @@ PIC OF A PRESSURE GRAPH + hermetic box ?
 
 - Temperature: To be honest this is more for fun as I don't think it will impact my measurements at all but still, it would be nice to have the water filling my phantom at the correct temperature.
 
+
+
 ### Measurements
 The whole goal of making this phantom is to be able to test different sensors.
 Based on the section just above, I intent to test:
 - A pressure sensor
 - A deformation sensor
 - A temperature sensor
+- - Acceleration: this idea came to me later on but I think that it would be possible to measure the acceleration of the bladder wall during a contraction.
 - Something else ? Maybe simulate the bladder electrical activity and try to place electrode to act as an EMG ?
 
 ### Signal amplification and processing

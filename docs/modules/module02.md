@@ -42,7 +42,7 @@ Once I was done with my design, the magic combo ++ctrl+shift+r++ allowed me to c
   <figcaption> My new logo made in Inkscape</figcaption>
 </figure>
 
-I only add one issue: when exporting to SVG, the bottom text does not appear. It is especially strange as it does appear in Inkscape (which reads the .svg) and also it exists when editing the file in "text mode". I think it is linked to the half ellipses as the "communication" also does not appear... Workaround for the moment: export as a .png ! Note that in the File menu - Document properties you can set the background color to white so that it does export with a nice white background in .png.
+I only had one issue: when exporting to SVG, the bottom text does not appear. It is especially strange as it does appear in Inkscape (which reads the .svg) and also it exists when editing the file in "text mode". I think it is linked to the half ellipses as the "communication" also does not appear... Workaround for the moment: export as a .png ! Note that in the File menu - Document properties you can set the background color to white so that it does export with a nice white background in .png.
 
 <figure> <center>
   <img src="./../../img/mod02/inkscapeText.jpg" alt="inkscape text" width="80%" />
