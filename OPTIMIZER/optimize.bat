@@ -4,8 +4,7 @@ set size=800x
 set quality=85
 
 if "%1" == "" (
-    echo Please specify an absolute path
-    exit /b 
+    %1 = ./
 ) 
 
 pushd %1
