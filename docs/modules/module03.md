@@ -116,6 +116,13 @@ Finally to find the good speed and power ratio for our material, we prepared an 
 What we could observe is that, as expected, the ratio of speed and power outputs the same result. It is quite logical as the slower the pass is, the more power is delivered to the material to ignite it and the more it pierces through the material.
 That means that the energy given to the material is equal to the power delivered by the laser divided by the speed.
 
+
+By varying the speed and power, we can also engrave different color gradation:
+<video width="640" height="480" autoplay loop>
+  <source src="./../../img/mod03/laserEngraving.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
 The Epilog also has a "frequency" settings but even though playing with it, it did not yield visible result. It is still an unknown and is left at 100%.
 
 ### Lasersaur mirror aligning
@@ -162,6 +169,32 @@ I then had to vectorize my image for the Vynil cutter software to cut it. I laun
   <figcaption> The adapated logo !</figcaption>
 </figure>
 
+
+Then I realized that to import it in Silhouette Studio, I needed a .dxf file so I tried to convert my SVG to it and ended up with a 30MB file that Silhouette never succeeded importing...
+
+Anwyay I found out that I could simply import my PNG and it would vectorize inside the software !
+By choosing "Select Trace Area" and tweaking the settings I had a nice trace for the machine to cut.
+
+
+
+
+<figure> <center>
+  <img src="./../../img/mod03/silhouettepng.jpg" alt="logo text" width="80%" />
+  <figcaption> The PNG inside the Silhouette software</figcaption>
+</figure>
+
+
+<figure> <center>
+  <img src="./../../img/mod03/silhouettetrace.jpg" alt="logo text" width="80%" />
+  <figcaption> Trace settings</figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/mod03/silhouetteresult.jpg" alt="logo text" width="80%" />
+  <figcaption> The output trace</figcaption>
+</figure>
+
+Then by clicking the Send button in the upper-right corner, you can change the settings of the blade and just cut your design.
 
 ### test cut to dial the cutter (highly dependant )
 transfer of copper sheet to an epoxy film to make it stiffer and get a better resolution.
@@ -214,6 +247,31 @@ Now I won't be making one, hopefully, I have a similar class E and coil availabl
 By injecting 9V at the primary, I hope to be able to get at least a few volts after my full-wave rectifier to light up my LED (about 2V).
 
 ## 3. My laser cutter design
+To make a parametric design in Solidworks, I had to make a basic sketch then go to "Tools -> Equations" and there I could add my variables. In my sketch dimension I could then refer to those variables.
+
+<figure> <center>
+  <img src="./../../img/mod03/variable.jpg" alt="logo text" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/mod03/jointTester.jpg" alt="logo text" width="80%" />
+  <figcaption></figcaption>
+</figure
+
+I then made a drawing of my object and exported it in a TIF file. Back in Inkscape I can trace the bitmap and scale it to the correct dimensions. The red contour is so that in the Epilog software we can set it as a cut while black is the engraving of the numbers.
+
+<figure> <center>
+  <img src="./../../img/mod03/drawing.jpg" alt="logo text" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/mod03/inkscapeComb.jpg" alt="logo text" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+
 note: need chamfer on slots to help fitting it in and compress it so that it gets inside and stays there.
 flexure in cardboard to make it flex for soft corners, curves...
 
