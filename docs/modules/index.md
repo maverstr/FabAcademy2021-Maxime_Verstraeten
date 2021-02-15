@@ -28,10 +28,9 @@ Here are displayed my weekly assignments:
 
   <div class="moduleContainer">
     <a href="./module03">
-      <img src="./../img/mod02/phoneHolder1.png" alt="Week 02">
+      <img src="./../img/mod03/powerTestPlate.jpg" alt="Week 02">
       <div class="modulecontainerText"> Week 3: <br> Computer-Controlled Cutting </div>
     </a>
   </div>
-
 
 </div>

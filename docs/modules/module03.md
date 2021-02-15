@@ -25,6 +25,11 @@ I'll have 3 objectives this week.
 
 - Finally, I have relatively big desk at work but just like every desk, it gets clumped with all sorts of stuff. My biggest issue is that my laptop rests on a cardboard box (so that it sits at eye-level) and sometimes when I need to takes notes during online meetings, I don't have enough room in front of my laptop because of this huge cardboard box. So I want to make a press-fit kit like a small table where I can leave my laptop on and slide my keyboard underneath.
 
+<figure> <center>
+  <img src="./../../img/mod03/desk.jpg" alt="inkscape text" width="80%" />
+  <figcaption> This is what I want to replace</figcaption>
+</figure>
+
 
 ## 1. Tools
 Multiple tools exist to cut things. Some are more expensive, some are easier to use, some a safer but mainly it depends on what you want to do and especially the machines that you have available at your Fablab.
@@ -104,6 +109,14 @@ To measure the kerf, we just need to cut a square and measure the difference bet
 
 We measured a kerf of 3.3mm for the 10 squares, therefore we have a kerf unit = 0.33mm. It is actually twice what we expected (the lasersaur that our Lab uses usually has a mean kerf of about 0.17mm) so it's a good thing we actually measured it before cutting parts of our construction kits.
 
+To test some press-fit joints, we made a "comb-like" shape with slots of different sizes. The best fit was for joints with -0.3mm offset.
+
+<figure> <center>
+  <img src="./../../img/mod03/comb.jpg" alt="kerf" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+
 ### Power and speed
 
 Finally to find the good speed and power ratio for our material, we prepared an SVG file with multiple squares of different colors that we could link to actual parameters in the Epilog software. Sometimes there is no need to reinvent the wheel so we just used the design of our predecessors but this time with the intent to test it on the Epilog and test the engraving capabilities.
@@ -116,12 +129,28 @@ Finally to find the good speed and power ratio for our material, we prepared an 
 What we could observe is that, as expected, the ratio of speed and power outputs the same result. It is quite logical as the slower the pass is, the more power is delivered to the material to ignite it and the more it pierces through the material.
 That means that the energy given to the material is equal to the power delivered by the laser divided by the speed.
 
+<figure> <center>
+  <img src="./../../img/mod03/powerTestPlate.jpg" alt="powerSpeedRatio" width="80%" />
+  <figcaption></figcaption>
+</figure>
 
 By varying the speed and power, we can also engrave different color gradation:
+
+<figure> <center>
+  <img src="./../../img/mod03/engravingTestPlate.jpg" alt="powerSpeedRatio" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
 <video width="640" height="480" autoplay loop>
   <source src="./../../img/mod03/laserEngraving.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
+
+<figure> <center>
+  <img src="./../../img/mod03/engraving.jpg" alt="powerSpeedRatio" width="80%" />
+  <figcaption>The final piece</figcaption>
+</figure>
+
 
 The Epilog also has a "frequency" settings but even though playing with it, it did not yield visible result. It is still an unknown and is left at 100%.
 
@@ -175,9 +204,6 @@ Then I realized that to import it in Silhouette Studio, I needed a .dxf file so 
 Anwyay I found out that I could simply import my PNG and it would vectorize inside the software !
 By choosing "Select Trace Area" and tweaking the settings I had a nice trace for the machine to cut.
 
-
-
-
 <figure> <center>
   <img src="./../../img/mod03/silhouettepng.jpg" alt="logo text" width="80%" />
   <figcaption> The PNG inside the Silhouette software</figcaption>
@@ -194,10 +220,84 @@ By choosing "Select Trace Area" and tweaking the settings I had a nice trace for
   <figcaption> The output trace</figcaption>
 </figure>
 
-Then by clicking the Send button in the upper-right corner, you can change the settings of the blade and just cut your design.
+I can then start loading the paper by placing it next to the blue lines and arrows on the left and adjusting the right blocker. Then press the load button on the machine.
 
-### test cut to dial the cutter (highly dependant )
-transfer of copper sheet to an epoxy film to make it stiffer and get a better resolution.
+<figure> <center>
+  <img src="./../../img/mod03/load.jpg" alt="logo text" width="80%" />
+  <figcaption> Load or unload paper</figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/mod03/ready.jpg" alt="logo text" width="80%" />
+  <figcaption> The machine is ready !</figcaption>
+</figure>
+
+
+Then by clicking the Send button in the upper-right corner, you can change the settings of the blade and just cut your design. Note that I had to set the force, the speed and the height of the blade to the minimum to get acceptable results. I tested the settings by making several lines at different settings until I realized they all shredded the paper or went through it and I resigned myself to use the lowest settings.
+
+<figure> <center>
+  <img src="./../../img/mod03/settingsSilhouette.jpg" alt="logo text" width="80%" />
+  <figcaption> The settings to cut in the vynil</figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/mod03/shredded.jpg" alt="logo text" width="80%" />
+  <figcaption> A bad try with shredded paper at force and speed = 2</figcaption>
+</figure>
+
+Finally everything went well and I ended up with my logo. I removed it carefully but some pieces were left on the paper:
+
+<figure> <center>
+  <img src="./../../img/mod03/negative.jpg" alt="logo text" width="80%" />
+  <figcaption> The negative with some left-over</figcaption>
+</figure>
+
+I applied it on a glass and placed the left-over on it manually:
+
+<figure> <center>
+  <img src="./../../img/mod03/initialGlass.jpg" alt="logo text" width="80%" />
+  <figcaption> Some pieces are left-over or missing</figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/mod03/finalGlass.jpg" alt="logo text" width="80%" />
+  <figcaption> The final logo on the glass</figcaption>
+</figure>
+
+### Enters the SANDBLASTER
+Though the glass looks nice like this, I felt like it wouldn't last through multiple washings.. So I though about using the sandblaster.
+First, I covered the rest of the glass in duct-tape:
+
+<figure> <center>
+  <img src="./../../img/mod03/beforeSand.jpg" alt="logo text" width="80%" />
+  <figcaption> My glass is well protected and ready to go in the sandblaster</figcaption>
+</figure>
+
+I then loaded the sandblaster with glass beads (200-300µm) and connected to compressor and the vacuum cleaner to their respective inputs and outputs.
+
+<figure> <center>
+  <img src="./../../img/mod03/glassBeads.jpg" alt="logo text" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/mod03/glassInTheMachine.jpg" alt="logo text" width="80%" />
+  <figcaption> I just poured the glass beads inside</figcaption>
+</figure>
+
+I had some trouble manipulating the "gun" and my glass in the sandblaster with the heavy gloves but more importantly, my duct-tape didn't stick well enough. I should probably have cleaned my glass with iso-propanol before to increase the "stickiness" but I'm not sure it would have made a big difference.
+
+<figure> <center>
+  <img src="./../../img/mod03/glassAfter.jpg" alt="logo text" width="80%" />
+  <figcaption> The duct-tape didn't stick well</figcaption>
+</figure>
+
+The final result is a bit disappointing and I will need to look for improvements but that's a first step.
+
+<figure> <center>
+  <img src="./../../img/mod03/glassDone.jpg" alt="logo text" width="80%" />
+  <figcaption> All hail my glass !</figcaption>
+</figure>
 
 
 ### Trying to make a flexible circuit
@@ -229,6 +329,44 @@ I exported it in a PDF from Altium and then vectorized it in Inkscape just like 
 
 The only thing that I had to look for was the actual scaling of my picture. I had to manually scale it so that the measurement on my PCB are the same as the distance on the vectorized image. The dimensions of my PCB are 78.74mmx76.2mm.
 
+To make sure the copper sheet does not slide (it does not stick very well to the cutter holders), I taped it to a cutting mat and slid that inside the machine.
+
+<video width="640" height="480" autoplay loop>
+  <source src="./../../img/mod03/vynilCutterVideo.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+<figure> <center>
+<img src="./../../img/mod03/pcbCut.jpg" alt="logo text" width="80%" />
+<figcaption> after the vynil cutter was done ! </figcaption>
+</figure>
+
+I then removed the excess of copper by using the tip of a scalpel:
+
+<figure> <center>
+  <img src="./../../img/mod03/afterVynil.jpg" alt="logo text" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+And used somes tape to make the transfer from the paper to a flexible piece of plastic I found laying around:
+
+<figure> <center>
+  <img src="./../../img/mod03/applyingTape.jpg" alt="logo text" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/mod03/onTape.jpg" alt="logo text" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/mod03/onPlastic.jpg" alt="logo text" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+
+
 ### How it (should) work
 
 So the main idea is that power is transmitted from a primary to a secondary (my circuit). The device should work on the principle of mutual induction between the two coils. The magnetic flux generated by the emitter coil gets linked to the secondary and a voltage is generated in the secondary (also called EMF (electromotor force)).
@@ -247,6 +385,8 @@ Now I won't be making one, hopefully, I have a similar class E and coil availabl
 By injecting 9V at the primary, I hope to be able to get at least a few volts after my full-wave rectifier to light up my LED (about 2V).
 
 ## 3. My laser cutter design
+With the kerf, we can make adjust our design so that our joints fit correctly. However, it is always best to test it ourselves. To do so, we made a kind of "comb" with several different sizes and we can therefore find the ones that fit the best.
+
 To make a parametric design in Solidworks, I had to make a basic sketch then go to "Tools -> Equations" and there I could add my variables. In my sketch dimension I could then refer to those variables.
 
 <figure> <center>
@@ -257,9 +397,10 @@ To make a parametric design in Solidworks, I had to make a basic sketch then go 
 <figure> <center>
   <img src="./../../img/mod03/jointTester.jpg" alt="logo text" width="80%" />
   <figcaption></figcaption>
-</figure
+</figure>
 
-I then made a drawing of my object and exported it in a TIF file. Back in Inkscape I can trace the bitmap and scale it to the correct dimensions. The red contour is so that in the Epilog software we can set it as a cut while black is the engraving of the numbers.
+To cut it, I had some trouble with SolidWorks initially:
+The first method I found was to make a drawing of my object and export it in a TIF file. Back in Inkscape I can trace the bitmap and scale it to the correct dimensions. The red contour is so that in the Epilog software we can set it as a cut while black is the engraving of the numbers.
 
 <figure> <center>
   <img src="./../../img/mod03/drawing.jpg" alt="logo text" width="80%" />
@@ -271,12 +412,73 @@ I then made a drawing of my object and exported it in a TIF file. Back in Inksca
   <figcaption></figcaption>
 </figure>
 
+### My kit
+I started by defining all my parameters.
 
-note: need chamfer on slots to help fitting it in and compress it so that it gets inside and stays there.
-flexure in cardboard to make it flex for soft corners, curves...
+<figure> <center>
+  <img src="./../../img/mod03/pressFitParams.jpg" alt="logo text" width="80%" />
+  <figcaption> The global variables of my design</figcaption>
+</figure>
 
-kerf is the fact that the laser has a finite width and therefore we need to offset the laser path a bit on the external side to ensure the cutting happens actually on the chosen path.
+Then I made a simple square piece with press-fit joints.
+
+Note that chamfer on the slots are almost mandatory in the design since they allow to help fitting the pieces in and compress them so that once inside, they stay there.
 
 
-## Mechanical iris in cardboard ?
-maybe for machine day, to open it on the wire shelf... ?
+<figure> <center>
+  <img src="./../../img/mod03/pressFitSquare.jpg" alt="logo text" width="80%" />
+  <figcaption> a 50x50mm press-fit square</figcaption>
+</figure>
+
+I then did the same for rectangles and circles:
+<figure> <center>
+  <img src="./../../img/mod03/rectangle.jpg" alt="logo text" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/mod03/circle.jpg" alt="logo text" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+Finally, I wanted to make some laser cut parts for my little laptop table.
+
+To avoid having to re-vectorize my parts in Inkscape I found a new way to export my parts from Soliworks:
+First, once my part is finished, I make a Solidworks drawing of it. I make sure to untick "Display sheet format" to remove the sheet drawings because I don't want them.
+<figure> <center>
+  <img src="./../../img/mod03/makeDrawing.jpg" alt="logo text" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/mod03/sheetFormat.jpg" alt="logo text" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+Then I place my part and make sure to put the view I want (make sure to select "custom scale: 1:1 !!!!!"). I will remove any unwanted view just after.
+<figure> <center>
+  <img src="./../../img/mod03/onSheet.jpg" alt="logo text" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/mod03/scale.jpg" alt="logo text" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+ I save the document and then save it again but as a .ai (Adobe Illustrator) file.
+ <figure> <center>
+   <img src="./../../img/mod03/aiFile.jpg" alt="logo text" width="80%" />
+   <figcaption></figcaption>
+ </figure>
+
+I can then open this file in Inkscape. As I have a student version I need to select the "Student" text and remove it. And we're good to go ! Add any other part you want you can send it to the laser cutter by "printing" it.
+
+My table:
+<figure> <center>
+  <img src="./../../img/mod03/assembly.jpg" alt="logo text" width="80%" />
+  <figcaption> My little laptop-table</figcaption>
+</figure>
+
+### To go further
+I wanted to test the slots in cardboard to make it flex to create soft corners or curves so I'll try to implement it later.
