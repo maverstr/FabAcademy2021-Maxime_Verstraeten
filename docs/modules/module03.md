@@ -21,9 +21,9 @@ I'll have 3 objectives this week.
 
 - I would like to make a very small electronics circuit using copper tape and the vinyl cutter. I don't expect very nice results with it but if it works sufficiently well, then it might an extremely quick way to make some traces without the need to order a PCB or make using a CNC or chemical processes. Moreover, that makes for easy flexible circuits if I ever need some.
 
-- Before this, I want to get some experiments using the vinyl cutter by simply slicing some stickers with some logos or customize a t-shirt using heat transfer!
+- Before this, I want to get some experiments using the vinyl cutter by simply slicing some stickers with some logos or customize a t-shirt using heat transfer (spoiler alert: I didn't make any shirts but maybe in the future)!
 
-- Finally, I have relatively big desk at work but just like every desk, it gets clumped with all sorts of stuff. My biggest issue is that my laptop rests on a cardboard box (so that it sits at eye-level) and sometimes when I need to takes notes during online meetings, I don't have enough room in front of my laptop because of this huge cardboard box. So I want to make a press-fit kit like a small table where I can leave my laptop on and slide my keyboard underneath.
+- Finally, I have a relatively big desk at work but just like every desk, it gets clumped with all sorts of stuff. My biggest issue is that my laptop rests on a cardboard box (so that it sits at eye-level) and sometimes when I need to takes notes during online meetings, I don't have enough room in front of my laptop because of this huge cardboard box. So I want to make a press-fit kit like a small table where I can leave my laptop on and slide my keyboard underneath.
 
 <figure> <center>
   <img src="./../../img/mod03/desk.jpg" alt="inkscape text" width="80%" />
@@ -69,7 +69,7 @@ CO2 lasers are cheap and efficient but are limited to cardboard, wood and acryli
 ### And the rest !
 Plasma cutters are for metal cutting by melting the metal (extremely hot plume). Waterjet cutters basically outputs water at supersonic speed that cuts through metal sheets, stones and almost everything (way more things than a laser cutter) and are mostly used in the industry. Hot wire cutters can be used to make artistical shapes in foam with a heating resistor a voltage on its ends. The end result is extremely smooth and the minimum diameter is of the wire itself which can be extremely low.
 
-## To parametric design !
+## 2. To parametric design !
 So in order to do a cardboard design using the laser cutter, we'll basically need to set the width of the slots and their depth. The width depends only on the cardboard thickness (and a margin) but can be therefore set in a parametric manner in the CAD tool (meaning that a simple change of the parameter variable will change the whole design).
 
 ### CAD tools
@@ -85,7 +85,7 @@ Execuc made a nice [module for FreeCAD](https://github.com/execuc/LCInterlocking
 ### The ~~horse~~ machine whisperer
 Getting a design is one thing but then you need to "inject" your design in the cutting machine. Each machine has its own drivers so this is one way of doing it. But other tools exist like [Deepnest](https://deepnest.io/). Deepnest is an open-source software that will optimize the cuts and the parts so waste the least amount of material and time (merging common lines and so on). This also will improve quality of the final results by avoiding heat warping (distortion in the material due to the heat of the laser) with every subsequent laser pass.
 
-## 2. Machine setup and characterization
+## 3. Machine setup and characterization
 As part of the group assignment, [Jason](http://fabacademy.org/2021/labs/ulb/students/jason-pettiaux/) and I had  to characterize the laser cutter we were going to use.
 We wanted to check a few things:
 1. Check the focus
@@ -179,7 +179,7 @@ We also tried to repair the [Lasersaur](https://www.lasersaur.com/) in our lab t
 </figure>
 
 
-## 2. My Vynil cutter design
+## 4. My Vynil cutter design
 
 So I used my newly acquired skill to slightly adjust the logo of my last year promotion.
 <figure> <center>
@@ -195,7 +195,7 @@ I then had to vectorize my image for the Vynil cutter software to cut it. I laun
 
 <figure> <center>
   <img src="./../../img/mod03/logoBiomed.png" alt="logo text" width="80%" />
-  <figcaption> The adapated logo !</figcaption>
+  <figcaption> The adapted logo !</figcaption>
 </figure>
 
 
@@ -380,11 +380,13 @@ So basically, on the primary I will need a fast-switching current. Common AC vol
   <figcaption> A classic class E </figcaption>
 </figure>
 
-Now I won't be making one, hopefully, I have a similar class E and coil available at my lab that is working at 300kHz. µ
+Now I won't be making one, hopefully, I have a similar class E and coil available at my lab that is working at 300kHz.
 
 By injecting 9V at the primary, I hope to be able to get at least a few volts after my full-wave rectifier to light up my LED (about 2V).
 
-## 3. My laser cutter design
+I will test the circuit during the next week.
+
+## 5. My laser cutter design
 With the kerf, we can make adjust our design so that our joints fit correctly. However, it is always best to test it ourselves. To do so, we made a kind of "comb" with several different sizes and we can therefore find the ones that fit the best.
 
 To make a parametric design in Solidworks, I had to make a basic sketch then go to "Tools -> Equations" and there I could add my variables. In my sketch dimension I could then refer to those variables.
@@ -474,11 +476,35 @@ Then I place my part and make sure to put the view I want (make sure to select "
 
 I can then open this file in Inkscape. As I have a student version I need to select the "Student" text and remove it. And we're good to go ! Add any other part you want you can send it to the laser cutter by "printing" it.
 
-My table:
+So to put my laptop on my desk I made a small little table:
+Here is a basic assembly of it in Solidworks:
 <figure> <center>
   <img src="./../../img/mod03/assembly.jpg" alt="logo text" width="80%" />
   <figcaption> My little laptop-table</figcaption>
 </figure>
+
+And here is the final result:
+<figure> <center>
+<img src="./../../img/mod03/myTable.jpg" alt="logo text" width="80%" />
+<figcaption> My laptop-table assembled, "fresh" from the laser cutter</figcaption>
+</figure>
+
+<figure> <center>
+<img src="./../../img/mod03/myTable2.jpg" alt="logo text" width="80%" />
+<figcaption></figcaption>
+</figure>
+
+<figure> <center>
+<img src="./../../img/mod03/desk.jpg" alt="logo text" width="80%" />
+<figcaption>Before...</figcaption>
+</figure>
+
+<figure> <center>
+<img src="./../../img/mod03/myTable3.jpg" alt="logo text" width="80%" />
+<figcaption>After... Much better !</figcaption>
+</figure>
+
+I'm not completely happy with it as it is quite wobbly. This is mostly due to the fact that my wood plate bent a bit inside the lasercutter and so the focus was not right for some parts, leading to inaccurate slots. I could also improve the design by adding one or two beams to reinforce the structure.
 
 ### To go further
 I wanted to test the slots in cardboard to make it flex to create soft corners or curves so I'll try to implement it later.

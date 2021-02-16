@@ -1,4 +1,18 @@
-# Week 5
+# 5. ...
+
+## Objectives
+
+<div class="objectivePanel">
+  <ul>
+    <li> Group assignment: characterize your lasercutter's focus, power, speed, rate, kerf, joint clearance and types. </li>
+    <li> Cut something on the vinylcutter.</li>
+    <li>  Design, lasercut and document a parametric construction kit, accounting for the lasercutter kerf whiuch can be assembled in multiple ways.</li>
+    <li> Try to include elements which aren't flat.</li>
+  </ul>
+</div>
+TODO
+<div class="dottedLine"></div>
+
 
 
 To scan things, I downloaded [Autodesk Recap Pro](https://www.autodesk.com/products/recap/overview?plc=RECAP&term=1-YEAR&support=ADVANCED&quantity=1).
@@ -14,6 +28,8 @@ To scan things, I downloaded [Autodesk Recap Pro](https://www.autodesk.com/produ
 I was first not really conviced by the software capabilities so I took bad photos (no attention to lighting, blur or 3D completeness) of a bottle of beer. Surprisingly, the results were good !
 
 The Edit-> 'Slice and Fill' option allowed to slice the object from the environement and I ended up with this:
+
+
 
 <figure> <center>
   <img src="./../../img/mod05/beer.jpg" alt="Beer" width="50%" />
