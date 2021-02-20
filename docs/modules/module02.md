@@ -186,3 +186,6 @@ Finally, I wanted to give a go at FReps (or function representation). The best e
 I just ordered a XP-Pen Star03 V2 drawing tablet off Amazon to further enhance my skills in 2D-design and to enjoy it more ! It will also certainly be useful for any lecture I might teach online during the academic year.
 
 I would also like to experiment the video game designer tools such as Unity or Unreal Engine. Whenever I have time !
+
+
+## My files
