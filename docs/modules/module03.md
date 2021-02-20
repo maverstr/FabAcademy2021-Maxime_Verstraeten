@@ -506,5 +506,8 @@ And here is the final result:
 
 I'm not completely happy with it as it is quite wobbly. This is mostly due to the fact that my wood plate bent a bit inside the lasercutter and so the focus was not right for some parts, leading to inaccurate slots. I could also improve the design by adding one or two beams to reinforce the structure.
 
-### To go further
+## To go further
 I wanted to test the slots in cardboard to make it flex to create soft corners or curves so I'll try to implement it later.
+
+## My files
+:material-download-box: [My Design files](./../files/mod03.zip)
