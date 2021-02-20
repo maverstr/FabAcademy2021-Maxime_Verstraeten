@@ -33,4 +33,11 @@ Here are displayed my weekly assignments:
     </a>
   </div>
 
+  <div class="moduleContainer">
+    <a href="./module04">
+      <img src="./../img/mod03/powerTestPlate.jpg" alt="Week 02">
+      <div class="modulecontainerText"> Week 4: <br> Electronics Production </div>
+    </a>
+  </div>
+
 </div>
