@@ -22,7 +22,36 @@ I had some experience making my PCB using chemical processes and "industrial pro
 
 ## Introduction to Electronics Production
 
+### Etching
+
+This is the process I'm the most familiar with. Not because I've done it myself, but I ordered some PCBs from companies in the past and this the method they use. I gotta say, the quality of the PCBs is very good and when you need a lot of them, it's quite cheap.
+
+Basically, they place masks on the copper plates before etching it with an alkaline solution. The biggest drawback is the impact on the environment and staff working in factories. This is also why etching "by yourself" is usually a bad idea as you don't have the material needed to process the waste.
+
+I'll reserve this process for large batches or industrial production or if you need very high precision.
+
+### CNC milling
+This technique consists of using a CNC to mill the copper plate. The biggest advantage is that it produces little waste and is extremely convenient for prototyping. You can have your board ready in a few hours or less directly from the Gerber to the machine without additional steps. Final good point: it can make the holes at the same time, in the same workflow !
+It is however not extremely precise (highly dependent on the machine) though sufficient for most purposes and not very suitable for large quantities. It is also less practical for multi-layer boards.
+
+The milling obviously rely on bits, and there are multiple types and sizes. At my lab we use 1/64" for tracks and 1mm for edge cutting and clearance.
+There are also V-bits which are cheaper but the width of the cut varies with the depth which can be inconvenient.
+
 ### CNC design rules
+We used this method primarily to make our board at my lab, so here are the steps required to make it work (for the [Bantam](https://www.bantamtools.com/) tool that we have):
+
+1. Import your files. The files can be either "board" files (.brd and so on) as the Bantam software can convert these directly. Alternatively, you can directly load you Gerber files that contain all the information about your board and its layers.
+2. Fix the copper plate. It has to be well-fixed and as flat as possible, especially if the board is large. We use double-sided tape.
+2. Check the underlay of the machine. This layer is made to protect the bed of the machine and will get milled with the PCB and get scratched over time so it must be replaced from time to time.
+3. Zero the bit. The machine knows the height of the bed (it usually milled it itself) but it doesn't know how far you inserted the bit. So it will measure the height of the bit relative to the bed. It does so by electrically connecting the bit and the bed and whenever the bit touches the bed, it closes the circuit and that serves as a trigger that the bit reached the bed (and it avoids breaking the very fragile bit). This must be done only once each time you change the bit.
+4. PCB thickness. Usually, the height of the board is known, but you don't know the height of the double-sided tape underneath, so you must also measure the distance between the bit and the board. Same thing as before but this time the circuit is closed by connecting the board to the bed with a little metallic part. This must be done for each PCB as the board can be slightly bent or not perfectly level. This is called the "bitBreaker" utility in the software.
+5. Load the correct bit and settings for each bit and layer and let the machine do the work. Change the bits when requested.
+
+
+Note that we use FR1 boards which is quite ductile so we don't break our bits (industrial  "green" boards are FR4 which is epoxy glass and will dull the bits).
+
+**Speed.. for our bits: TODO**
+trace width...
 
 Note that since the copper is directly in contact with the humid air, it tends to oxidize over time. A good practice is therefore to either cover the tracks with solder or to cover the board in an epoxy resin or any king of protection.
 
@@ -31,7 +60,34 @@ Note that since the copper is directly in contact with the humid air, it tends t
 Your browser does not support the video tag.
 </video>
 
-## Using the Vynil cutter
+
+## Printing process
+At my lab we have received a [Voltera](https://www.voltera.io/) a few months ago. This a new process of making boards which involve depositing a conductive ink on a board before heating it. The machine is then able to drill the holes, apply solder paste and you just need to place the components before it heats the board and solders everything for you. The boards cost a lot more (about 5$ each) and it still requires a few hours per board.
+
+Unfortunately, due to COVID, we didn't really use it and bad news, the conductive ink got bad in just those few months... Anyway, we tested it in the past and here is what it is capable of doing.
+<figure> <center>
+  <img src="./../../img/mod03/voltera1.jpg" alt="logo text" width="80%" />
+  <figcaption>Voltera-printed board</figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/mod03/voltera2.jpg" alt="logo text" width="80%" />
+  <figcaption> The components are soldered automatically !</figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/mod03/voltera3.jpg" alt="logo text" width="80%" />
+  <figcaption> It comes with a very well-made software !</figcaption>
+</figure>
+
+This little video shows how the ink looks like after a few months and as you can see, it is not suitable for board printing anymore.
+<video width="640" height="480" autoplay loop>
+  <source src="./../../img/mod04/volteraVideo.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+
+## Vynil cutter
 Last week I used the Vynil cutter to make a small PCB. I didn't make any more but I think it suits this week's assignments well so here is a pic!
 
 <figure> <center>
@@ -39,12 +95,9 @@ Last week I used the Vynil cutter to make a small PCB. I didn't make any more bu
   <figcaption> My PCB using the Vynil cutter</figcaption>
 </figure>
 
-### others
+## Others
+Laser cutting (fibre laser), printing, sewing and electro-plating are other techniques that I didn't have time to investigate but exist !
 
-<video width="640" height="480" autoplay loop>
-  <source src="./../../img/mod04/volteraVideo.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
 
 ## Introduction to microcontrollers
 A µ-controller is an integrated circuit (IC) that is like a very small computer, able to perform specific tasks. They are programmed to perform these tasks over and over again, on loop (but can be programmed to respond to conditions of course).
@@ -104,7 +157,7 @@ The board is rather simple:
 
 It uses the USB 5V and a 5V-3.3V converter to power the ATSAMD11 and consists of a reduced-JTAG connection (Clock, data, VDD, GND) to first install the bootloader and will be able to convert Serial to UPDI or UART based on the jumper selection and can provide 5V or 3.3V to the AVR device. Some protection resistors limit the current.
 
-The board has been manufactured using the CNC milling machine described before. I used a 1/64" flat mill for accurate traces and a 1" flat mill for cutting the edges of the board and increase the clearance between the tracks.
+The board has been manufactured using the CNC milling machine described before. I used a 1/64" flat mill for accurate traces and a 1mm flat mill for cutting the edges of the board and increase the clearance between the tracks.
 
 <figure> <center>
   <img src="./../../img/mod04/boardMilled.jpg" alt="logo text" width="80%" />
@@ -148,7 +201,7 @@ Unfortunately, I initially couldn't make it work. It is probably the programmer 
 </figure>
 
 I then changed it for my instructor's programmer and it went through successfully.
-`edbg -bpv -e -t samd11 -f sam_ba_Generic_D11C14A_SAMD11C14A.bin`
+`edbg-b95-WINDOWS-47c6ba4.exe -ebpv -t samd11 -f sam_ba_Generic_D11C14A_SAMD11C14A.bin`
 
 <figure> <center>
   <img src="./../../img/mod04/programmed.jpg" alt="logo text" width="80%" />
@@ -226,6 +279,8 @@ Our programmer is ready to... Program !
 
 ## To go further
 I would like to use the CNC milling to make USB keys and an AVR controller to be able to... do things. I don't know what yet but I'm sure I'll find more ideas. I could use a 3D-printer to make a small case for it, maybe some epoxy resin to protect the circuit...
+
+It would be nice to test laser cutting (fibre laser), printing, sewing and electro-plating to make PCBs in the future !
 
 ## My files
 :material-download-box: [My Design files](./../files/mod04.zip)
