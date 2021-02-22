@@ -50,8 +50,9 @@ We used this method primarily to make our board at my lab, so here are the steps
 
 Note that we use FR1 boards which is quite ductile so we don't break our bits (industrial  "green" boards are FR4 which is epoxy glass and will dull the bits).
 
-**Speed.. for our bits: TODO**
-trace width...
+For our mills, we use a cut speed of 200mm/minute, a plunge speed of 200mm/min a jog speed of 300mm/min and a jog height of 2mm. The spindle speed is 30,000RPM.
+
+The cut depth using the 1/64" flat end mill is 0.08mm with 2 passes for a total of 0.15mm.
 
 Note that since the copper is directly in contact with the humid air, it tends to oxidize over time. A good practice is therefore to either cover the tracks with solder or to cover the board in an epoxy resin or any king of protection.
 
@@ -66,17 +67,17 @@ At my lab we have received a [Voltera](https://www.voltera.io/) a few months ago
 
 Unfortunately, due to COVID, we didn't really use it and bad news, the conductive ink got bad in just those few months... Anyway, we tested it in the past and here is what it is capable of doing.
 <figure> <center>
-  <img src="./../../img/mod03/voltera1.jpg" alt="logo text" width="80%" />
+  <img src="./../../img/mod04/voltera1.jpg" alt="logo text" width="80%" />
   <figcaption>Voltera-printed board</figcaption>
 </figure>
 
 <figure> <center>
-  <img src="./../../img/mod03/voltera2.jpg" alt="logo text" width="80%" />
+  <img src="./../../img/mod04/voltera2.jpg" alt="logo text" width="80%" />
   <figcaption> The components are soldered automatically !</figcaption>
 </figure>
 
 <figure> <center>
-  <img src="./../../img/mod03/voltera3.jpg" alt="logo text" width="80%" />
+  <img src="./../../img/mod04/voltera3.jpg" alt="logo text" width="80%" />
   <figcaption> It comes with a very well-made software !</figcaption>
 </figure>
 
@@ -151,7 +152,7 @@ So the idea here is to use an ARM board (SAMD11) to convert USB (serial emulatio
 
 The board is rather simple:
 <figure> <center>
-  <img src="./../../img/mod04/schematicAVRProgrammer.png" alt="logo text" width="80%" />
+  <img src="./../../img/mod04/schematicAVRProgrammer.jpg" alt="logo text" width="80%" />
   <figcaption> Quentin's board</figcaption>
 </figure>
 
@@ -273,9 +274,85 @@ void loop() {
 Our programmer is ready to... Program !
 
 
+I then tried to install [Quentin](http://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/)'s new version of the [code](https://github.com/qbolsee/SAMD11C_serial/tree/main/SAMD11C_serial). It is basically the same as above but dynamically detect the baud rate.
+
+I could connect Jason's board and mine together through UART protocol (RX and TX opposed on each board) and we could communicate through our own serial monitors in Arduino IDE !
+
+<figure> <center>
+  <img src="./../../img/mod04/UART1.jpg" alt="logo text" width="80%" />
+  <figcaption> Our boards connected</figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/mod04/UART2.jpg" alt="logo text" width="80%" />
+  <figcaption> I received Jason's message ! (mine is not printed but sent to his board)</figcaption>
+</figure>
+
 ## Second board: ARM programmer
+The second board must act as an ARM programmer. Note that we should have done the reverse (this board first) so that we can use our own board to program the AVR programmer.
 
+For the second board, no Gerber files were provided so I had to use mods to create the Gcode from the image (png) file. This is possible because png is lossless and the dpi (dot per inch) is known. Neil's files are at 10000dpi.
 
+I chose the CMSIS-DAP.4.D11C board as it has an LED but is otherwise quite minimalist:
+<figure> <center>
+  <img src="./../../img/mod04/hello.CMSIS-DAP.4.D11C.png" alt="logo text" width="80%" />
+  <figcaption> </figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/mod04/hello.CMSIS-DAP.4.D11C.traces.png" alt="logo text" width="80%" />
+  <figcaption> The traces </figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/mod04/hello.CMSIS-DAP.4.D11C.interior.png" alt="logo text" width="80%" />
+  <figcaption> The outline </figcaption>
+</figure>
+
+I used mods (right-click - open server program - 2D PCB png) to create the GCode.
+
+First, I load my traces png, set the tool diameter, the cut depth and the offset number (the number of semi-overlapping pass to increase the clearance).
+
+<figure> <center>
+  <img src="./../../img/mod04/mods1.png" alt="logo text" width="80%" />
+  <figcaption> Tool parameters </figcaption>
+</figure>
+
+Then I change the milling parameters:
+<figure> <center>
+  <img src="./../../img/mod04/mods2.png" alt="logo text" width="80%" />
+  <figcaption> </figcaption>
+</figure>
+
+When clicking on "calculating" I can save the .nc (gcode) output file.
+
+Note however that Bantam tools does not handle G54 coordinates system ! It must therefore be removed from the output file !
+Else, I could also modify the script in mods and save the whole program to later locally load it if I need it again.
+
+For the outline, the process is the same but the tool parameters are obviously different.
+
+<figure> <center>
+  <img src="./../../img/mod04/mods3.png" alt="logo text" width="80%" />
+  <figcaption> Tool parameters for the 1mm end flat mill</figcaption>
+</figure>
+
+An alternative to mods would be [Flatcam](http://flatcam.org/) but I didn't have the opportunity to test it.
+
+<figure> <center>
+  <img src="./../../img/mod04/board2Mill.jpg" alt="logo text" width="80%" />
+  <figcaption> Job is sent to the CNC </figcaption>
+</figure>
+
+Unfortunately, I had some issues as the bits I used were a bit dull as it can be seen on the traces :
+
+<figure> <center>
+  <img src="./../../img/mod04/dull.jpg" alt="logo text" width="80%" />
+  <figcaption> The one on the right is not perfect and the one done after (on the left) is even worse </figcaption>
+</figure>
+
+That lead to difficult soldering.
+
+Also, I had trouble installing the bootloader ([free_dap_d11c_mini](http://academy.cba.mit.edu/classes/embedded_programming/SWD/free_dap_d11c_mini.bin)). This is probably because I only had an [Atmel ICE](https://www.microchip.com/DevelopmentTools/ProductDetails/ATATMEL-ICE) available and I had trouble finding the right pins and how to make it work. In the end I think it didn't work because I didn't connect the VCC to my board voltage as I thought it was to power it but I supply it with the USB so I though it was not necessary.
 
 ## To go further
 I would like to use the CNC milling to make USB keys and an AVR controller to be able to... do things. I don't know what yet but I'm sure I'll find more ideas. I could use a 3D-printer to make a small case for it, maybe some epoxy resin to protect the circuit...
