@@ -284,7 +284,7 @@ I could connect Jason's board and mine together through UART protocol (RX and TX
 </figure>
 
 <figure> <center>
-  <img src="./../../img/mod04/UART2.jpg" alt="logo text" width="80%" />
+  <img src="./../../img/mod04/UART2.png" alt="logo text" width="80%" />
   <figcaption> I received Jason's message ! (mine is not printed but sent to his board)</figcaption>
 </figure>
 
