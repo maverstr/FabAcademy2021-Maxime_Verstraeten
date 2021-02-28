@@ -30,6 +30,14 @@ Basically, they place masks on the copper plates before etching it with an alkal
 
 I'll reserve this process for large batches or industrial production or if you need very high precision.
 
+At my Uni we do use quite often though but mainly due to legacy reasons. We often have some spots on the tracks where the copper was etched so we really care about making large tracks.
+
+<figure> <center>
+  <img src="./../../img/mod04/etching.jpg" alt="logo text" width="80%" />
+  <figcaption> A board we made by etching </figcaption>
+</figure>
+
+
 ### CNC milling
 This technique consists of using a CNC to mill the copper plate. The biggest advantage is that it produces little waste and is extremely convenient for prototyping. You can have your board ready in a few hours or less directly from the Gerber to the machine without additional steps. Final good point: it can make the holes at the same time, in the same workflow !
 It is however not extremely precise (highly dependent on the machine) though sufficient for most purposes and not very suitable for large quantities. It is also less practical for multi-layer boards.
@@ -54,13 +62,41 @@ For our mills, we use a cut speed of 200mm/minute, a plunge speed of 200mm/min a
 
 The cut depth using the 1/64" flat end mill is 0.08mm with 2 passes for a total of 0.15mm.
 
-Note that since the copper is directly in contact with the humid air, it tends to oxidize over time. A good practice is therefore to either cover the tracks with solder or to cover the board in an epoxy resin or any king of protection.
+Note that since the copper is directly in contact with the humid air, it tends to oxidize over time. A good practice is therefore to either cover the tracks with solder or to cover the board in an epoxy resin or any king of protection like tin.
 
 <video width="640" height="480" autoplay loop>
   <source src="./../../img/mod04/cncVideo.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 
+We used the files available on the fabacademy's website to characterize the thinnest tracks we can make.
+
+<figure> <center>
+  <img src="./../../img/mod04/designRules1.jpg" alt="logo text" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+And then I covered the tracks with tin by putting the board inside a solution of tin and sulfuric acid.
+
+<figure> <center>
+  <img src="./../../img/mod04/tin1.jpg" alt="logo text" width="80%" />
+  <figcaption> Plunging the board in the solution</figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/mod04/tin2.jpg" alt="logo text" width="80%" />
+  <figcaption> Recovering it </figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/mod04/tin3.jpg" alt="logo text" width="80%" />
+  <figcaption> Rinsing it to remove the acid </figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/mod04/designRules2.jpg" alt="logo text" width="80%" />
+  <figcaption>Final results ! The tracks are covered !</figcaption>
+</figure>
 
 ## Printing process
 At my lab we have received a [Voltera](https://www.voltera.io/) a few months ago. This a new process of making boards which involve depositing a conductive ink on a board before heating it. The machine is then able to drill the holes, apply solder paste and you just need to place the components before it heats the board and solders everything for you. The boards cost a lot more (about 5$ each) and it still requires a few hours per board.
