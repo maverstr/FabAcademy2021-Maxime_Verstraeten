@@ -510,4 +510,4 @@ I'm not completely happy with it as it is quite wobbly. This is mostly due to th
 I wanted to test the slots in cardboard to make it flex to create soft corners or curves so I'll try to implement it later.
 
 ## My files
-:material-download-box: [My Design files](./../files/mod03.zip)
+:material-download-box: [My Design files](https://gitlab.fabcloud.org/academany/fabacademy/2021/labs/ulb/students/maxime-verstraeten/-/raw/master/docs/files/mod03.zip)

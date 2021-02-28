@@ -189,4 +189,4 @@ I would also like to experiment the video game designer tools such as Unity or U
 
 
 ## My files
-:material-download-box: [My Design files](./../files/mod02.zip)
+:material-download-box: [My Design files](https://gitlab.fabcloud.org/academany/fabacademy/2021/labs/ulb/students/maxime-verstraeten/-/raw/master/docs/files/mod02.zip)

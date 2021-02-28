@@ -99,6 +99,8 @@ It also natively features version control GUI for Git (see below) which just mak
 ### Git
 Git is a version-control system, meaning that we can track changes in a set of files (who did the change, where and when). Note however that Git is used to track relatively small-size files. For larger files, we can use [Git Large File Storage (LFS)](https://git-lfs.github.com/) which replaces those files with pointers to these files but stored on a remote server.
 
+_Week 04 edit:_ I did later use LFS to store my design files for my assignments. I simply created my .zip files and used the command `git lfs track "*.zip"` then `git add .gitattributes` and that's it ! Super easy.
+
 Moreover, Git allows multiple branches of a project in parallel (non-linear workflow). This eases the development of a project and the cooperation inside a developer team and creates easy backup as it is possible to revert changes to any previously committed state.
 
 I personally used Git **a lot** in [my personal projects](https://github.com/maverstr). It just makes it super easy to work on multiple computers, work with different people and if you make any mistake, you _always_ just revert back to that last working commit.
