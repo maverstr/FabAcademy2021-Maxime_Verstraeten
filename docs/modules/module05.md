@@ -344,6 +344,12 @@ With the lasso tool and the diagnostic tool I could remove the last bits and fil
 
 I could then export it as an STL before printing it !
 
+<figure> <center>
+  <img src="./../../img/mod05/pigPrinted.jpg" alt="Beer" width="100%" />
+  <figcaption></figcaption>
+</figure>
+
+
 
 All in all, Recap has the advantage of running in the cloud but the waiting queue can be a bit bothersome. On the other hand, meshroom is free and runs locally on your computer.
 The end results are pretty much similar but Meshroom has more options to play with (intrinsic camera matrices, changing the nodes in the graph editor to alter the results, ...) so I guess it is more powerful.
@@ -428,6 +434,11 @@ I plan to do the whole department in the coming months !
 
 <figure> <center>
   <img src="./../../img/mod05/maxBishop.jpg" alt="Beer" width="100%" />
+  <figcaption></figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/mod05/maxBishopPrinted.jpg" alt="Beer" width="100%" />
   <figcaption></figcaption>
 </figure>
 
