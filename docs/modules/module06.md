@@ -392,12 +392,12 @@ Just placing the components on the PCB looks like this in ratsnest:
 
 With a bit of time and effort I ended up with this.
 <figure> <center>
-  <img src="./../../img/mod06/neopixelPCB2.jpg" alt="logo text" width="80%" />
+  <img src="./../../img/mod06/neopixelPCB1.jpg" alt="logo text" width="80%" />
   <figcaption>  </figcaption>
 </figure>
 
 <figure> <center>
-  <img src="./../../img/mod06/neopixelPCB1.jpg" alt="logo text" width="80%" />
+  <img src="./../../img/mod06/neopixelPCB2.jpg" alt="logo text" width="80%" />
   <figcaption> With the ground plane </figcaption>
 </figure>
 
