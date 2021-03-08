@@ -5,7 +5,7 @@
 <div class="objectivePanel">
   <ul>
     <li> Group assignment: Test the design rules for your 3D printer(s). </li>
-    <li> design and 3D print an object (small, few cm3, limited by printer time)
+    <li> Design and 3D print an object (small, few cm3, limited by printer time)
          that could not be made subtractively. </li>
     <li>  3D scan an object (and optionally print it).</li>
   </ul>
@@ -204,6 +204,12 @@ I was a bit scared about the printing as I didn't really know if I needed suppor
   <img src="./../../img/mod05/guidolinePrinted.jpg" alt="prusa Height" width="80%" />
   <figcaption> My new holder !</figcaption>
 </figure>
+
+<figure> <center>
+  <img src="./../../img/mod05/guidolineInBike.jpg" alt="prusa Height" width="80%" />
+  <figcaption> That fits nicely !</figcaption>
+</figure>
+
 
 ### PVA: the soluble filament
 PVA is a type of filament that has the property to be soluble in water. That makes it good for two things:
@@ -409,16 +415,16 @@ I first tried to place my father's head on a headstand to deal with the issues a
 
 | Illustrations     | Description     |
 | :------------- | :------------- |
-| ![](./../../img/mod05/mixer1.jpg)| To move the head: edit -> transform, clicking on the center square for scaling|
-| ![](./../../img/mod05/mixer2.jpg)| Select (++s++ key) then brush to select and b to smooth the boundary |
-| ![](./../../img/mod05/mixer3.jpg)| Then x to delete|
-| ![](./../../img/mod05/mixer4.jpg)| Do the same for the headstand|
-| ![](./../../img/mod05/mixer5.jpg)| ++shift++ click to select both then combine
+| ![](./../img/mod05/mixer1.jpg)| To move the head: edit -> transform, clicking on the center square for scaling|
+| ![](./../img/mod05/mixer2.jpg)| Select (++s++ key) then brush to select and b to smooth the boundary |
+| ![](./../img/mod05/mixer3.jpg)| Then x to delete|
+| ![](./../img/mod05/mixer4.jpg)| Do the same for the headstand|
+| ![](./../img/mod05/mixer5.jpg)| ++shift++ click to select both then combine
 |
-| ![](./../../img/mod05/mixer6.jpg)|++s++ then double left click to select the whole boundary Edit -> join
+| ![](./../img/mod05/mixer6.jpg)|++s++ then double left click to select the whole boundary Edit -> join
 |
-| ![](./../../img/mod05/mixer7.jpg)|Then brush to shrink smooth everything|
-| ![](./../../img/mod05/mixer8.jpg)|Export to STL|
+| ![](./../img/mod05/mixer7.jpg)|Then brush to shrink smooth everything|
+| ![](./../img/mod05/mixer8.jpg)|Export to STL|
 
 
 You can then print the resulting STL !

@@ -24,6 +24,7 @@ nav:
         - './modules/module03.md'
         - './modules/module04.md'
         - './modules/module05.md'
+        - './modules/module06.md'
     - About:
         - License: './about/license.md'
         - Release Notes: './about/release-notes.md'

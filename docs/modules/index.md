@@ -47,4 +47,11 @@ Here are displayed my weekly assignments:
     </a>
   </div>
 
+  <div class="moduleContainer">
+    <a href="./module06">
+      <img src="./../img/mod05/pigMeshroom.jpg" alt="Week 02">
+      <div class="modulecontainerText"> Week 5: <br> 3D Scanning and Printing</div>
+    </a>
+  </div>
+
 </div>
