@@ -247,8 +247,8 @@ We also used a MSO5104 oscilloscope to check the output signal of my previously 
   <figcaption> </figcaption>
 </figure>
 
-<figure> <center>
-  <img src="./../../img/mod06/rigol1.jpg" alt="logo text" width="80%" />
+<figure> <center> 
+  <img src="./../../img/mod06/rigol2.jpg" alt="logo text" width="80%" />
   <figcaption> A UART message sent from my week4 PCB</figcaption>
 </figure>
 
