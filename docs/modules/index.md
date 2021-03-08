@@ -49,7 +49,7 @@ Here are displayed my weekly assignments:
 
   <div class="moduleContainer">
     <a href="./module06">
-      <img src="./../img/mod05/pigMeshroom.jpg" alt="Week 02">
+      <img src="./../img/mod06/armBoard2.jpg" alt="Week 02">
       <div class="modulecontainerText"> Week 6: <br> Electronics Design</div>
     </a>
   </div>

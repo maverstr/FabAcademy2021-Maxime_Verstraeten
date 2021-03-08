@@ -205,7 +205,7 @@ Let's analyze it in Logic 2:
 Now the problem is that the message appears in hexadecimal, let's change the encoding!
 <figure> <center>
   <img src="./../../img/mod06/message2.jpg" alt="logo text" width="80%" />
-  <figcaption> hexadecimal message/figcaption>
+  <figcaption> hexadecimal message</figcaption>
 </figure>
 
 <figure> <center>
@@ -247,7 +247,7 @@ We also used a MSO5104 oscilloscope to check the output signal of my previously 
   <figcaption> </figcaption>
 </figure>
 
-<figure> <center> 
+<figure> <center>
   <img src="./../../img/mod06/rigol2.jpg" alt="logo text" width="80%" />
   <figcaption> A UART message sent from my week4 PCB</figcaption>
 </figure>
@@ -277,8 +277,92 @@ Your browser does not support the video tag.
 ## Designing a board
 This week I chose to use Altium as my PCB drawing tool as it is the main one used at my Uni and I have trouble using it (I'm more used to Eagle) so let's try to get something done with it.
 
-### 14 segments display
-I first tried to directly do something big: a 14-segments display using NeoPixels .
+### ARM programmer
+
+During week 4, I tried to use a design proposed on the FabAcademy website to make an SAMD1-based ARM programmer. However, I ran into some issues, mostly due to the very small width of the tracks and the lack of status LED. I therefore decided to make my own board in Altium.
+
+I based my design on other boards but I wanted to add a LED on the 3.3V and on pin 14 to have a status LED. Moreover, I wanted to have wide tracks (at least 20 mil on almost all of them, up to 50 mil) to reduce the risk of error due to CNC engraving and ease the soldering and debugging. I added a button to pull-down the reset pin and restart the µ-C or allow programming. I also wanted to have a ground plane to reduce the tear on our milling bit and reduce the potential interferences. Finally, I added a micro USB B connector.
+
+<figure> <center>
+  <img src="./../../img/mod06/armSchematic.jpg" alt="logo text" width="80%" />
+  <figcaption> </figcaption>
+</figure>
+
+A small tip I learned in Altium is that if you don't care about naming your components like resistors and capacitors, you can ask Altium do it for you (naming then from 1 to ... from the top left corner to the bottom right) using the "_Annotate schematic quietly_" tool.
+
+<figure> <center>
+  <img src="./../../img/mod06/annotate.jpg" alt="logo text" width="80%" />
+  <figcaption> </figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/mod06/armPCB.jpg" alt="logo text" width="80%" />
+  <figcaption> </figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/mod06/arm3D.jpg" alt="logo text" width="80%" />
+  <figcaption> </figcaption>
+</figure>
+
+I then wanted to load by [bootloader](http://academy.cba.mit.edu/classes/embedded_programming/SWD/free_dap_d11c_mini.bin) using edbg. However, I ran into a few issues. First of all, I made a mistake in my Altium design during the routing: I unfortunately deleted the VDD route which is the supply to my µ-C. This was easily fixed by adding a small jumper wire and UI fixed the PCB for later use.
+
+To make sure the milling bits are able to cut between the tracks and the ground plane, the clearance msut be minimum the diameter of the bit. In our case, that is a /64" bit so 16mil is the perfect setting. Note that I had to modify some footprints like the USB connector for it to fit.
+
+<figure> <center>
+  <img src="./../../img/mod06/width.jpg" alt="logo text" width="80%" />
+  <figcaption> Design rule for clearance in Altium</figcaption>
+</figure>
+
+Regarding the ground plane, I ran into a small issue that is that the conductor gap was a bit too small leading to the fact that grounded pins do not present any pin (as they were too thin to be cut with the CNC). A simple design rule can be changed to overcome this !
+
+<figure> <center>
+  <img src="./../../img/mod06/conductorGap.jpg" alt="logo text" width="80%" />
+  <figcaption> </figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/mod06/armBoard.jpg" alt="logo text" width="80%" />
+  <figcaption> The engraved board, grounded pins are missing pads </figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/mod06/armBoard2.jpg" alt="logo text" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+I used the excellent binoculars at my Uni to be able to cleanly solder the µ-C, the microUSB connector and the voltage regulator which are really tiny.
+
+<figure> <center>
+  <img src="./../../img/mod06/binoculars.jpg" alt="logo text" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/mod06/jason.jpg" alt="logo text" width="80%" />
+  <figcaption>Jason looking in the binoculars </figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/mod06/binoculars2.jpg" alt="logo text" width="80%" />
+  <figcaption>It looks even better in real life !</figcaption>
+</figure>
+
+Then, I noticed I still couldn't program my µ-C. Looking at all the traces I finally found that my reset pin was shorted to ground. I had a lot of trouble finding the short location and I ended up cutting traces around until I found the actual short was under the button...
+Bad news, I ended up tearing my SWD programming pins and I still couldn't program.
+Bright side is Jason did engrave another board of my design and soldered it. It worked with no issues as I expected :smile:
+
+
+<video width="854" height="480" autoplay loop>
+  <source src="./../../img/mod06/armBoard.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+
+
+### 7/14 segments display
+#### 1. 14 segments display
+I then tried to do something big: a 14-segments display using NeoPixels.
 Neopixels are addressable RGB LEDS that are controlled using a single control line and the data is sent from the first LED controller to the last followed by a confirmation/update sequence. They in fact are WS2812 LED Driver IC that control 3 LEDs (RGB) and the whole thing is placed inside a 5050 LED package.
 They would therefore be perfectly suited for my needs: I can control my 14 LEDS using only one output pin (given that I have a reliable clock on the µ-C).
 
@@ -293,4 +377,61 @@ I first mentally drew the schematic and what I would need:
 
 For the external supply I quickly calculated that I would need it as the LEDs pull about 60mA (3x20mA, RGB) at 5V which means 0.72A for 14 LEDs which is more than the µ-C can handle and the USB can supply (max 0.5A)
 
-Since NeoPixels require very precise commands and timings, let's use designed libraries to use them: FastLED and AdaFruit Neo Pixel. However, FastLED does not support the SAMD11C so we'll have to try with AdaFruit's first.
+I then did the schematic only to realize there will be a lot of components. In particular, each neoPixel requires a 150Ohms resistor and a decoupling capacitor along with the GND and VDD supply.
+
+<figure> <center>
+  <img src="./../../img/mod06/neopixelSchematic.jpg" alt="logo text" width="80%" />
+  <figcaption> 14 segments schematic </figcaption>
+</figure>
+
+Just placing the components on the PCB looks like this in ratsnest:
+<figure> <center>
+  <img src="./../../img/mod06/neopixelRatsnest.jpg" alt="logo text" width="80%" />
+  <figcaption> That will be hard to route... </figcaption>
+</figure>
+
+With a bit of time and effort I ended up with this.
+<figure> <center>
+  <img src="./../../img/mod06/neopixelPCB2.jpg" alt="logo text" width="80%" />
+  <figcaption>  </figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/mod06/neopixelPCB1.jpg" alt="logo text" width="80%" />
+  <figcaption> With the ground plane </figcaption>
+</figure>
+
+However, I did not take into account the clearance (oops I forgot...) and my board was actually too big for the FR1 copper plate that we use.
+<figure> <center>
+  <img src="./../../img/mod06/bantam.jpg" alt="logo text" width="80%" />
+  <figcaption> Does not fit in the plate and too small clearance </figcaption>
+</figure>
+
+#### 2. 7 segments display
+I therefore had to redo it, so let's be humble and (re)start with a smaller challenge: 7 segments only.
+<figure> <center>
+  <img src="./../../img/mod06/neo2Schematic.jpg" alt="logo text" width="80%" />
+  <figcaption> 7 segments display schematic </figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/mod06/neo2PCB.jpg" alt="logo text" width="80%" />
+  <figcaption>  </figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/mod06/neo2PCB2.jpg" alt="logo text" width="80%" />
+  <figcaption> With ground plane </figcaption>
+</figure>
+
+This time it fits in the FR1 copper plate :smile:
+<figure> <center>
+  <img src="./../../img/mod06/bantam2.jpg" alt="logo text" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+Since NeoPixels require very precise commands and timings, let's use designed libraries to use them: [FastLED](https://github.com/FastLED/FastLED) and [AdaFruit](https://github.com/adafruit/Adafruit_NeoPixel) Neo Pixel. However, FastLED does not support the SAMD11C so we'll have to try with AdaFruit's first.
+
+
+#### The laser cut pattern and vynil cutter
+To make it more like a real 7 segments display, we laser engraved a plexiglass sheet to make it diffuse the light and we plan (not yet done..) to do the same (but inverted) pattern on the vynil cutter on a black material.
