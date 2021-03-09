@@ -430,7 +430,18 @@ This time it fits in the FR1 copper plate :smile:
   <figcaption></figcaption>
 </figure>
 
+However the double-sided tape did not stick well enought and well... a wasted copper plate...
+<figure> <center>
+  <img src="./../../img/mod06/bantamSlip.jpg" alt="logo text" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+
+
+#### Code
 Since NeoPixels require very precise commands and timings, let's use designed libraries to use them: [FastLED](https://github.com/FastLED/FastLED) and [AdaFruit](https://github.com/adafruit/Adafruit_NeoPixel) Neo Pixel. However, FastLED does not support the SAMD11C so we'll have to try with AdaFruit's first.
+
+_Not yet done..._
 
 
 #### The laser cut pattern and vynil cutter
