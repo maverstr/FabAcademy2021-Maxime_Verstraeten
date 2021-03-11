@@ -358,6 +358,32 @@ Bright side is Jason did engrave another board of my design and soldered it. It 
 Your browser does not support the video tag.
 </video>
 
+Once the frustration had passed, I soldered new pins directly on the tracks:
+<figure> <center>
+  <img src="./../../img/mod06/hackedARM.jpg" alt="logo text" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+And I could finally program it. Since I had some doubt about edbg, I tried the Segger "Flasher" programmer that was available at work and used the Segger J-Flash software in the V6.44e version.
+
+
+<figure> <center>
+  <img src="./../../img/mod06/programmed.jpg" alt="logo text" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+
+<figure> <center>
+  <img src="./../../img/mod06/log.jpg" alt="logo text" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+Finally, I could program my SAMD11 !
+<figure> <center>
+  <img src="./../../img/mod06/appearsAsDebugger.jpg" alt="logo text" width="80%" />
+  <figcaption> Yes! It appears as a programmer in edbg !</figcaption>
+</figure>
+
 
 
 ### 7/14 segments display
@@ -430,7 +456,7 @@ This time it fits in the FR1 copper plate :smile:
   <figcaption></figcaption>
 </figure>
 
-However the double-sided tape did not stick well enought and well... a wasted copper plate...
+However the double-sided tape did not stick well enough and well... a wasted copper plate...
 <figure> <center>
   <img src="./../../img/mod06/bantamSlip.jpg" alt="logo text" width="80%" />
   <figcaption></figcaption>
@@ -445,4 +471,11 @@ _Not yet done..._
 
 
 #### The laser cut pattern and vynil cutter
-To make it more like a real 7 segments display, we laser engraved a plexiglass sheet to make it diffuse the light and we plan (not yet done..) to do the same (but inverted) pattern on the vynil cutter on a black material.
+To make it more like a real 7/14 segments display, we laser cut and engraved a plexiglass sheet to make it diffuse the light and we plan (not yet done..) to do the same (but inverted) pattern on the vynil cutter on a black material.
+
+<figure> <center>
+  <img src="./../../img/mod06/segments.jpg" alt="logo text" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+Unfortunately, it does not diffuse the light as well as expected so a better method should be used for better results.
