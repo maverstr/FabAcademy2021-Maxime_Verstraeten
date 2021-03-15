@@ -350,17 +350,17 @@ Then I had to glue them together. I used wood glue and clamps to hold them in pl
 
 <figure> <center>
   <img src="./../../img/mod07/glue3.jpg" alt="logo text" width="80%" />
-  <figcaption> </figcaption>
-</figure>
-
-<figure> <center>
-  <img src="./../../img/mod07/glue4.jpg" alt="logo text" width="80%" />
   <figcaption> Clamps</figcaption>
 </figure>
 
 <figure> <center>
+  <img src="./../../img/mod07/glue4.jpg" alt="logo text" width="80%" />
+  <figcaption> Horizontal holder and clamp to prevent wood buckling </figcaption>
+</figure>
+
+<figure> <center>
   <img src="./../../img/mod07/glue5.jpg" alt="logo text" width="80%" />
-  <figcaption> Horizontal holder and clamp to prevent wood buckling</figcaption>
+  <figcaption> The other 3 boards assembly</figcaption>
 </figure>
 
 <figure> <center>
@@ -533,7 +533,7 @@ I started with the neck hole/pocket since it is the easier. I did just like for 
 
 <figure> <center>
   <img src="./../../img/mod07/neckPocket.jpg" alt="logo text" width="80%" />
-  <figcaption>JNeck finished</figcaption>
+  <figcaption>Neck finished</figcaption>
 </figure>
 
 <figure> <center>
@@ -551,59 +551,59 @@ For the central holes, most of them are not of the same depth, however, to avoid
 <figure> <center>
   <img src="./../../img/mod07/faceA1.jpg" alt="logo text" width="80%" />
   <figcaption></figcaption>
-</figure
+</figure>
 
 <figure> <center>
   <img src="./../../img/mod07/faceA2.jpg" alt="logo text" width="80%" />
   <figcaption></figcaption>
-</figure
+</figure>
 
 An extreme attention must be made to the clearance height to make sure the mill won't jog into the whole wood.
 <figure> <center>
   <img src="./../../img/mod07/centralHoles1.jpg" alt="logo text" width="80%" />
   <figcaption></figcaption>
-</figure
+</figure>
 
 <figure> <center>
   <img src="./../../img/mod07/centralHoles2.jpg" alt="logo text" width="80%" />
   <figcaption></figcaption>
-</figure
+</figure>
 
 
 For the bridge part, it goes through the whole part but we'll make a first half in the face A and the other half on face B. Note that since we have surfaced already, the top height is the stock minus 2mm since I surfaced 2mm.
 <figure> <center>
   <img src="./../../img/mod07/heightHoles.jpg" alt="logo text" width="80%" />
   <figcaption></figcaption>
-</figure
+</figure>
 
 
 <figure> <center>
   <img src="./../../img/mod07/bridge1.jpg" alt="logo text" width="80%" />
   <figcaption></figcaption>
-</figure
+</figure>
 
 
 <figure> <center>
   <img src="./../../img/mod07/bridge2.jpg" alt="logo text" width="80%" />
   <figcaption></figcaption>
-</figure
+</figure>
 
 I then did the Jack input hole:
 <figure> <center>
   <img src="./../../img/mod07/Jack1.jpg" alt="logo text" width="80%" />
   <figcaption></figcaption>
-</figure
+</figure>
 
 <figure> <center>
   <img src="./../../img/mod07/Jack2.jpg" alt="logo text" width="80%" />
   <figcaption></figcaption>
-</figure
+</figure>
 
 And finished by making the different depth holes:
 <figure> <center>
   <img src="./../../img/mod07/depthSub.jpg" alt="logo text" width="80%" />
   <figcaption></figcaption>
-</figure
+</figure>
 
 
 
@@ -614,29 +614,29 @@ Since the height is not constant, I used a 3D pocket clearing to get a rough sur
 <figure> <center>
   <img src="./../../img/mod07/3DPocket1.jpg" alt="logo text" width="80%" />
   <figcaption></figcaption>
-</figure
+</figure>
 
 <figure> <center>
   <img src="./../../img/mod07/3DPocket2.jpg" alt="logo text" width="80%" />
   <figcaption></figcaption>
-</figure
+</figure>
 
 <figure> <center>
   <img src="./../../img/mod07/slope1.jpg" alt="logo text" width="80%" />
   <figcaption></figcaption>
-</figure
+</figure>
 
 
 <figure> <center>
   <img src="./../../img/mod07/slope2.jpg" alt="logo text" width="80%" />
   <figcaption></figcaption>
-</figure
+</figure>
 
 
 <figure> <center>
   <img src="./../../img/mod07/slope3.jpg" alt="logo text" width="80%" />
   <figcaption>After hand-sanding</figcaption>
-</figure
+</figure>
 
 The cusps are very visible but this is normal, this step is to reduce the maximum depth to mill in the next step.
 
@@ -645,18 +645,18 @@ I can now use the parallel process to really follow the slope (there is no stepd
 <figure> <center>
   <img src="./../../img/mod07/slope4.jpg" alt="logo text" width="80%" />
   <figcaption>Parallel process</figcaption>
-</figure
+</figure>
 
 <figure> <center>
   <img src="./../../img/mod07/slope5.jpg" alt="logo text" width="80%" />
   <figcaption>Parallel process</figcaption>
-</figure
+</figure>
 
 
 <figure> <center>
   <img src="./../../img/mod07/slope6.jpg" alt="logo text" width="80%" />
   <figcaption></figcaption>
-</figure
+</figure>
 
 ### Top face: outline
 I used the 2D contour process to do the outline. I have 44mm to cut so I'll do 20 on this face. However, since wood waste will be stuck in the slot, I'll only make 10mm in one job then clean thoroughly before doing a second job 10mm below.
@@ -664,32 +664,32 @@ I used the 2D contour process to do the outline. I have 44mm to cut so I'll do 2
 <figure> <center>
   <img src="./../../img/mod07/outline1.jpg" alt="logo text" width="80%" />
   <figcaption>First job</figcaption>
-</figure
+</figure>
 
 <figure> <center>
   <img src="./../../img/mod07/outline2.jpg" alt="logo text" width="80%" />
   <figcaption>Second job</figcaption>
-</figure
+</figure>
 
 <figure> <center>
   <img src="./../../img/mod07/outline3.jpg" alt="logo text" width="80%" />
   <figcaption></figcaption>
-</figure
+</figure>
 
 <figure> <center>
   <img src="./../../img/mod07/outline4.jpg" alt="logo text" width="80%" />
   <figcaption>The wood is very cheap so the mill broke some when the direction was perpendicular to the fiber direction</figcaption>
-</figure
+</figure>
 
 <figure> <center>
   <img src="./../../img/mod07/outline5.jpg" alt="logo text" width="80%" />
   <figcaption>On other direction the finish is nice</figcaption>
-</figure
+</figure>
 
 <figure> <center>
   <img src="./../../img/mod07/outline6.jpg" alt="logo text" width="80%" />
   <figcaption></figcaption>
-</figure
+</figure>
 
 ### Top face: Rounded edges
 For rounded edges on the Jack input and on the outline, I used the parallel process but using the additional _check surfaces_ option and make sure the _touch_ settings was on. That allowed me to force the tool to follow the curve all along.
@@ -697,36 +697,36 @@ For rounded edges on the Jack input and on the outline, I used the parallel proc
 <figure> <center>
   <img src="./../../img/mod07/check1.jpg" alt="logo text" width="80%" />
   <figcaption>Selecting the contour</figcaption>
-</figure
+</figure>
 
 
 <figure> <center>
   <img src="./../../img/mod07/check2.jpg" alt="logo text" width="80%" />
   <figcaption>And the check surfaces (touch enabled)</figcaption>
-</figure
+</figure>
 
 The height is set as : from the surface to the surface -5mm.
 <figure> <center>
   <img src="./../../img/mod07/check3.jpg" alt="logo text" width="80%" />
   <figcaption></figcaption>
-</figure
+</figure>
 
 
 <figure> <center>
   <img src="./../../img/mod07/check5.jpg" alt="logo text" width="80%" />
   <figcaption></figcaption>
-</figure
+</figure>
 
 <figure> <center>
   <img src="./../../img/mod07/check6.jpg" alt="logo text" width="80%" />
   <figcaption> Rounded Jack input</figcaption>
-</figure
+</figure>
 
 I did the same for the outline:
 <figure> <center>
   <img src="./../../img/mod07/check7.jpg" alt="logo text" width="80%" />
   <figcaption> Rounded outline</figcaption>
-</figure
+</figure>
 
 ###Changing side: Drilling holes
 
