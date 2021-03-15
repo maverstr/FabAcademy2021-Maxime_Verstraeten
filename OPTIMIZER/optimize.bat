@@ -1,7 +1,7 @@
 @echo off
 
 set size=800x
-set quality=85
+set quality=65
 
 magick mogrify -format jpg *.png
 magick mogrify -format jpg *.jpeg
