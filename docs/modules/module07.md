@@ -739,7 +739,7 @@ I thought for a long time until I came up with this idea:
 
 First, I make a new sketch composed of 4 6mm holes which are placed at the 4 corners of my guitar but at the same distance from the rotation axis.
 <figure> <center>
-  <img src="./../../img/mod07/flip1.jpg" alt="logo text" width="80%" />
+  <img src="./../../img/mod07/flip1.png" alt="logo text" width="80%" />
   <figcaption> New sketch with 4 holes</figcaption>
 </figure>
 
@@ -780,7 +780,7 @@ I can now flip the stock and it will perfectly fit the holes on the spoilerboard
 By taking a look at the Gcode, I can know the position of those 4 holes relative to the zero position of the machine. I can therefore also know the position of the flip axis relative to the machine (G54 coordinates).
 
 <figure> <center>
-  <img src="./../../img/mod07/flip8.jpg" alt="logo text" width="80%" />
+  <img src="./../../img/mod07/flip8.png" alt="logo text" width="80%" />
   <figcaption>Holes y coordinates: 346.134 and 71.134 </figcaption>
 </figure>
 
@@ -788,7 +788,7 @@ The mean coordinate, i.e. the y coordinate of the flip axis is therefore (346.13
 I add a new point in my sketch in a plane that is at 48mm from the top of the guitar (i.e. the distance of the bottom part of the stock) that I will use to set the coordinate of the machine in a new job that will be the bottom face job.
 
 <figure> <center>
-  <img src="./../../img/mod07/flip9.jpg" alt="logo text" width="80%" />
+  <img src="./../../img/mod07/flip9.png" alt="logo text" width="80%" />
   <figcaption> </figcaption>
 </figure>
 
@@ -844,6 +844,13 @@ I was afraid I could not finish in time but the end result is there !
 
 ### Bonus
 I wanted to make a pick protector as well using the laser cutter. But I was so tired of all the machining I actually made it the wrong scale :smile:. I'll finish it later.
+
+<figure> <center>
+  <img src="./../../img/mod07/pick.png" alt="logo text" width="80%" />
+  <figcaption> </figcaption>
+</figure>
+
+
 <figure> <center>
   <img src="./../../img/mod07/endResult4.jpg" alt="logo text" width="80%" />
   <figcaption> </figcaption>
