@@ -12,14 +12,14 @@
 </div>
 <div class="dottedLine"></div>
 
-# Introduction
+## Introduction
 This week is about making something "big". It started with a lack of interesting idea and I didn't want to make "just" another table or chair...
 Got it ! **Let's make an electric guitar** !
 
-# Introduction to the CNC
+## Introduction to the CNC
 Before I dive into the extremely complicated design of my guitar, I spent an afternoon with Christophe so that I could get an understanding of how the CNC works and what I can/cannot do with it.
 
-## The CNC itself
+### The CNC itself
 The CNC is a computer-controlled machine that generally means is motorized and can move in multiple directions, according to the files that are fed into the program.
 In this particular case, when I refer to the CNC, I will refer to the CNC machine that we have at our Fablab: a [HIGH-Z S-1000](https://www.cnc-step.com/cnc-router-1000x600-s-1000t-ballscrew/) that is controlled with the [Kinetic-NC](https://www.cnc-step.com/cnc-software/kinetic-nc-cnc-control-software/) software.
 
@@ -31,7 +31,7 @@ In this particular case, when I refer to the CNC, I will refer to the CNC machin
 
 Using the correct milling bits, it is able to cut through wood, aluminum and some other materials in 2.5D (i.e. 2D with different heights and depths).
 
-## Equipment
+### Equipment
 We lack a bit of mills at the Fablab so we were limited to using only 6mm and 3mm flat mills (201043 from Hoffman Group).
 Mills are usually defined by a few parameters:
 - The material they are made of
@@ -63,17 +63,17 @@ The surfacing speed and the diameter will have an impact of the rotation speed (
 
 The Kinetic-NC software is pretty easy to use and has two mains menus: jog and program. The first one allows to move the CNC around manually and zero the machine. The latter is used to load a CAM process and run. We can also slightly adjust the parameters once the program is running (0-150% spindle speed and feed per tooth).
 
-## Safety
+### Safety
 A CNC machine can be a dangerous tool. The one at our lab cannot run whenever its doors are open and is automatically stopped whenever a door is opened. Moreover, one must always stay close to it when running in case something goes wrong. Cutting causes a lot of friction and heat and one must be extremely vigilant about it.
 
 Also, it is always better to double-check your CAM process in the CAM software and in Kinetic-NC. An "air pass" is usually recommended at least for the first job on the part to make sure the stock is correctly placed and the zero is correctly set.
 
 A CNC working can be quite loud so ear protections are recommend, especially if you spend your whole weekend in the lab :smile:. Eye protection can be useful especially if the CNC is open, in which case a dust mask can also be proven useful.
 
-## Dust collection
+### Dust collection
 Because CNCing something will create a lot of waste material, it is important to remove them in-between two jobs. I used a cyclone vacuum to remove most of the waste material but it ended up a bit blocked at the end... I then used a classical vacuum cleaner.
 
-## Making a CAM design
+### Making a CAM design
 To test the CNC possibilities, I designed a small piece in SolidWorks that features sharp and round edges, engraving and enclosed and open holes (through all and blind).
 
 <figure> <center>
@@ -91,7 +91,7 @@ Once installed (and the computer rebooted), a CAM menu appeared on the top ribbo
   <figcaption></figcaption>
 </figure>
 
-### Setting up the job
+#### Setting up the job
 The first step is to create a new job.
 
 <figure> <center>
@@ -101,10 +101,9 @@ The first step is to create a new job.
 Inside the job settings, I need to set the coordinates system (selecting edges that will be my X and Y axis and a zero-position for the machine). On our CNC, the X axis is the longer one so I place the X axis along the longest edge.
 
 <figure> <center>
-  <img src="./../../img/mod07/WCS.jpg" alt="logo text" width="80%" />
+  <img src="./../../img/mod07/WCS.jpg" alt="logo text" />
   <figcaption></figcaption>
 </figure>
-
 
 Then, I set the dimension of my stock, in this virtual test, I set my stock to be a fixed size box of 300x300x22mm.
 
@@ -127,7 +126,7 @@ I could then set my zero-position of the machine to be the either a selected poi
 
 One need to be very careful about the orientation of the axis, in particular the Z one.
 
-### Surfacing the part
+#### Surfacing the part
 The first step is to surface the part. This will create an even surface for the part relative to the machine axis and will ensure that the finish surface is smooth and "new". To avoid surfacing the whole surface of the CNC or the whole stock, I can create a new sketch that will be my surfacing boundaries (Later I found that I could actually surface the model contour, see below).
 
 <figure> <center>
@@ -164,7 +163,7 @@ Here is the result of the surfacing job.
   <figcaption> </figcaption>
 </figure>
 
-### 2D Pocket
+#### 2D Pocket
 A 2D pocket is a job that allows to cut inside the part to make a hole (a pocket). One must select the contour and either the bottom height or the contour surface to set the depth. It is extremely important to set the "multiple depths" settings to on to preserve the mill.
 
 <figure> <center>
@@ -185,12 +184,12 @@ A 2D pocket is a job that allows to cut inside the part to make a hole (a pocket
 One can set a "stock to leave" if using a big mill to then finish the job with a softer touch and a smaller mill (using the 2D contour job). If only one pass (which I did for my guitar as I had not much time, then set it to off !).
 
 
-### 2D Adaptive and other
+#### 2D Adaptive and other
 Adaptive clearing means that the program will try to compute the path to reduce the load on the mill. However, this usually result in a longer toolpath but the material undergoes less force and pressure so the finish is usually better. There is no multiple depth settings there.
 
 A lot of the options are also available. In particular, the 2D engraving too but also the 3D jobs that allow to make slopes with the parallel, 3D pocket, 3D adaptive, scallop jobs, ... I used some of them to make my guitar.
 
-### Simulating
+#### Simulating
 The final step before exporting the CAM is to simulate it. This allows to see the time it will take and help detect any issues. I highly recommend to do it.
 
 ## Making my guitar !
@@ -570,6 +569,11 @@ An extreme attention must be made to the clearance height to make sure the mill 
 </figure>
 
 
+<video width="854" height="480" autoplay loop>
+  <source src="./../../img/mod07/centerHoles.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
 For the bridge part, it goes through the whole part but we'll make a first half in the face A and the other half on face B. Note that since we have surfaced already, the top height is the stock minus 2mm since I surfaced 2mm.
 <figure> <center>
   <img src="./../../img/mod07/heightHoles.jpg" alt="logo text" width="80%" />
@@ -729,6 +733,135 @@ I did the same for the outline:
 </figure>
 
 ###Changing side: Drilling holes
+**That was the moment I was the most afraid of !**. I need to flip my stock around, without losing references and coordinates to be able to mill the other side and complete my guitar.
+
+I thought for a long time until I came up with this idea:
+
+First, I make a new sketch composed of 4 6mm holes which are placed at the 4 corners of my guitar but at the same distance from the rotation axis.
+<figure> <center>
+  <img src="./../../img/mod07/flip1.jpg" alt="logo text" width="80%" />
+  <figcaption> New sketch with 4 holes</figcaption>
+</figure>
+
+Then, I use the "Drill" operation in the CAM to drill these 4 holes on my stock. I make sure to go at least 30mm inside the stock.
+<figure> <center>
+  <img src="./../../img/mod07/flip2.jpg" alt="logo text" width="80%" />
+  <figcaption> Drilling the holes as far as possible (35mm) </figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/mod07/flip3.jpg" alt="logo text" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+I remove the stock from the CNC and I drill the same 4 holes but at Z = 0 up to Z = -10mm (a bit less than the spoilerboard height).
+<figure> <center>
+  <img src="./../../img/mod07/flip6.jpg" alt="logo text" width="80%" />
+  <figcaption></figcaption>
+</figure>
+I insert 4 metal bits, recycled from an IKEA furniture in the holes in the stock.
+<figure> <center>
+  <img src="./../../img/mod07/flip4.jpg" alt="logo text" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/mod07/flip5.jpg" alt="logo text" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+I can now flip the stock and it will perfectly fit the holes on the spoilerboard.
+
+<figure> <center>
+  <img src="./../../img/mod07/flip7.jpg" alt="logo text" width="80%" />
+  <figcaption>flipped stock, perfectly in place</figcaption>
+</figure>
+
+By taking a look at the Gcode, I can know the position of those 4 holes relative to the zero position of the machine. I can therefore also know the position of the flip axis relative to the machine (G54 coordinates).
+
+<figure> <center>
+  <img src="./../../img/mod07/flip8.jpg" alt="logo text" width="80%" />
+  <figcaption>Holes y coordinates: 346.134 and 71.134 </figcaption>
+</figure>
+
+The mean coordinate, i.e. the y coordinate of the flip axis is therefore (346.134 + 71.134)/2 = 208.634, still relative to the zero position of the machine. I therefore know that, after flipping, my machine is now zeroed at -208.634, and still at the same X (41.624).
+I add a new point in my sketch in a plane that is at 48mm from the top of the guitar (i.e. the distance of the bottom part of the stock) that I will use to set the coordinate of the machine in a new job that will be the bottom face job.
+
+<figure> <center>
+  <img src="./../../img/mod07/flip9.jpg" alt="logo text" width="80%" />
+  <figcaption> </figcaption>
+</figure>
+
+### Bottom face
+So for the bottom face, it's all the same, but easier since there is less to do.
+
+<figure> <center>
+  <img src="./../../img/mod07/surfacingBottom.jpg" alt="logo text" width="80%" />
+  <figcaption> Surfacing the bottom </figcaption>
+</figure>
+
+What was very important was to first do all the holes and so on, before the outline. The guitar was basically "floating" in the air so if I cut the outline it wouldn't be held by the stock anymore.
+Moreover, when doing the outline, I needed to remove the last 19mm. I first did a pass of 10mm. Then a second of 7mm so as to leave a final 2mm holding the guitar body to the stock.
+
+<figure> <center>
+  <img src="./../../img/mod07/finished.jpg" alt="logo text" width="80%" />
+  <figcaption> The last 2mm are holding everything in place</figcaption>
+</figure>
+
+Finally, I hit the last part of the outline with a small chisel at an edge and everything just "snapped" and the guitar was free !
+
+
+<video width="854" height="480" autoplay loop>
+  <source src="./../../img/mod07/end.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+### The end result
+
+<figure> <center>
+  <img src="./../../img/mod07/endResult1.jpg" alt="logo text" width="80%" />
+  <figcaption> </figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/mod07/endResult2.jpg" alt="logo text" width="80%" />
+  <figcaption> </figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/mod07/endResult3.jpg" alt="logo text" width="80%" />
+  <figcaption> </figcaption>
+</figure>
+
+
+
+The finish is not perfect and I will probably hand-sand it a bit in the future before applying a vernish but it is still very impressive.
+
+### Some stats
+The machine jobs lasted for about 14 hours. Moreover, doing the vacuum cleaning, placing things on the board, flipping the board, preparing the CAM and so on, it took me an additional 2 hours.
+Add to this the work done to prepare the stock: about 2 hours and the CAD design: 4 hours.
+I was afraid I could not finish in time but the end result is there !
+
+### Bonus
+I wanted to make a pick protector as well using the laser cutter. But I was so tired of all the machining I actually made it the wrong scale :smile:. I'll finish it later.
+<figure> <center>
+  <img src="./../../img/mod07/endResult4.jpg" alt="logo text" width="80%" />
+  <figcaption> </figcaption>
+</figure>
+
+I also would like to engrave a part of the guitar using the laser cutter.
+
+## Errors that I did
+1. There is one main error that I did. I found looking around a mill that looked exactly like an 8mm mill. I set it up in the machine, hoping to speed up the surfacing process. Quite fast, it starts smoking a lot in the room. I thought I misentered some parameters and the mill was rotating too fast or slow... Tweaking the parameters yield nothing but more smoke. I removed it and I noticed a little pointy edge at its end. Looking online I found that bits like these one are actually made to unsolder metal sheets, despite looking almost exactly 8mm mill. So it was normal that it smokes as it wasn't made for it to be used in a CNC ! I'll check better next time !
+Luckily, my stock was not hurt too much neither was the machine.
+<figure> <center>
+  <img src="./../../img/mod07/8mmBit.jpg" alt="logo text" width="80%" />
+  <figcaption> Looks like an 8mm mill... But it's not !</figcaption>
+</figure>
+
+
+2. A little mistake is that instead of surfacing the whole top part (though constrained to a square) I could just, like I did for the bottom part, surface the contour of the guitar with a small offset. I could have gained 30min to 1h just doing that!
 
 ## My design files
+All the CAD design, CAM processes and Gcode are available here:
 :material-download-box: [My Design files](https://gitlab.fabcloud.org/academany/fabacademy/2021/labs/ulb/students/maxime-verstraeten/-/raw/master/docs/files/mod07.zip)
