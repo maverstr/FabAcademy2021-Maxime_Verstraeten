@@ -16,7 +16,9 @@ This week I tried to establish a sketch of my project. It's quite hard as I don'
 
 
 ## Intro
-Because I'm doing my PhD full-time concurrently with the FabAcademy, I'll try to stay in the scope of my PhD subject.
+Because I'm doing my PhD full-time concurrently with the FabAcademy, I'll try to stay in the scope of my PhD subject (see my [introduction](./../index.md#my-job) for more details but here is a little introduction).
+
+My objective, in a 6-years timeframe, is to develop an implant that is able to monitor the bladder activity (pressure, contractions, volume and so on) to help people with decrease sensibility to manage their urinary problems, in particular people who suffered a spinal cord injury. Bladder issues are actually ranked first in multiple surveys by SCI despite being often reduced to only incontinence. Indeed, most people don't realize the tremendous consequences of a neurogenic bladder, including a very high mortality rate due to hydronephrosis or lower urinary tract infections. Being able to monitor the bladder activity would also allow to stimulate the afferent bladder nerves in a closed-feedback loop to prevent or reduce involuntary contractions.
 
 Currently, I have a barely working silicone bladder phantom that I would like to improve and test several sensors that could be implanted inside.
 
@@ -47,7 +49,7 @@ Being able to monitor and predict bladder contractions as well as rising intrave
 ##Project requirements
 
 ### Bladder phantom
-The fist step in the development of a medical device is tot test it on a phantom. The state-of-the-art bladder phantom, still today, it a rubber balloon. Needless to say that is not a very good model of the bladder itself.
+The first step in the development of a medical device is tot test it on a phantom. The state-of-the-art bladder phantom, still today, it a rubber balloon. Needless to say that is not a very good model of the bladder itself.
 The first step is therefore to mold a new phantom in silicone. I plan to use 3D-printing to make molds for it. Also, it would be nice if I could segment 3D scan of patient's bladder to enhance my model.
 
 <figure> <center>
@@ -69,9 +71,17 @@ The main parameters that I aim to simulate:
 </figure>
 
 
-- Pressure: The intravesical pressure is the main symptom we are looking to treat. In particular, contractions lead to sudden increase in pressure that can be detected. Being able top simulate these contractions (a net of contractile wires ?) would be extremely interesting. It could also be simulated by placing the phantom in a hermetic box where the pressure can be externally-controlled.
+- Pressure: The intravesical pressure is the main symptom we are looking to treat. In particular, contractions lead to sudden increase in pressure that can be detected. Being able to simulate these contractions (a net of contractile wires ?) would be extremely interesting. It could also be simulated by placing the phantom in a hermetic box where the pressure can be externally-controlled.
 
-PIC OF A PRESSURE GRAPH + hermetic box ?
+<figure> <center>
+  <img src="./../../img/mod00/pressureGraph.png" alt="phantomDrawing" width="80%" />
+  <figcaption> Pressure rise in bladder and contraction spikes </figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/mod00/pressureBox.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption> A basic hermetic box for pressure measurement</figcaption>
+</figure>
 
 - Deformation: Over time, the bladder deforms as it is made of various visco-elastic fibers. By choosing the right material (silicone : which one ? or other materials) we could reach the same mechanical properties and be able to simulate the bladder deformation.
 

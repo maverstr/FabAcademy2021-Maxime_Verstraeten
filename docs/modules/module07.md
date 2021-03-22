@@ -1,4 +1,4 @@
-# 6. Computer-Controlled Machining
+# 7. Computer-Controlled Machining
 
 ## Objectives
 
