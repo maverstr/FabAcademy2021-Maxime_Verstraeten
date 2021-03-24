@@ -651,8 +651,14 @@ Because I'm limited to a single layer, I had trouble connecting all the pins. I'
 Here it becomes... Complicated. We had no more FR1 copper plates at the Fablab when I wanted to make my board...
 So I tried to make one by chemical etching:
 
+
 <figure> <center>
-  <img src="./../../img/mod08/etching0.jpg" alt="logo text" width="80%" />
+  <img src="./../../img/mod08/transparentfilm.jpg" alt="logo text" width="80%" />
+  <figcaption>The transparent film on which I printed my mask</figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/mod08/mask.jpg" alt="logo text" width="80%" />
   <figcaption>Printing the mask</figcaption>
 </figure>
 
@@ -670,7 +676,7 @@ That made the board way more porous than it should be as the ink layer was a bit
   <figcaption>Inserting the board in the chemical solution</figcaption>
 </figure>
 
-So, just like [I did in week 4](./../module04/#cnc-design-rules), I tried to cover the board with tin to cover the holes.
+So, just like [I did in week 4](./../module04/#cnc-design-rules), I tried to cover the board with tin to cover the holes but it didn't cover anything... So I tried to apply a lot of flux and solder to cover the tracks:
 
 <figure> <center>
   <img src="./../../img/mod08/etching3.jpg" alt="logo text" width="80%" />
