@@ -672,6 +672,11 @@ I didn't notice at first but the printer I used to make the mask was actually lo
 That made the board way more porous than it should be as the ink layer was a bit too thin.
 
 <figure> <center>
+  <img src="./../../img/mod08/maskHoles.jpg" alt="logo text" width="80%" />
+  <figcaption>Porous ink layer</figcaption>
+</figure>
+
+<figure> <center>
   <img src="./../../img/mod08/etching2.jpg" alt="logo text" width="80%" />
   <figcaption>Inserting the board in the chemical solution</figcaption>
 </figure>
