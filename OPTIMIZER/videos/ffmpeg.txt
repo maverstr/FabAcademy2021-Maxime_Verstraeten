@@ -1,0 +1,1 @@
+ffmpeg -i x -vcodec libx264 -crf 30 -vf scale=1024:576 -an out.mp4

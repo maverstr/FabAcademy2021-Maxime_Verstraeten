@@ -1,0 +1,10 @@
+pin x10 : 2
+pin x4 : 2
+pin x2 (opposite) : 1
+led : 3
+switch : 2
+R: 10k : 1
+R : 0R : 1
+R : 100R : 4
+Capa 1µF = 2
+micro usb b: 1

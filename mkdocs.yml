@@ -27,6 +27,7 @@ nav:
         - './modules/module06.md'
         - './modules/module07.md'
         - './modules/module08.md'
+        - './modules/module09.md'
     - About:
         - License: './about/license.md'
         - Release Notes: './about/release-notes.md'
