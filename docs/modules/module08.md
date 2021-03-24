@@ -585,11 +585,11 @@ The ESP is a 32-bit microcontroller developped by Espressif that has some nice f
 A more detailed analysis reveals that it features two CPU cores that can be individually controlled and a clock from 80 to 240MHz. There is also a low-power microprocessor that can be used to save power.
 Regarding its connectivity : multiple GPIOs (general purpose input and output), capacitive touch sensors, hall sensors, an SD CARD and ethernet interface and support for SPI, UART, I²S and I²C.
 <figure> <center>
-  <img src="./../../img/mod08/ESP1.jpg" alt="logo text" width="80%" />
+  <img src="./../../img/mod08/esp1.jpg" alt="logo text" width="80%" />
   <figcaption></figcaption>
 </figure>
 <figure> <center>
-  <img src="./../../img/mod08/ESP2.jpg" alt="logo text" width="80%" />
+  <img src="./../../img/mod08/esp2.jpg" alt="logo text" width="80%" />
   <figcaption></figcaption>
 </figure>
 
@@ -602,23 +602,29 @@ Additional information:
 #### GPIOs
 As stated before, the ESP features multiple GPIOs whose pin layout is found in the datasheet:
 <figure> <center>
-  <img src="./../../img/mod08/ESP3.jpg" alt="logo text" width="80%" />
+  <img src="./../../img/mod08/esp3.jpg" alt="logo text" width="80%" />
   <figcaption></figcaption>
 </figure>
 
 Each pin (38 in total) can be used as a "simple" input/output pin but some of them have extra functions:
 <figure> <center>
-  <img src="./../../img/mod08/ESP4.jpg" alt="logo text" width="80%" />
+  <img src="./../../img/mod08/esp4.jpg" alt="logo text" width="80%" />
   <figcaption></figcaption>
 </figure>
 
 <figure> <center>
-  <img src="./../../img/mod08/ESP5.jpg" alt="logo text" width="80%" />
+  <img src="./../../img/mod08/esp5.jpg" alt="logo text" width="80%" />
   <figcaption></figcaption>
 </figure>
 
 #### Strapping Pins
 Strapping pins are pins that are used to set the ESP into bootloader or flashing mode, set the operating voltage of some other pins, ... These pins should be left floating during startup as they are (weakly) pulled down or up internally except if you want to specifically change some parameters
+
+<figure> <center>
+  <img src="./../../img/mod08/esp6.jpg" alt="logo text" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
 
 ### Making a PCB
 #### 1. Schematic
