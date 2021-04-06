@@ -1,0 +1,9 @@
+﻿"spiralD"= 75
+"spiralHeight"= 5
+"spiralHoleWidth"=6.2
+"spiralED"= 58
+"spiralHoleHeight"=3
+"axisLength"=10
+"axisHeight"=2
+"bitDepth"=1
+"bitD"=1
