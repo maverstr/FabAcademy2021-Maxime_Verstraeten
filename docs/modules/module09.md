@@ -17,6 +17,16 @@
 Your browser does not support the video tag.
 </video>
 
+<video width="854" height="480" autoplay loop>
+  <source src="./../../img/mod09/urumbu.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+<video width="854" height="480" autoplay loop>
+  <source src="./../../img/mod09/automaticStore.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
 
 ## Introduction
 Most of the work will be depicted as well in our [group assignment page](http://fabacademy.org/2021/labs/ulb/) and on [Jason's website](http://fabacademy.org/2021/labs/ulb/students/jason-pettiaux/).
