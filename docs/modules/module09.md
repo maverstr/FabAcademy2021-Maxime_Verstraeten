@@ -12,17 +12,23 @@
 </div>
 <div class="dottedLine"></div>
 
+
+*Urumbu X-Y flexure machine*
 <video width="854" height="480" autoplay loop>
   <source src="./../../img/mod09/square.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 
-<video width="854" height="480" autoplay loop>
+<br>
+
+<video width="600" height="auto" autoplay loop>
   <source src="./../../img/mod09/urumbu.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 
-<video width="854" height="480" autoplay loop>
+<br>
+*Automatic Sun-avoidance blinders*
+<video width="600" height="auto" autoplay loop>
   <source src="./../../img/mod09/automaticStore.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
