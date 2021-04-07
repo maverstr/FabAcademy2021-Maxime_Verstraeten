@@ -5,7 +5,7 @@ int photoBottom = A7;
 
 float lightTop = 0.0;
 float lightBottom = 0.0;
-float threshold = 25;
+float threshold = 5;
 void setup() {
   analogReadResolution(10);
   Serial.begin(9600);
@@ -18,14 +18,12 @@ void setup() {
 }
 
 void loop() {
-//  digitalWrite(directionPin, LOW);
-//  digitalWrite(controlPin, LOW);
+//  moveDirection(HIGH);
 //  delay(1000);
 //  digitalWrite(controlPin, HIGH);
 //  delay(1000);
 //
-//  digitalWrite(directionPin, HIGH);
-//  digitalWrite(controlPin, LOW);
+//  moveDirection(LOW);
 //  delay(1000);
 //  digitalWrite(controlPin, HIGH);
 //  delay(1000);
@@ -37,10 +35,12 @@ void loop() {
   Serial.println(lightBottom);
 
   if(lightTop > threshold && lightBottom > threshold){ //if both phototransistors are under light
+    Serial.print("moving up");
     moveDirection(HIGH); //move from bottom to top
   }
 
-  if(lightTop < threshold && lightBottom < threshold){ //if both phototransistors are in the shadow
+  else if(lightTop < threshold && lightBottom < threshold){ //if both phototransistors are in the shadow
+    Serial.print("moving low");
     moveDirection(LOW); //move from bottom to top
   }
   else{

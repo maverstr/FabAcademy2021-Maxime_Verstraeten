@@ -12,6 +12,12 @@
 </div>
 <div class="dottedLine"></div>
 
+<video width="854" height="480" autoplay loop>
+  <source src="./../../img/mod09/square.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+
 ## Introduction
 Most of the work will be depicted as well in our [group assignment page](http://fabacademy.org/2021/labs/ulb/) and on [Jason's website](http://fabacademy.org/2021/labs/ulb/students/jason-pettiaux/).
 
@@ -394,21 +400,34 @@ Your browser does not support the video tag.
 In the end, using a Python code that sends the data over Serial, it was really easy to make a square shape.
 
 ````
-import time
 import serial
+import time
 
-ser = Serial.Serial(COM16, baudrate=115200)
-ser.open()
-for i in range(10):
-    ser.write(b'0:0:80)
-    time.sleep(0.85)
-    ser.write(b'1:0:80)
-    time.sleep(0.85)
-    ser.write(b'0:0:0)
-    time.sleep(0.85)
-    ser.write(b'1:0:0)
-    time.sleep(0.85)
+ser = serial.Serial("COM13", baudrate=115200)
+
+delay = 0.85
+
+for i in range(2):
+    ser.write(b"0:0=80\n")
+    time.sleep(delay)
+    ser.write(b"1:0=80\n")
+    time.sleep(delay)
+    ser.write(b"0:0=-80\n")
+    time.sleep(delay)
+    ser.write(b"1:0=-80\n")
+    time.sleep(delay)
+
+
+ser.write(b"0:0=80\n")
+ser.write(b"1:0=80\n")
+time.sleep(delay)
+ser.write(b"0:0=-80\n")
+time.sleep(delay)
+ser.write(b"1:0=80\n")
+
+
 ser.close()
+
 ````
 
 <video width="854" height="480" autoplay loop>
