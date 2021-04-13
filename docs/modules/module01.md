@@ -261,8 +261,12 @@ _The main advantage of command line being that it can be used on a web server to
 
 #### Tools for video compression
 [ffmpeg](https://ffmpeg.org/) is a video converter that through command line. It is extremely powerful and can highly compress videos.
-[Handbrake](https://handbrake.fr/) is a free, open-source, cross-platform tool that comes with a GUI for video conversion. It is way more user friendly and comes with a variety of presets
+[Handbrake](https://handbrake.fr/) is a free, open-source, cross-platform tool that comes with a GUI for video conversion. It is way more user friendly and comes with a variety of presets.
 
+Here is a command line that I use to compress the videos to put on the website:
+
+`ffmpeg -i "NameofVideo.mp4" -vcodec libx264 -crf 30 -vf scale=1024:576 -an out.mp4
+`
 #### Video editing
 I always used Premiere Pro when it comes to video editing but [kdenLive](https://handbrake.fr/) is an open source alternative that I will probably use in the future.
 Other free alternatives include [Olive](https://www.olivevideoeditor.org/), [Shotcut](https://shotcut.org/), [OpenShot](https://www.openshot.org/).

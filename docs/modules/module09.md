@@ -1,4 +1,4 @@
-# 8. Mechanical and Machine Design
+# 9. Mechanical and Machine Design
 
 ## Objectives
 

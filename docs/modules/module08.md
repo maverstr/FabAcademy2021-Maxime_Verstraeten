@@ -594,6 +594,7 @@ Regarding its connectivity : multiple GPIOs (general purpose input and output), 
 </figure>
 
 Additional information:
+
 - Because of its low-power CPU and its sleeping modes (where the current is < 5µA), it is also suitable for battery operation.
 - The OS for the WROOM 32 is freeRTOS.
 - The ESP can be powered by a 3.3V supply voltage maximum.
@@ -697,6 +698,40 @@ So, just like [I did in week 4](./../module04/#cnc-design-rules), I tried to cov
 Unfortunately, it didn't work out very well and it created a too thick layer so I cannot correctly solder my microcontroller...
 
 All in all, I couldn't make my board this week so I'll have to postpone it.
+
+### Update Week 10:
+I had some time this week to finally mill my board as new FR1 boards arrived.
+<figure> <center>
+  <img src="./../../img/mod10/ESP32Board.jpg" alt="logo text" width="80%" />
+  <figcaption>The board !</figcaption>
+</figure>
+
+I could finally also solder it and make it work! Some issues though that should be fixed before reusing my design:
+The main one being that I forgot adding two current limiting resistors on two LEDs (D1 and D2). Luckily I noticed it during soldering so I could repair that mistake.
+<figure> <center>
+  <img src="./../../img/mod10/pyramidLED.jpg" alt="logo text" width="80%" />
+  <figcaption>Easy fix: add a resistor on the LED pads by making a pyramid</figcaption>
+</figure>
+
+Also, during production, I once again had the issue that ground pads are completely isolated like other pads instead of being connected to the ground plane... I though I fixed that issue in electronics design week but it seems that Bantam Tools CNC machine didn't remember the settings or something else gone wrong. Again, easy fix to add small pieces of wire to correct that.
+
+More ground pins would be useful to add here and there, especially near the UART connector.
+
+The ESP32 has a "keep-out zone" (I think due to the antenna) which was not indicated on the footprint I took online so two pads are not accessible anymore.
+<figure> <center>
+  <img src="./../../img/mod10/keepout.jpg" alt="logo text" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+Finally, a strong pull-up would be needed on GPIO0 to make sure we boot in SPI mode and not in download mode by default (it works sometimes but a strong pull-up would help make it more reliable). Otherwise, you sometimes need to short 3.3V and the GPIO0 to be able to enter the SPI mode.
+
+Soldering the ESP32 is not an easy task by itself as the package is almost like a QFN, meaning you have to "push" the solder underneath the pads to make a good connection. Anyway, with a bit of practice, it's a matter of minutes.
+<figure> <center>
+  <img src="./../../img/mod10/soldering.jpg" alt="logo text" width="80%" />
+  <figcaption>WROOM32 soldered</figcaption>
+</figure>
+
+All in all, the ESP32 can be programmed easily and works well. I used it for the input devices week.
 
 ## My design files
 My ESP32 Altium design and my FPGA codes and bitstreams are available here:

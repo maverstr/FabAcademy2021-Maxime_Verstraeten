@@ -75,3 +75,11 @@ Here are displayed my weekly assignments:
     </a>
   </div>
 </div>
+
+<div class="moduleContainer">
+  <a href="./module10">
+    <img src="./../img/mod10/programming.jpg" alt="Week 02">
+    <div class="modulecontainerText"> Week 10: <br> Input Devices</div>
+  </a>
+</div>
+</div>
