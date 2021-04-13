@@ -266,6 +266,7 @@ Your browser does not support the video tag.
 ### 2. Strain
 I designed a circuit to measure the strain and the deformation. Unfortunately, I had no SMD components at hand so I did it on a breaboard but it works !
 It seems complex but is quite simple. It is made of:
+
 - A strain gauge, i.e. a resistance that varies with the strain
 - A Wheatstone bridge to transform this resistance variation in a voltage
 - A differential amplifier at the output of the Wheatstone bridge with a gain of about 100.
