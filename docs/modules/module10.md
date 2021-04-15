@@ -10,8 +10,10 @@
 </div>
 <div class="dottedLine"></div>
 
+## Group assignment
+Jason and I already used a logic analyzer and an oscilloscope in the past few weeks some inputs and outputs (see [here](http://fabacademy.org/2021/labs/ulb/assignments/week07/)).
 
-##Introduction
+## Introduction
 I've had the opportunity to play with input devices already during the past few weeks so we'll dig a bit deeper. Moreover, I designed an [ESP32 board two weeks ago](./../module08/#esp32-development-board) but I couldn't finish it in time so it is the opportunity to do it now.
 
 
@@ -94,7 +96,7 @@ By having a look at the ([datasheet](https://www.ftdichip.com/Support/Documents/
   <figcaption>Cable pinout</figcaption>
 </figure>
 
-We will therefore connect GND to GND, and make sure to connect RX_cable to TX_ESP and TX_Cable to RX_ESP ! **Do not connect VCC** as the USB is 5V and the ESP32 will already be powered by either its own USB or another supply. I did this mistake but luckily, nothing went bad as (I think) the ESP32 went into latch-up mode when it happened to prevent any damage. I noticed my mistake as soon as I turned on my power supply and it flickered between 3.3V and higher.
+We will therefore connect GND to GND, and make sure to connect RX_cable to TX_ESP and TX_Cable to RX_ESP ! **Do not connect VCC** as the USB is 5V and the ESP32 will already be powered by either its own USB or another supply. I did this mistake but luckily, nothing went bad as (I think) the ESP32 went into latch-up mode when it happened to prevent any damage. I noticed my mistake as soon as I turned on my power supply and it flickered between 3.3V and higher. I'm not completely sure as a latch-up mode can be destructive for the device and it worked well after that some maybe the current flowing was limited? In any case, everything was okay but I'll make sure not to do this mistake again.
 <figure> <center>
   <img src="./../../img/mod10/latchup.jpg" alt="logo text" width="80%" />
   <figcaption>Latch up mode probably triggered when connecting 5V to 3.3V</figcaption>
@@ -202,15 +204,21 @@ Your browser does not support the video tag.
 
 ### Input and output pins
 I chose my output and input pins based on their ADC channels and their capabilities (not all pins can be output nor have internal pull-ups !).
-However I noticed that using the Arduino's analogRead command, the pull-ups don't work at all as even approaching my finger would make the values completely erratic. I think this is because internally, the pins are linked to the ADC channels on analogRead function calls... I noticed a decrease in the erratic values if I call `pinMode(pin, INPUT_PULLUP)` after every analogRead()... But this is a (barely working) workaround. I found that using external pull-ups and pull-downs was really the only way to avoid this behavior.
+However I noticed that using the Arduino's analogRead command, the pull-ups don't work at all as even approaching my finger would make the values completely erratic. I think this is because internally, the pins are linked to the ADC channels on analogRead function calls and they are obviously not pulled-up or pulled-down as it would create an internal voltage divider.... I found that connecting any unused input to ground was really the only way to avoid this behavior.
 
-To be able to output either an analog value or a duty-cycle varying PWM, I can either use the ESP ledC functions or use the wrapper library for analogRead (not natively instaled) available [here](https://github.com/ERROPiX/ESP32_AnalogWrite). You then need to include "AnalogWrite.h" and analogRead() is now callable.
+To be able to output either an analog value or a duty-cycle varying PWM, I can either use the ESP ledC functions or use the wrapper library for analogWrite (not natively installed) available [here](https://github.com/ERROPiX/ESP32_AnalogWrite). You then need to include "AnalogWrite.h" and analogWrite() is now callable.
 
 ## Input devices
 I tried to measure three different things:
 
 ### 1. Light
-Last week, Jason and I designed a small PCB with phototransistors and pull-ups to measure the amount of light reaching our PCB. I simply plugged it into the ESP and made a little code to read the values. I then decided to light my own LED on the ESP32 PCB based on the amount of light received by the smaller PCB with the phototransistors.
+Last week, Jason and I designed a small PCB with phototransistors and bias resistors to measure the amount of light reaching our PCB. I simply plugged it into the ESP and made a little code to read the values. I then decided to light my own LED on the ESP32 PCB based on the amount of light received by the smaller PCB with the phototransistors.
+<figure> <center>
+  <img src="./../../img/mod10/schematicPhoto.jpg" alt="logo text" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+Note that we didn't really take the time to design the correct resistor value for it but it works pretty well. What we should have done is to use the Beta value for the BJT in the datasheet, compute the maximum current flow and deduce the resistor maximum value for the output to be 3.3V max.
 
 ````
 #include <analogWrite.h>
