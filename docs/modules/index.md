@@ -74,7 +74,6 @@ Here are displayed my weekly assignments:
       <div class="modulecontainerText"> Week 9: <br> Mechanical and Machine Design</div>
     </a>
   </div>
-</div>
 
 <div class="moduleContainer">
   <a href="./module10">
@@ -82,4 +81,13 @@ Here are displayed my weekly assignments:
     <div class="modulecontainerText"> Week 10: <br> Input Devices</div>
   </a>
 </div>
+
+<div class="moduleContainer">
+  <a href="./module11">
+    <img src="./../img/mod11/mold6.jpg" alt="Week 02">
+    <div class="modulecontainerText"> Week 11: <br> Molding and Casting</div>
+  </a>
+</div>
+
+
 </div>
