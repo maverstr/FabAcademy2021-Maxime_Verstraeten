@@ -505,7 +505,7 @@ And polish everything with sand-paper:
   <figcaption></figcaption>
 </figure>
 
-Still some bubbles on the top but it's that bad:
+Still some bubbles on the top but it's not that bad:
 <figure> <center>
   <img src="./../../img/mod11/mold10.jpg" alt="logo text" width="80%" />
   <figcaption></figcaption>
