@@ -14,7 +14,7 @@
 ## Group assignment
 Jason and I [reviewed the safety datasheets and we made some test casts](http://fabacademy.org/2021/labs/ulb/assignments/week11/) with each molding material (or at least each family). This is recapped below:
 
-## Safety
+### Safety
 In particular, we tested (with the datasheets linked):
 
 - [Sylgard 184 PDMS](https://www.wpiinc.com/media/wysiwyg/pdf/SDS/sylgard184-curing-agent.pdf)
@@ -26,7 +26,7 @@ In particular, we tested (with the datasheets linked):
 
 We noticed that all datasheets are talking about gloves, long sleeves, ventilated area ("room size" ventialtion) and safety glasses. Because of this, we made to always work nitrile or latex gloves, lab coats, glasses and under a vent in the lab.
 
-## Types and usages
+### Types and usages
 Having a look at the various datasheets, we can see that some of them are bio-compatible (Elite double 8 for example, which is used for dental work). The materials are categorized according to their final hardness (shore), pot life and curing time, material, ...
 
 <figure> <center>
@@ -45,7 +45,7 @@ _examples of instructions for use (Elite double 8):_
    2. Mix the two components well, until colour is even.
    3. slowly pour Elite Double, preferably from a height of about 30cm above the flask. If the quantity measured out is not sufficient to complete the process, wait until the silicone has hardened completely and then add more material the same way. The material will bind perfectly and the addition will have no effect on the final result. Use a jet of compressed air between the model and the mould created. Do not use mechanical force with a knife or other implement, and do not pull it away from the flask, or you may deform the mould
 
-## Test casts
+### Test casts
 We used Petri dishes to test the different materials. We made sure to pour about 10g of each material, while respecting the mix prescribed by the manufacturer.
 
 <figure> <center>
