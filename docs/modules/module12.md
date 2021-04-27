@@ -11,7 +11,7 @@
 <div class="dottedLine"></div>
 
 ## Group assignment
-For the group assignment, I had already measured to current consumption of an LED on my ESP32 board right [here](./../module10/#making-a-program)
+For the group assignment, I had already measured to current consumption of an LED on my ESP32 board right [here](./../module10/#making-a-program).
 
 <video width="854" height="480" autoplay loop>
   <source src="./../../img/mod10/blink2.mp4" type="video/mp4">
@@ -128,7 +128,7 @@ Then when I knew it worked well, I connected it all to my own ESP32 board.
 
 
 <figure> <center>
-  <img src="./../../img/mod12/ESP32.jpg" alt="logo text" width="80%" />
+  <img src="./../../img/mod12/esp32.jpg" alt="logo text" width="80%" />
   <figcaption></figcaption>
 </figure>
 
