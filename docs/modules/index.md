@@ -89,5 +89,11 @@ Here are displayed my weekly assignments:
   </a>
 </div>
 
+<div class="moduleContainer">
+  <a href="./module12">
+    <img src="./../img/mod12/zero.jpg" alt="Week 02">
+    <div class="modulecontainerText"> Week 12: <br> Output devices</div>
+  </a>
+</div>
 
 </div>
