@@ -211,7 +211,7 @@ Your browser does not support the video tag.
 ### Possible improvement and extension
 With NPN transistors, it would also be possible to multiplex multiple display. We then link each display segments together (a's with a's, b's with b's, ...) and we select the display we want to light up by toggling the corresponding NPN transistor to allow current from the 12V supply to flow. The eye "low-pass filter" will simply let you see all displays light up together even though they toggle real fast. You therefore need 8(7 segments + DP-) +1 per display(selectDisplayPin) pins in total instead of 8 per display.
 
-This requires NPN transitors, as it is impossible to do with PNP (VB should be > 12V which I cannot supply) so I couldn't do it this week but it isn't difficult per se.
+This requires NPN transitors, as it is impossible to do with PNP (VB should be close to 12V which I cannot supply) so I couldn't do it this week but it isn't difficult per se.
 
 
 <figure> <center>
@@ -223,7 +223,7 @@ This requires NPN transitors, as it is impossible to do with PNP (VB should be >
 Finally, I had a speaker lying around so I gave it a try as well.
 To make it work, nothing complicated electrically as it is a simple coil that you make vibrate through a PWM at a set frequency for each note.
 
-Obviously, I needed to power it from 12V as well and the inner resistance of the speaker being 8ohms, I protected it with a 1k resistor and the base resistor is again, like for the first project, 1k as well.
+Obviously, I chose to power it from 12V as well (but it could work with 5V as well, without needing a resistor then) and the inner resistance of the speaker being 8ohms, I protected it with a 100Ohms resistor and the base resistor is again, like for the first project, 1k as well.
 <figure> <center>
   <img src="./../../img/mod12/speakerSchematic.jpg" alt="logo text" width="80%" />
   <figcaption>Final result</figcaption>
