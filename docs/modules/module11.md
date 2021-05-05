@@ -161,6 +161,32 @@ Then end result is pretty nice !
 </figure>
 But I can't seem to remove the mold. Next time, I'll use a soluble filament (PVA) so that I can easily dissolve the mold !
 
+### Update Week 12
+I have re-done my mold (with a new design) using PVA water-soluble filament and made a new batch of epoxy. With the water-soluble filament, I can easily remove the mold !I forgot to take a pic before removing it in water but here is the result:
+
+<figure> <center>
+  <img src="./../../img/mod11/newMold.jpg" alt="logo text" width="80%" />
+  <figcaption>New design</figcaption>
+</figure>
+
+
+<figure> <center>
+  <img src="./../../img/mod11/glassRemoving.jpg" alt="logo text" width="80%" />
+  <figcaption>After a first session in water</figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/mod11/finalGlass1.jpg" alt="logo text" width="80%" />
+  <figcaption>after a second session and some scraping using a scalpel</figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/mod11/finalGlass2.jpg" alt="logo text" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+The end result is extremely nice and the glass can be used again :smile: !
+
 ## Second project: remaking a chess piece
 That same friend recently brought a chess board at work but he unfortunately lost a few pieces in the past years. The pieces themselves are quite artistic and would be extremely difficult to reproduce by 3D-printing or any other method ! It's perfect for molding !
 
