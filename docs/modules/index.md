@@ -103,4 +103,11 @@ Here are displayed my weekly assignments:
   </a>
 </div>
 
+<div class="moduleContainer">
+  <a href="./module13">
+    <img src="./../img/mod13/connecting.jpg" alt="Week 02">
+    <div class="modulecontainerText"> Week 13: <br> Networking and Communications</div>
+  </a>
+</div>
+
 </div>
