@@ -393,6 +393,33 @@ void processMessage(char cmd, char param){//decomposes message in command and pa
 }
 ````
 
+## Update Week 13:
+I updated the design with a third node (a second slave) with adress 'b'.
+
+I forgot to add at least two 3.3V pins on my design so I had to connect my first slave to the 3.3V pin, and the second one to the 5V pin, both from the master (in a "star" configuration). In a perfect design, the 3.3V supply from one node would propagate to the next one.
+
+Also, I initially had some issues making it work, because when I soldered my boards, I added all the 4.7kOhms pull-up resistors on all the boards.
+That made the communication line very pulled-up and the communication was altered. I then realized it, unsoldered every 4.7k on the slaves board (as it should be, just didn't think of it when soldering) and it finally worked flawlessly.
+
+<figure> <center>
+  <img src="./../../img/mod13/3nodes.jpg" alt="logo text" width="80%" />
+  <figcaption>The 2 slaves and the master together</figcaption>
+</figure>
+
+_Making the LEDs subsequently blink_
+<video width="700" height="480" autoplay loop>
+  <source src="./../../img/mod13/blink3Nodes.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+<br>
+
+_Commanding the indivual LEDs through the network_
+<video width="700" height="480" autoplay loop>
+  <source src="./../../img/mod13/command3Nodes.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
 
 ## My design files
 :material-download-box: [My Design files](https://gitlab.fabcloud.org/academany/fabacademy/2021/labs/ulb/students/maxime-verstraeten/-/raw/master/docs/files/mod13.zip)
