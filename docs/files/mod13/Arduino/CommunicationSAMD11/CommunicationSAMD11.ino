@@ -2,7 +2,7 @@
 
 #define startFrame 0x02 // STX :start of frame
 #define endFrame 0x03 // ETX : end of frame
-#define DLY 500
+#define DLY 100
 #define slave1Address 'b'
 #define slave2Address 'c'
 #define masterAddress 'a'
@@ -41,17 +41,17 @@ void loop() { //MASTER loop: write input data or pre-selected data to UART to sl
   if(SerialUSB.available()){
     String input = "";
     byte slaveAddress = (byte)SerialUSB.read();
-    SerialUSB.print("slaveAddress :");
-    SerialUSB.println(slaveAddress);
+//    SerialUSB.print("slaveAddress :");
+//    SerialUSB.println(slaveAddress);
     while(SerialUSB.available()){
       input+=(char)SerialUSB.read();
     }
-    SerialUSB.println(input);
+//    SerialUSB.println(input);
     delay(DLY);
     sendMessage(slaveAddress, input);
   }
   #else
-  SerialUSB.println("start");
+//  SerialUSB.println("start");
   sendMessage(slave1Address, "11");
   delay(DLY);
   sendMessage(slave1Address, "21");
@@ -65,7 +65,7 @@ void loop() { //MASTER loop: write input data or pre-selected data to UART to sl
   sendMessage(slave1Address, "30");
   delay(DLY);
 
-  SerialUSB.println("start2");
+//  SerialUSB.println("start2");
   sendMessage(slave2Address, "11");
   delay(DLY);
   sendMessage(slave2Address, "21");
