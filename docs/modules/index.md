@@ -104,9 +104,9 @@ Here are displayed my weekly assignments:
 </div>
 
 <div class="moduleContainer">
-  <a href="./module13">
-    <img src="./../img/mod13/connecting.jpg" alt="Week 02">
-    <div class="modulecontainerText"> Week 13: <br> Networking and Communications</div>
+  <a href="./module14">
+    <img src="./../img/mod14/finalInterface.jpg" alt="Week 02">
+    <div class="modulecontainerText"> Week 14: <br> Interface and Application Programming</div>
   </a>
 </div>
 

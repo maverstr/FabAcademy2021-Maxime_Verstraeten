@@ -185,6 +185,12 @@ Your browser does not support the video tag.
 
 Finally, I mixed my PySerial script with the buttons, using dictionaries and arrays to store all the values, added some more layouts and buttons as well as a "spinner" to select the COM port and I was finally happy with my interface. I can now make my LEDs blink in sequence or light every single one on demand. It also detects connections and disconnections.
 
+
+<figure> <center>
+  <img src="./../../img/mod14/finalInterface.jpg" alt="logo text" width="80%" />
+  <figcaption>Final interface</figcaption>
+</figure>
+
 <video width="700" height="480" autoplay loop>
   <source src="./../../img/mod14/interface3.mp4" type="video/mp4">
 Your browser does not support the video tag.
