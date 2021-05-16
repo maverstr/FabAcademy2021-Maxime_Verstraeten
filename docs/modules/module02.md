@@ -123,6 +123,40 @@ Autodesk also created their [AutoCAD](https://www.autodesk.be/fr/products/autoca
 I had a very very small bit of experience using Blender as I used it to make assets in a [video game project](https://www.youtube.com/watch?v=6TVJTZ06IqM) but it is a very complex software that I still have trouble using, especially since I use it once every 3 years :smile:...
 Blender really shines when it comes to artistically sculpt objects and make animations. There are multiple rendering engines. Eevee for example allows for real-time rendering but offline rendering in Blender is extremely powerful, allowing things like ray-tracing to be rendered.
 
+I tried to render a very basic scene in Blender featuring a "pressure box" made of plexiglas, a manometer, some wires and a "bladder" inside. To do so, I started a new project which begins with a simple cube in the middle.
+
+<figure> <center>
+  <img src="./../../img/mod02/basicScene.jpg" alt="Blender scene" width="100%" />
+  <figcaption></figcaption>
+</figure>
+
+I then go into the "Edit mode" using the ++tab++ key and I select the upper face of the cube. I then use the ++e++ key to extrude a new face from it. I do the same for the bottom part. Then use the ++i++ key to make subdivision of the faces.
+
+<figure> <center>
+  <img src="./../../img/mod02/cubeExtruded.jpg" alt="Blender scene" width="100%" />
+  <figcaption>After extrusion</figcaption>
+</figure>
+
+I can then select these faces an apply a specific material to them. To make the center of the cube "transparent", I choose a slight blue color and place the transparency dial to the maximum as well as the alpha. The effect is not perfect but it's a good starting point.
+
+<figure> <center>
+  <img src="./../../img/mod02/transparent.jpg" alt="Blender scene" width="100%" />
+  <figcaption>Material settings</figcaption>
+</figure>
+
+For the external part, I simply use a brown color and tweaked the settings to my liking.
+
+To make the bladder, I started from a new sphere and I sculpted it a bit (sculpting upper menu). You can increase the mesh resolution to get a better result but I didn't want to mess with it as it is a simple project.
+
+<figure> <center>
+  <img src="./../../img/mod02/sculpting.jpg" alt="Blender scene" width="100%" />
+  <figcaption></figcaption>
+</figure>
+
+To make the manometer, I followed the same workflow : make a new cylinder, add new circle on top of it, extrude it, and so on ... I then applied a texture on it and colored it manually just to test that.
+
+Finally, for the wire, I had to activate the "extra objects" addon in the preference menu to get the possibility to add "knots" to an object and I could link my bladder and the manometer together with this kind of very simple wire.
+
 <figure> <center>
   <img src="./../../img/mod02/sceneRendered.jpg" alt="Blender scene" width="100%" />
   <figcaption> A very bad scene in Blender  featuring a bladder phantom, a pressure box and a manometer with some wires </figcaption>
