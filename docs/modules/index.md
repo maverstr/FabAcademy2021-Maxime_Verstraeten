@@ -110,4 +110,11 @@ Here are displayed my weekly assignments:
   </a>
 </div>
 
+<div class="moduleContainer">
+  <a href="./module15">
+    <img src="./../img/modulesGallery/microfluidicsIndex.jpg" alt="Week 02">
+    <div class="modulecontainerText"> Week 15: <br> Wildcard</div>
+  </a>
+</div>
+
 </div>
