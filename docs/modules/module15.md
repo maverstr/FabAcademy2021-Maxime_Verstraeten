@@ -217,19 +217,19 @@ The final print comes with a bit of support on top that you can remove with firs
 
 <figure> <center>
   <img src="./../../img/mod15/silicone10.jpg" alt="logo text" width="80%" />
-  <figcaption>After the water blast</figcaption>
+  <figcaption></figcaption>
 </figure>
 
 
  And then an ultrasonic bath of Sodium hydroxide:
  <figure> <center>
    <img src="./../../img/mod15/silicone11.jpg" alt="logo text" width="80%" />
-   <figcaption>After the water blast</figcaption>
+   <figcaption></figcaption>
  </figure>
 
  <figure> <center>
    <img src="./../../img/mod15/silicone12.jpg" alt="logo text" width="80%" />
-   <figcaption>After the water blast</figcaption>
+   <figcaption></figcaption>
  </figure>
 
  <figure> <center>
