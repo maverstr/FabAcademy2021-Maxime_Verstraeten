@@ -24,7 +24,7 @@ In particular, we tested (with the datasheets linked):
 - [Xencast PX90](https://3937524.app.netsuite.com/core/media/media.nl?id=55472&c=3937524&h=c841bef244b6c376b5be&_xt=.pdf)
 - [SuperSap CLV bio-epoxy](https://3937524.app.netsuite.com/core/media/media.nl?id=42567&c=3937524&h=c38c9b00692bfe9898c3&_xt=.pdf)
 
-We noticed that all datasheets are talking about gloves, long sleeves, ventilated area ("room size" ventilation), and safety glasses. Because of this, we made to always work nitrile or latex gloves, lab coats, glasses, and under a vent in the lab.
+We noticed that all datasheets are talking about gloves, long sleeves, ventilated area ("room size" ventilation), and safety glasses. Because of this, we made sure to always work with nitrile or latex gloves, lab coats, glasses, and under a vent in the lab.
 
 ### Types and usages
 Having a look at the various datasheets, we can see that some of them are bio-compatible (Elite double 8 for example, which is used for dental work). The materials are categorized according to their final hardness (shore), pot life and curing time, material, ...
@@ -129,13 +129,13 @@ Our test casts:
 ## First project: repairing a broken glass
 A friend of mine recently told me he broke a glass and wanted to repair it but didn't know how to do that. Let's try to repair it this week.
 
-The bottom of it was completely broken so I thought about making a quick 3D-printed mold and then pour some (coloured) epoxy on top of it. So I started designing a mold in Solidworks, that looks more or less like a bike wheel:
+Its bottom stand was completely broken so I thought about making a quick 3D-printed mold and then pour some (coloured) epoxy on top of it. So I started designing a mold in SolidWorks, that looks more or less like a bicycle wheel (he's a fan of cycling) :
 <figure> <center>
   <img src="./../../img/mod11/glass1.jpg" alt="logo text" width="80%" />
   <figcaption></figcaption>
 </figure>
 
-I made sure to add some chamfers in the design to help remove the mold (spoiler alert: it didn't !).
+I made sure to add some chamfers in the design to help remove the mold (spoiler alert: that wasn't enough!).
 
 <figure> <center>
   <img src="./../../img/mod11/glass2.jpg" alt="logo text" width="80%" />
@@ -162,7 +162,7 @@ Then end result is pretty nice !
 But I can't seem to remove the mold. Next time, I'll use a soluble filament (PVA) so that I can easily dissolve the mold!
 
 ### Update Week 12
-I have re-done my mold (with a new design) using PVA water-soluble filament and made a new batch of epoxy. With the water-soluble filament, I can easily remove the mold !I forgot to take a pic before removing it in water but here is the result:
+I have re-done my mold (with a new design) using PVA water-soluble filament and made a new batch of epoxy. With the water-soluble filament, I can easily remove the mold! I forgot to take a pic before placing it in the water but here is the result:
 
 <figure> <center>
   <img src="./../../img/mod11/newMold.jpg" alt="logo text" width="80%" />
@@ -188,7 +188,7 @@ I have re-done my mold (with a new design) using PVA water-soluble filament and 
 The result is extremely nice and the glass can be used again :smile: !
 
 ## Second project: remaking a chess piece
-That same friend recently brought a chessboard at work but he, unfortunately, lost a few pieces in the past years. The pieces themselves are quite artistic and would be extremely difficult to reproduce by 3D printing or any other method! It's perfect for molding!
+That same friend recently brought a chessboard at work but he, unfortunately, lost a few pieces in the past years. The pieces themselves are quite artistic and would be extremely difficult to reproduce by 3D printing or any other method! So it's perfect for molding!
 
 <figure> <center>
   <img src="./../../img/mod11/chess1.jpg" alt="logo text" width="80%" />
@@ -200,7 +200,7 @@ That same friend recently brought a chessboard at work but he, unfortunately, lo
   <figcaption></figcaption>
 </figure>
 
-I placed it in a container but because I was afraid it the bottom would fill, I made sure to make a vent at the top (in the end it wasn't necessary though).
+I placed it in a container but because I was afraid that the bottom would be filled, I made sure to make a vent at the top (in the end it wasn't necessary though).
 <figure> <center>
   <img src="./../../img/mod11/chess3.jpg" alt="logo text" width="80%" />
   <figcaption></figcaption>
@@ -333,14 +333,14 @@ Can you tell the difference ?
 ## Third project: Inception spinning top
 Finally, let's make a spinning top!
 
-First, [I found a nice design](https://grabcad.com/library/inception-spinning-top-1), inspired from the Inception on movie.
+First, [I found a nice design](https://grabcad.com/library/inception-spinning-top-1), inspired from the Inception movie.
 <figure> <center>
   <img src="./../../img/mod11/inception.jpg" alt="logo text" width="80%" />
   <figcaption>From GrabCad</figcaption>
 </figure>
 ### Positive mold
-First step: designing the positive mold in Solidworks so that I can machine it.
-To create the mold in Solidworks:
+First step: designing the positive mold in SolidWorks so that I can machine it.
+To create the mold in SolidWorks:
 
 I created a basic rectangle which is bigger than the spinning top.
 <figure> <center>
@@ -446,6 +446,7 @@ Just like I did in the CNC week, I used Solidworks with HSMWorks and the Kinetic
 </figure>
 **4. Making the 2 holes for the alignment bits:
 **
+
 **Note:** for an unknown reason here, the mill went straight between the top of the holes and hit my part (luckily just a very small part of it). It is strange because I took special care for that not to happen and, in the toolpath simulation, it does not happen...
 
 **5. Parallel pass to get a nice finish with a 3mm ball mill:
