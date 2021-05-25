@@ -176,7 +176,7 @@ I have re-done my mold (with a new design) using PVA water-soluble filament and 
 </figure>
 
 <figure> <center>
-  <img src="./../../img/mod11/finalGlass1.jpg" alt="logo text" width="80%" />
+  <img src="./../../img/mod11/finalGlass.jpg" alt="logo text" width="80%" />
   <figcaption>after a second session and some scraping using a scalpel</figcaption>
 </figure>
 
