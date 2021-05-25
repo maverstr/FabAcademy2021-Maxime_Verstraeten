@@ -12,7 +12,7 @@
 <div class="dottedLine"></div>
 
 ## Group assignment
-Jason and I [reviewed the safety datasheets and we made some test casts](http://fabacademy.org/2021/labs/ulb/assignments/week11/) with each molding material (or at least each family). This is recapped below:
+Jason and I [reviewed the safety data sheets and we made some test casts](http://fabacademy.org/2021/labs/ulb/assignments/week11/) with each molding material (or at least each family). This is recapped below:
 
 ### Safety
 In particular, we tested (with the datasheets linked):
@@ -24,7 +24,7 @@ In particular, we tested (with the datasheets linked):
 - [Xencast PX90](https://3937524.app.netsuite.com/core/media/media.nl?id=55472&c=3937524&h=c841bef244b6c376b5be&_xt=.pdf)
 - [SuperSap CLV bio-epoxy](https://3937524.app.netsuite.com/core/media/media.nl?id=42567&c=3937524&h=c38c9b00692bfe9898c3&_xt=.pdf)
 
-We noticed that all datasheets are talking about gloves, long sleeves, ventilated area ("room size" ventialtion) and safety glasses. Because of this, we made to always work nitrile or latex gloves, lab coats, glasses and under a vent in the lab.
+We noticed that all datasheets are talking about gloves, long sleeves, ventilated area ("room size" ventilation), and safety glasses. Because of this, we made to always work nitrile or latex gloves, lab coats, glasses, and under a vent in the lab.
 
 ### Types and usages
 Having a look at the various datasheets, we can see that some of them are bio-compatible (Elite double 8 for example, which is used for dental work). The materials are categorized according to their final hardness (shore), pot life and curing time, material, ...
@@ -40,13 +40,13 @@ Having a look at the various datasheets, we can see that some of them are bio-co
 
 _examples of instructions for use (Elite double 8):_
 
-   0. Before using Elite Double, check that the model to be duplicated is perfectly clean. If it needs milling, be sure to remove any oily residues; use of a solvent such as acetone is recommended. Wait for steam to evaporate, if used, and make sure that the model is perfectly dry. Select a flask of appropriate size, then anchor the model onto its base with wax
-   1. Measure or weight equal amounts of Catalyst (white) and Base (coloured) in a graduated container.
-   2. Mix the two components well, until colour is even.
-   3. slowly pour Elite Double, preferably from a height of about 30cm above the flask. If the quantity measured out is not sufficient to complete the process, wait until the silicone has hardened completely and then add more material the same way. The material will bind perfectly and the addition will have no effect on the final result. Use a jet of compressed air between the model and the mould created. Do not use mechanical force with a knife or other implement, and do not pull it away from the flask, or you may deform the mould
+   0. Before using Elite Double, check that the model to be duplicated is perfectly clean. If it needs milling, be sure to remove any oily residues; the use of a solvent such as acetone is recommended. Wait for steam to evaporate, if used, and make sure that the model is perfectly dry. Select a flask of appropriate size, then anchor the model onto its base with wax
+   1. Measure or weigh equal amounts of Catalyst (white) and Base (colored) in a graduated container.
+   2. Mix the two components well, until the color is even.
+   3. slowly pour Elite Double, preferably from a height of about 30cm above the flask. If the quantity measured out is not sufficient to complete the process, wait until the silicone has hardened completely and then add more material the same way. The material will bind perfectly and the addition will not affect the final result. Use a jet of compressed air between the model and the mold created. Do not use mechanical force with a knife or other implement, and do not pull it away from the flask, or you may deform the mold
 
 ### Test casts
-We used Petri dishes to test the different materials. We made sure to pour about 10g of each material, while respecting the mix prescribed by the manufacturer.
+We used Petri dishes to test the different materials. We made sure to pour about 10g of each material while respecting the mix prescribed by the manufacturer.
 
 <figure> <center>
   <img src="./../../img/mod11/testCasts.jpg" alt="logo text" width="80%" />
@@ -127,7 +127,7 @@ Our test casts:
 
 
 ## First project: repairing a broken glass
-A friend of mine recently told me he broke a glass and wanted to repair it but didn't know how. Let's try to repair it this week.
+A friend of mine recently told me he broke a glass and wanted to repair it but didn't know how to do that. Let's try to repair it this week.
 
 The bottom of it was completely broken so I thought about making a quick 3D-printed mold and then pour some (coloured) epoxy on top of it. So I started designing a mold in Solidworks, that looks more or less like a bike wheel:
 <figure> <center>
@@ -159,7 +159,7 @@ Then end result is pretty nice !
   <img src="./../../img/mod11/glass5.jpg" alt="logo text" width="80%" />
   <figcaption></figcaption>
 </figure>
-But I can't seem to remove the mold. Next time, I'll use a soluble filament (PVA) so that I can easily dissolve the mold !
+But I can't seem to remove the mold. Next time, I'll use a soluble filament (PVA) so that I can easily dissolve the mold!
 
 ### Update Week 12
 I have re-done my mold (with a new design) using PVA water-soluble filament and made a new batch of epoxy. With the water-soluble filament, I can easily remove the mold !I forgot to take a pic before removing it in water but here is the result:
@@ -185,10 +185,10 @@ I have re-done my mold (with a new design) using PVA water-soluble filament and 
   <figcaption></figcaption>
 </figure>
 
-The end result is extremely nice and the glass can be used again :smile: !
+The result is extremely nice and the glass can be used again :smile: !
 
 ## Second project: remaking a chess piece
-That same friend recently brought a chess board at work but he unfortunately lost a few pieces in the past years. The pieces themselves are quite artistic and would be extremely difficult to reproduce by 3D-printing or any other method ! It's perfect for molding !
+That same friend recently brought a chessboard at work but he, unfortunately, lost a few pieces in the past years. The pieces themselves are quite artistic and would be extremely difficult to reproduce by 3D printing or any other method! It's perfect for molding!
 
 <figure> <center>
   <img src="./../../img/mod11/chess1.jpg" alt="logo text" width="80%" />
@@ -212,14 +212,14 @@ I placed it in a pyrex container (bad idea !)
   <figcaption></figcaption>
 </figure>
 
-And then prepared the silicone mix. I used the Oomoo-30 as it was the most recommended one to make mold and the only one I had at hand at this moment.
+And then prepared the silicone mix. I used the Oomoo-30 as it was the most recommended one to make a mold and the only one I had at hand at this moment.
 
 <figure> <center>
   <img src="./../../img/mod11/chess5.jpg" alt="logo text" width="80%" />
   <figcaption>Vacuuming</figcaption>
 </figure>
 
-I then filled my container with it but... I didn't prepare enough... Okay let's raise the silicone level by inserting some Play-doh inside.
+I then filled my container with it but... I didn't prepare enough... Okay, let's raise the silicone level by inserting some Play-doh inside.
 
 <figure> <center>
   <img src="./../../img/mod11/chess6.jpg" alt="logo text" width="80%" />
@@ -234,7 +234,7 @@ So I came back the day after with the expectation to unmold that pretty easily..
   <figcaption>Cured silicone</figcaption>
 </figure>
 
-It just sticked so much to the container I had to try to unmold it for a few tens of minutes with a scalpel, a screwdriver and anything else I could find. Looking back, I never should have done it inside this container !
+It just stuck so much to the container I had to try to unmold it for a few tens of minutes with a scalpel, a screwdriver, and anything else I could find. Looking back, I never should have done it inside this container!
 
 I finally did it but the mold really took a hit.
 <figure> <center>
@@ -291,7 +291,7 @@ So let's tinker a bit with a latex glove !
   <figcaption>Filled mold</figcaption>
 </figure>
 
-Now we just have to wait and hope the molds holds together for the curing time.
+Now we just have to wait and hope the molds hold together for the curing time.
 
 ### The day after... again
 Epoxy has cured, time to unmold!
@@ -348,7 +348,7 @@ I created a basic rectangle which is bigger than the spinning top.
   <figcaption></figcaption>
 </figure>
 
-Then created an assembly which contained both the "mold rectangle" and my spinning top.
+Then created an assembly that contained both the "mold rectangle" and my spinning top.
 
 <figure> <center>
   <img src="./../../img/mod11/sw2.jpg" alt="logo text" width="80%" />
@@ -475,7 +475,7 @@ Just like I did in the CNC week, I used Solidworks with HSMWorks and the Kinetic
 </figure>
 
 ### Making the negative
-Just like for the chess piece, I used Oomoo-30. Simply mixing them 1:1, vacuuming and pouring. I made sure to slightly coat the positive mold with release agent before pouring. It still sticked hard so I had to play with a lot before being able to get it out of the mold once cured.
+Just like for the chess piece, I used Oomoo-30. Simply mixing them 1:1, vacuum, and pouring. I made sure to lightly coat the positive mold with a release agent before pouring. It still stuck hard so I had to play with it a lot before being able to get it out of the mold once cured.
 
 <figure> <center>
   <img src="./../../img/mod11/mold1.jpg" alt="logo text" width="80%" />
@@ -489,7 +489,7 @@ The result is pretty good though.
   <figcaption></figcaption>
 </figure>
 
-I did the same thing for the second part, this time with much more release agent. It was indeed easier to remove but there was so many agent that it left some holes and the surface finish is not great.
+I did the same thing for the second part, this time with much more release agent. It was indeed easier to remove but there was so much releasing agent that it left some holes and the surface finish is not great.
 
 <figure> <center>
   <img src="./../../img/mod11/mold3.jpg" alt="logo text" width="80%" />
