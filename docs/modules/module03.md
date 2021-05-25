@@ -178,7 +178,7 @@ We also tried to repair the [Lasersaur](https://www.lasersaur.com/) in our lab t
   <figcaption> At greater distance, the offset is amplified and we can start aligning the mirror through trial and error</figcaption>
 </figure>
 
-To be able to make a very short laser pulse, there were no way to do that except actually cutting an imported SVG shape. So we did a very small square shape in SVG so that a very short laser pulse will be triggered when trying to "cut" this shape.
+To be able to make a very short laser pulse, there was no way to do that except actually cutting an imported SVG shape. So we did a very small square shape in SVG so that a very short laser pulse will be triggered when trying to "cut" this shape.
 
 <figure> <center>
   <img src="./../../img/mod03/lasersaurInterface.jpg" alt="lasersaur" width="80%" />
@@ -186,7 +186,7 @@ To be able to make a very short laser pulse, there were no way to do that except
 </figure>
 
 
-As a student, I was more trying to understand everything and so I let my instructor guide me in the process. I don't know if this method is recommended by the Lasersaur community neither if there are other procedures that may work ? In the end, we successfully aligned the lasers with this method.
+As a student, I was more trying to understand everything and so I let my instructor guide me in the process. I don't know if this method is recommended by the Lasersaur community neither if there are other procedures that may work ? In the end, we successfully aligned the lasers with this method but issues with the lens (weird laser shape) persisted.
 
 ## 4. My Vynil cutter design
 
