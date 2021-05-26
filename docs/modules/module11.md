@@ -70,7 +70,7 @@ We also played around with some pigments:
   <figcaption>Adding color</figcaption>
 </figure>
 
-and used the vacuum bell:
+and used the vacuum bell. We had an analog manometer so it was sometimes difficult to read the exact values but we reached around 0.2 bar for efficient degassing. We also noted that going too low in pressure would result in never-ending bubbles as the solvents would start to evaporate (or at least we think so).
 <figure> <center>
   <img src="./../../img/mod11/pdms1.jpg" alt="logo text" width="80%" />
   <figcaption>PDMS before vacuum</figcaption>
@@ -125,6 +125,17 @@ Our test casts:
   <figcaption></figcaption>
 </figure>
 
+For the pigments in the epoxy (and below in the first project), we used the Smooth-on Silc Pig color system. Note that they are not soluble in water, only in silicone or fatty media.
+
+<figure> <center>
+  <img src="./../../img/mod11/silcpig.jpg" alt="logo text" width="80%" />
+  <figcaption>pigments</figcaption>
+</figure>
+
+
+As a conclusion for the test materials, we can say that there are large differences in terms of pot-life and curing time for the various types of molding substances. Also, some are more viscous than others and therefore need more degassing, are more difficult to pour in a mold, and sometimes it would even be beneficial to be able to centrifugate the mold for a very viscous silicone.
+The PDMS has really interesting optical properties and could be used for microfluidics for example but has a 24-hour curing time. Some materials already have some pigments in them like the Oomoo for example.
+Finally, the most obvious difference between the materials is the stiffness.
 
 ## First project: repairing a broken glass
 A friend of mine recently told me he broke a glass and wanted to repair it but didn't know how to do that. Let's try to repair it this week.
@@ -148,7 +159,7 @@ I then applied a lot of mold release agent:
   <figcaption></figcaption>
 </figure>
 
-Then prepared the epoxy and added some green pigments before pouring it into the mold.
+Then prepared the epoxy (mix 100:1000) and added some green pigments before pouring it into the mold.
 <figure> <center>
   <img src="./../../img/mod11/glass4.jpg" alt="logo text" width="80%" />
   <figcaption></figcaption>
@@ -330,6 +341,8 @@ Can you tell the difference ?
   <figcaption></figcaption>
 </figure>
 
+In practice, some pieces are smaller than others but this is because they are originally handmade so they are not all the same :smile: ! Also, my copy is actually a bit smaller than the original as I had to sand it a bit to have a nice smooth finish so I lost about 2mm.
+
 ## Third project: Inception spinning top
 Finally, let's make a spinning top!
 
@@ -397,7 +410,7 @@ Finally, I'll need to make it twice to get the full object and to help both part
 </figure>
 
 ### Machining
-Just like I did in the CNC week, I used Solidworks with HSMWorks and the KineticNC post-processor.
+Just like I did in the CNC week, I used Solidworks with HSMWorks and the KineticNC post-processor. More explanation is available on that week to understand how to use the CNC machine!
 
 **1. 2D pocket with a 6mm flat mill to get rid of most of the material around the spinning top:
 **
@@ -508,6 +521,7 @@ Assembling both parts with rubber bands:
   <figcaption></figcaption>
 </figure>
 
+I then made a bio-epoxy mix like for the group assignment and the glass (mix 100:1000).
 I was very afraid the input holes were too tiny and there would be a lot of air inside the mold, so I played a bit with a syringe to make sure to pop all of them.
 After curing, we can open the mold:
 
