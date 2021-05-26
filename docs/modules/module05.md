@@ -12,21 +12,58 @@
 </div>
 <div class="dottedLine"></div>
 
-This week is one of the most creative so I intend to make a good use of it in the time that I can allow to it.
+This week is one of the most creative so I intend to make good use of it in the time that I can allow it.
 
 ## Introduction
-So the main difference with 3D printers compared to more classical methods is that it _adds_ material (additive method) rather than _removing_ some (substractive methods).
-It has both pros and cons but additive manufacturing allows to create things that are not possible with substractive processes. Moreover, you don't need to care about the complexity of the design itself and how to manufacture it. With 3D-priting, it is possible to have access to the interior of a part while building it so we can create imbricated parts and bodies in a single process. Moreover, though the material can be quite expensive, the waste is limited as you don't remove excess parts (except support).
+So the main difference with 3D printers compared to more classical methods is that it _adds_ material (additive method) rather than _removing_ some (subtractive methods).
+It has both pros and cons but additive manufacturing allows to create things that are not possible with subtractive processes. Moreover, you don't need to care about the complexity of the design itself and how to manufacture it. With 3D printing, it is possible to have access to the interior of a part while building it so we can create imbricated parts and bodies in a single process. Moreover, though the material can be quite expensive, the waste is limited as you don't remove excess parts (except support).
 
-But it's not all good with 3D-printing. Printers are notoriously known for failing for sometimes unknown reasons, which can be frustrating when doing big parts (and that's why it's best to keep it to small parts, one at a time) that take a while (yes, 3D-printing is **slow** !). Also, the resolution is not as good as substractive processes as it is limited by the nozzle size and the filament used. It is still good enough however in most cases. Finally, not all materials are available so sometimes you have no other choice than to make a mould or use substractive processes.
+But it's not all good with 3D printing. Printers are notoriously known for failing for sometimes unknown reasons, which can be frustrating when doing big parts (and that's why it's best to keep it to small parts, one at a time) that take a while (yes, 3D-printing is **slow** !). Also, the resolution is not as good as subtractive processes as it is limited by the nozzle size and the filament used. It is still good enough however in most cases. Finally, not all materials are available so sometimes you have no other choice than to make a mould or use subtractive processes.
 
-Multiple types of printers exist: filament, resin and so on... This week I sticked to filament deposition printing but I plan to use resin in the future. We also have an Eden printer (photopolymer jetting technology) at Uni that I used once for a very detailed part but it is extremely expensive so I didn't use it this week :smile:.
+Multiple types of printers exist: filament, resin, and so on... This week I stuck to filament deposition printing but I plan to use resin in the future. We also have an Eden printer (photopolymer jetting technology) at Uni that I used once for a very detailed part but it is extremely expensive so I didn't use it this week :smile:.
+
+## Update: working with other printers
+After this assignment, I used other printers for various projects.
+For example, during the [wildcard week](./../module15/), I used the Stratasys Eden printer, a very very high resolution printer, to make some microfluidics !
+<figure> <center>
+   <img src="./../../img/mod15/silicone17.jpg" alt="logo text" width="80%" />
+   <figcaption></figcaption>
+ </figure>
+
+ I also used a resin printer (Elegoo Mars 2 pro) to make a very small version of the Atomium, a famous Belgian monument !
+ <figure> <center>
+    <img src="./../../img/mod05/resinPrinter.jpg" alt="logo text" width="80%" />
+    <figcaption></figcaption>
+  </figure>
+
+The resin printer is usually higher resolution than FDM. Different methods exist: SLA (i.e. curing the resin using a moving mirror and a UV laser) which provides the highest resolution and a large range of material, SLS which can be very expensive but with a low cost per part, and finally, LCD which is the case of the Mars 2 Pro, which uses a UV LCD screen to cure the resin.
+
+<figure> <center>
+   <img src="./../../img/mod05/comparison.jpg" alt="logo text" width="80%" />
+   <figcaption></figcaption>
+ </figure>
+
+ <figure> <center>
+    <img src="./../../img/mod05/comparison2.jpg" alt="logo text" width="80%" />
+    <figcaption></figcaption>
+  </figure>
+
+
+This has the lowest resolution (but still very high) but has the advantage that the printing time only depends on the height of the part, not the surface because it cures a whole slice of the part with a single image, at the same time, no matter the surface of the part itself.
+
+<figure> <center>
+   <img src="./../../img/mod05/resin2.jpg" alt="logo text" width="80%" />
+   <figcaption>The resin printer I used </figcaption>
+ </figure>
+
+ I used the chitubox slicer and post-cured the part with UV light (5 minutes) after removing the support to enhance the mechanical properties.
+
 
 ## The power of 3D-printing
 ### Printer characterization and design rules
 Some of this documentation is repeated on the [group page](http://fab.academany.org/2021/labs/ulb/assignments/week06/).
 
-At the lab we have multiple Prusa I3MK3 and MK3S. With Jason, we started printing multiple test parts and more specifically, we wanted to get a feel of what the different materials and nozzles change.
+At the lab, we have multiple Prusa I3MK3 and MK3S. With Jason, we started printing multiple test parts, and more specifically, we wanted to get a feel of what the different materials and nozzles change.
 
 Our fablab already printed a simple test part but we wanted to do it ourselves and test out more characteristics of the printer.
 
@@ -36,12 +73,12 @@ Our fablab already printed a simple test part but we wanted to do it ourselves a
 </figure>
 
 
-We found another nice [test part](https://www.thingiverse.com/thing:2656594) online that allows to test gaps, bridges, overhangs, angles, walls and so on.
+We found another nice [test part](https://www.thingiverse.com/thing:2656594) online that allows us to test gaps, bridges, overhangs, angles, walls and so on.
 We decided to print this part three times, with no support (otherwise the overhang tests do not make sense).
 
 ### PLA 0.4mm nozzle
 First with a PLA filament and a 0.4mm nozzle (0.2mm resolution), 10% infill.
-For the PLA, we sticked to the recommended temperature (i.e. 210°C extruder, 60°C heating plate).
+For the PLA, we stuck to the recommended temperature (i.e. 210°C extruder, 60°C heating plate).
 
 <figure> <center>
   <img src="./../../img/mod05/designRules1_1.jpg" alt="Beer" width="80%" />
@@ -100,11 +137,11 @@ To help the bottom plate to stick, we added a brim but it did not do much in our
   <figcaption> </figcaption>
 </figure>
 
-Overall, the PETG resulted in seemingly (not tested) more rigid part but hard to print (or at least we didn't found great settings).
+Overall, the PETG resulted in a seemingly (not tested) more rigid part but hard to print (or at least we didn't found great settings).
 
 ### Prusa adaptive layer settings
 
-I later found out this cool settings in recent Prusa slicer releases: the _variable layer height_. It allows to specifically set layer speed and resolution for each layer of the part. Even more interesting, it can adapt the layer settings automatically by pressing the _adaptive_ button. It can also smooth the resulting part.
+I later found out about this cool settings in recent Prusa slicer releases: the _variable layer height_. It allows to specifically set layer speed and resolution for each layer of the part. Even more interesting, it can adapt the layer settings automatically by pressing the _adaptive_ button. It can also smooth the resulting part.
 
 <figure> <center>
   <img src="./../../img/mod05/prusaHeight.jpg" alt="prusa Height" width="80%" />
@@ -112,7 +149,7 @@ I later found out this cool settings in recent Prusa slicer releases: the _varia
 </figure>
 
 
-We then tested the clearance using Neil's design. Once printed, we had to remove the support with pliers and bit of hand-work, not easy but it worked !
+We then tested the clearance using Neil's design. Once printed, we had to remove the support with pliers and a bit of handwork, not easy but it worked!
 
 <figure> <center>
   <img src="./../../img/mod05/clearance1.jpg" alt="prusa Height" width="80%" />
@@ -124,7 +161,7 @@ We then tested the clearance using Neil's design. Once printed, we had to remove
   <figcaption> 0.2 and 0.1mm clearance are blocked </figcaption>
 </figure>
 
-It's interesting to see that when the gaps gets too small, the support cannot be cleared and so the two parts are linked and blocked together.
+It's interesting to see that when the gaps get too small, the support cannot be cleared and so the two parts are linked and blocked together.
 
 ### Imbricated parts: Chainmail
 As an example of parts that can be constructed imbricated I decided to design (parametrically !) a chainmail. I did it in SolidWorks and printed it using PLA and a Prusa MK3 printer. My parameters were 0% infill and 0.2mm resolution (0.4mm nozzle).
@@ -164,7 +201,7 @@ As an example of parts that can be constructed imbricated I decided to design (p
   <figcaption> Printed </figcaption>
 </figure>
 
-The amazing thing with this is that I could simply export my SolidWorks file to STL and print it as is ! A single print !
+The amazing thing with this is that I could simply export my SolidWorks file to STL and print it as is! A single print !
 
 <video width="640" height="480" autoplay loop>
   <source src="./../../img/mod05/chainMail.mp4" type="video/mp4">
@@ -181,26 +218,26 @@ Being able to 3D-print also means that I do not need to buy small, specific part
   <figcaption> The lost holder and what it should look like </figcaption>
 </figure>
 
-So I decided to unmount the one I still have, measure it and print a new one !
+So I decided to unmount the one I still have, measure it and print a new one!
 
 <figure> <center>
   <img src="./../../img/mod05/guidoline2.jpg" alt="prusa Height" width="80%" />
-  <figcaption> looks like they just put duct tape on my cheap bike /figcaption>
+  <figcaption> looks like they just put duct tape on my cheap bike </figcaption>
 </figure>
 
-So after the measurements: time to design !
+So after the measurements: time to design!
 
 <figure> <center>
   <img src="./../../img/mod05/guidolineHolder.jpg" alt="prusa Height" width="80%" />
-  <figcaption> Just like the original, but even better ! /figcaption>
+  <figcaption> Just like the original, but even better ! </figcaption>
 </figure>
 
 <figure> <center>
   <img src="./../../img/mod05/guidolineCura.jpg" alt="prusa Height" width="80%" />
-  <figcaption> Printing with brim and no support, hoping that the bridge is short enough /figcaption>
+  <figcaption> Printing with brim and no support, hoping that the bridge is short enough </figcaption>
 </figure>
 
-I was a bit scared about the printing as I didn't really know if I needed support... Eventually all went well as the bridge was short enough and the overhang on the border was also short enough. Some filaments were a bit ugly under the dome but I don't care.
+I was a bit scared about the printing as I didn't really know if I needed support... Eventually, all went well as the bridge was short enough and the overhang on the border was also short enough. Some filaments were a bit ugly under the dome but I don't care.
 
 <figure> <center>
   <img src="./../../img/mod05/guidolinePrinted.jpg" alt="prusa Height" width="80%" />
@@ -251,7 +288,7 @@ At our lab, we have a 3D sense. Unfortunately, the company manufacturing it went
 The great news on the other hand is that [Quentin Bolsee's final project](http://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/#final-project) is a photogrammetry 3D scanner.
 It is extremely well done and yields very nice results. I decided to learn how to use it and scan a piggy toy.
 
-It works with an ESP32-CAM mounted on a CNC cut platform. The object to scan rotates on a plates with the help of two motors and the whole system is controlled with the ESP and an ATTiny412.
+It works with an ESP32-CAM mounted on a CNC cut platform. The object to scan rotates on a plate with the help of two motors and the whole system is controlled with the ESP and an ATTiny412.
 
 <figure> <center>
   <img src="./../../img/mod05/quentinScan.jpg" alt="3DSense" width="80%" />
@@ -265,7 +302,7 @@ The device can be used and controlled through a web page and HTTP requests.
   <figcaption> Web interface </figcaption>
 </figure>
 
-Before launching the automatic acquisition, I first homed the device and then I took some pics to visualize the illumination in the room and adjust the exposition time. I then tweaked the Python script to get exactly 100 pictures (20 different azimuths, 5 elevations). The code is available at the bottom of the page in the design files. Note that it requires Numpy, tqdm and open-cv.
+Before launching the automatic acquisition, I first homed the device, and then I took some pics to visualize the illumination in the room and adjust the exposition time. I then tweaked the Python script to get exactly 100 pictures (20 different azimuths, 5 elevations). The code is available at the bottom of the page in the design files. Note that it requires Numpy, tqdm and open-cv.
 `pip install tqdm` `pip install numpy` `pip install opencv-contrib-python`
 
 <figure> <center>
@@ -283,8 +320,8 @@ Before launching the automatic acquisition, I first homed the device and then I 
   <figcaption></figcaption>
 </figure>
 
-About one hour later, I finally have my 100 pictures. I can then import them in a photogrammetry software and see the result !
-First, I tried to use [Meshroom](https://alicevision.org/#meshroom) (AliceVision) which is free ! Note that Meshroom uses your GPU for the computation so best to have a nice desktop configuration. For an unknown reason, my GPU was not used a lot though but my CPU was running at full power for at least 30 minutes !
+About one hour later, I finally have my 100 pictures. I can then import them into photogrammetry software and see the result !
+First, I tried to use [Meshroom](https://alicevision.org/#meshroom) (AliceVision) which is free! Note that Meshroom uses your GPU for the computation so best to have a nice desktop configuration. For an unknown reason, my GPU was not used a lot though but my CPU was running at full power for at least 30 minutes!
 
 <figure> <center>
   <img src="./../../img/mod05/meshroom.jpg" alt="3DSense" width="80%" />
@@ -303,13 +340,13 @@ Once done, you can simply open the workign directory folder and the .obj will ge
 </figure>
 
 
-I then downloaded [Autodesk Recap Pro](https://www.autodesk.com/products/recap/overview?plc=RECAP&term=1-YEAR&support=ADVANCED&quantity=1). The software is extremely powerful and is capable of generating 3D model based on at least 30 images with a maximum of a 100 per project. These images can be simply taken with a smartphone camera without even needing to be in precise spatial positions. It is unfortunately pricey but a free-trial exists and just like (almost) all Autodesk's products, it's free if you have an .edu mail address.
+I then downloaded [Autodesk Recap Pro](https://www.autodesk.com/products/recap/overview?plc=RECAP&term=1-YEAR&support=ADVANCED&quantity=1). The software is extremely powerful and is capable of generating a 3D model based on at least 30 images with a maximum of a 100 per project. These images can be simply taken with a smartphone camera without even needing to be in precise spatial positions. It is unfortunately pricey but a free trial exists and just like (almost) all Autodesk's products, it's free if you have a .edu mail address.
 
  Recap will then try to reconstruct the point clouds in 3D and you can then slice or adjust the model before exporting it.
- The big advantage of Recap is the fact that the computing is done in the cloud ! No need for a graphics card :smile:
+ The big advantage of Recap is the fact that the computing is done in the cloud! No need for a graphics card :smile:
 
 !!!notes
-    .edu account have a limited queue so waiting time is between 2-12hours, no need to panic neither to leave your laptop on, as it is processed online ;)
+    .edu account have a limited queue so the waiting time is between 2-12hours, no need to panic neither to leave your laptop on, as it is processed online ;)
 
 
 I was first not really convinced by the software capabilities so I took bad photos (no attention to lighting, blur or 3D completeness) of a bottle of beer. Surprisingly, the results were good !
@@ -386,7 +423,7 @@ Your browser does not support the video tag.
 
 Well... **It failed** (absolutely nothing but a ball of unusable texture). I think this may be because some of the pictures did not capture its entire face and maybe the background was too uneven. I'll try again.
 
-I then simply took some pictures of my father's head (about 30 pictures) and it actually worked way better. Now the back of the head was very inaccurate because of the hair but the front of is face is actually quite impressive:
+I then simply took some pictures of my father's head (about 30 pictures) and it actually worked way better. Now the back of the head was very inaccurate because of the hair but the front of his face is actually quite impressive:
 
 <iframe allowfullscreen webkitallowfullscreen width="640" height="480" frameborder="0" seamless src="https://p3d.in/e/uDB2F"></iframe>
 
@@ -451,7 +488,7 @@ I plan to do the whole department in the coming months !
 </figure>
 
 ## To go further
-I would like to use a resin 3D-printer to make other parts and compare the results.
+I would like to use a resin 3D printer to make other parts and compare the results.
 I plan to finish my chess game whenever I got time.
 I want to implement OctoPrint on my Uni's printers to be able to print from everywhere in the building and monitor the printing.
 Play with the independent layer settings in Prusa to optimize my printing time.
