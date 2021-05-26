@@ -41,7 +41,7 @@ Not many people tried to model the bladder As said before, the current state-ot-
 Some models are more advanced but are especially dedicated to teaching surgery or endoscopic procedures and are not a good model of the bladder activity, pressure, or filling properties.
 
 <figure> <center>
-  <img src="./../../img/mod16/stateoftheart.png" alt="neurogenic Bladder" width="80%" />
+  <img src="./../../img/mod16/stateoftheart.jpg" alt="neurogenic Bladder" width="80%" />
   <figcaption>Current state-of-the-art model for ultrasonic techniques </figcaption>
 </figure>
 
@@ -88,7 +88,7 @@ A said before, most of the parts will be handmade!
 
 - For the phantom bladder, I will mold it with silicone, using a vacuum bell. I intend to print the molds using PLA and PVA but the outer mold could be improved if made in teflon with the CNC. The silicone mix is chosen for its mechanical properties. Additional silicone fibers will be made in Sorta Clear 40 to model the detrusor muscular fibers around the bladder. These fibers should be highly modular and practical so that I can easily add or remove some, change their positions, ... Additionally, it would be a nice improvement to be able to start from a 3D scan of a real bladder to make the mold.
 
-- For the pressure chamber, I will cut my PMMA sheets with the laser cutter and glue them strongly with the acrifix 192. If the system is fast enough, one could imagine trigger sudden increase in pressure to model contractions. This would require a solenoid valve and a pressure tank which will increase the cost and the complexity. 5 PMMA sheets will be glued together and a main board in wood at the bottom with some silicone sealing will hold everything together. Water tanks for the bladder filling will be placed near the chamber as well. 
+- For the pressure chamber, I will cut my PMMA sheets with the laser cutter and glue them strongly with the acrifix 192. If the system is fast enough, one could imagine trigger sudden increase in pressure to model contractions. This would require a solenoid valve and a pressure tank which will increase the cost and the complexity. 5 PMMA sheets will be glued together and a main board in wood at the bottom with some silicone sealing will hold everything together. Water tanks for the bladder filling will be placed near the chamber as well.
 
 - The electronics boards will be mainly made by chemical etching and assembled using SMD components.
 
