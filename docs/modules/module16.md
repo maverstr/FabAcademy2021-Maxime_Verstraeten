@@ -4,7 +4,7 @@
 
 <div class="objectivePanel">
   <ul>
-    <li> Propose a final project masterpiece that integrates the range of units covered </li>
+    <li> Propose a final project masterpiece that integrates the range of units covered. </li>
   </ul>
 </div>
 <div class="dottedLine"></div>
@@ -12,7 +12,9 @@
 ## What will it do?
 
 My project is in the scope of my Ph.D. subject.
+
 I intend to measure the activity, pressure, and deformation of a human bladder to detect micturition issues.
+
 In particular, a "neurogenic" bladder defines bladder and sphincter dysfunctions related to a neurological disease or a condition such as a spinal cord injury (SCI). Clinical manifestations include detrusor (the main muscle of the bladder) overactivity leading to incontinence and detrusor sphincter dyssynergia which can result in irreversible kidney damage.
 
 
@@ -38,6 +40,7 @@ The state-of-the-art bladder phantom is, still today, a rubber balloon. It is, f
 
 ## Who has done what beforehand?
 Not many people tried to model the bladder As said before, the current state-ot-the-art model is a rubber balloon.
+
 Some models are more advanced but are especially dedicated to teaching surgery or endoscopic procedures and are not a good model of the bladder activity, pressure, or filling properties.
 
 <figure> <center>
