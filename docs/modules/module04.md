@@ -399,4 +399,4 @@ I would like to use the CNC milling to make USB keys and an AVR controller to be
 It would be nice to test laser cutting (fibre laser), printing, sewing and electro-plating to make PCBs in the future !
 
 ## My files
-:material-download-box: [My Design files](https://gitlab.fabcloud.org/academany/fabacademy/2021/labs/ulb/students/maxime-verstraeten/-/raw/master/docs/files/mod04.zip)
+:material-download-box: [My Design files](http://academany.fabcloud.io/fabacademy/2021/labs/ulb/students/maxime-verstraeten/files/mod04.zip)

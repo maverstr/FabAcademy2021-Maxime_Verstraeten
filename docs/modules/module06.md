@@ -484,4 +484,4 @@ To make it more like a real 7/14 segments display, we laser cut and engraved a p
 Unfortunately, it does not diffuse the light as well as expected so a better method should be used for better results.
 
 ## My design files
-:material-download-box: [My Design files (Gerber files)](https://gitlab.fabcloud.org/academany/fabacademy/2021/labs/ulb/students/maxime-verstraeten/-/raw/master/docs/files/mod06.zip)
+:material-download-box: [My Design files](http://academany.fabcloud.io/fabacademy/2021/labs/ulb/students/maxime-verstraeten/files/mod06.zip)

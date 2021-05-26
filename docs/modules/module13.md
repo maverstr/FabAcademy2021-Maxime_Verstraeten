@@ -593,4 +593,4 @@ void processMessage(char cmd, char param){//decomposes message in command and pa
 ````
 
 ## My design files
-:material-download-box: [My Design files](https://gitlab.fabcloud.org/academany/fabacademy/2021/labs/ulb/students/maxime-verstraeten/-/raw/master/docs/files/mod13.zip)
+:material-download-box: [My Design files](http://academany.fabcloud.io/fabacademy/2021/labs/ulb/students/maxime-verstraeten/files/mod13.zip)

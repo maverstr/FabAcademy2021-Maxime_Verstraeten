@@ -735,4 +735,4 @@ All in all, the ESP32 can be programmed easily and works well. I used it for the
 
 ## My design files
 My ESP32 Altium design and my FPGA codes and bitstreams are available here:
-:material-download-box: [My Design files](https://gitlab.fabcloud.org/academany/fabacademy/2021/labs/ulb/students/maxime-verstraeten/-/raw/master/docs/files/mod08.zip)
+:material-download-box: [My Design files](http://academany.fabcloud.io/fabacademy/2021/labs/ulb/students/maxime-verstraeten/files/mod08.zip)

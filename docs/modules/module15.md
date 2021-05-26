@@ -331,4 +331,4 @@ To obtain a perfectly transparent and without any bubbles, I would recommend usi
 
 
 ## My design files
-:material-download-box: [My Design files](https://gitlab.fabcloud.org/academany/fabacademy/2021/labs/ulb/students/maxime-verstraeten/-/raw/master/docs/files/mod15.zip)
+:material-download-box: [My Design files](http://academany.fabcloud.io/fabacademy/2021/labs/ulb/students/maxime-verstraeten/files/mod15.zip)

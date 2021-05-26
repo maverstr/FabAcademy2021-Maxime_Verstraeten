@@ -340,5 +340,5 @@ void loop() {
 ````
 ## My design files
 The Arduino code is available here:
-:material-download-box: [My Design files](https://gitlab.fabcloud.org/academany/fabacademy/2021/labs/ulb/students/maxime-verstraeten/-/raw/master/docs/files/mod10.zip)
+:material-download-box: [My Design files](http://academany.fabcloud.io/fabacademy/2021/labs/ulb/students/maxime-verstraeten/files/mod10.zip)
 The ESP32 board design has been discussed in week 8.

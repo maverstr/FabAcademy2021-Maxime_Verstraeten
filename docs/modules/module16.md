@@ -13,7 +13,9 @@
 
 My project is in the scope of my Ph.D. subject.
 
+
 I intend to measure the activity, pressure, and deformation of a human bladder to detect micturition issues.
+
 
 In particular, a "neurogenic" bladder defines bladder and sphincter dysfunctions related to a neurological disease or a condition such as a spinal cord injury (SCI). Clinical manifestations include detrusor (the main muscle of the bladder) overactivity leading to incontinence and detrusor sphincter dyssynergia which can result in irreversible kidney damage.
 

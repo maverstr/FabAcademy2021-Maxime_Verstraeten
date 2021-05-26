@@ -458,4 +458,4 @@ Play with the independent layer settings in Prusa to optimize my printing time.
 Test infill patterns mechanical anisotropy to make structures that are rigid in a direction and deformable in another one.
 
 ## My design files
-:material-download-box: [My Design files](https://gitlab.fabcloud.org/academany/fabacademy/2021/labs/ulb/students/maxime-verstraeten/-/raw/master/docs/files/mod05.zip)
+:material-download-box: [My Design files](http://academany.fabcloud.io/fabacademy/2021/labs/ulb/students/maxime-verstraeten/files/mod05.zip)

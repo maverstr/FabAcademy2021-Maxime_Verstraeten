@@ -279,4 +279,4 @@ Your browser does not support the video tag.
 
 You can see I used my commercial devkit to test it out and then I later broke my USB-B connector on my own board without a mean to solder it back so it was good news I had the commercial board with me !
 ## My design files
-:material-download-box: [My Design files](https://gitlab.fabcloud.org/academany/fabacademy/2021/labs/ulb/students/maxime-verstraeten/-/raw/master/docs/files/mod12.zip)
+:material-download-box: [My Design files](http://academany.fabcloud.io/fabacademy/2021/labs/ulb/students/maxime-verstraeten/files/mod12.zip)
