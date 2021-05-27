@@ -108,6 +108,14 @@ A said before, most of the parts will be handmade!
 - Fluidics and electronics wires will enter the chamber through a hermetic entrance and a hermetic D-sub connector. Fluidic connectors and tubes will be refurbished from various other projects.
 
 
+As a summary, here is a very simplified block diagram of the system:
+<figure> <center>
+  <img src="./../../img/mod16/blockDiagram.svg" alt="neurogenic Bladder" width="100%" />
+  <figcaption></figcaption>
+</figure>
+
+
+
 ## What questions need to be answered and how the project will be evaluated?
 I want to be able to continuously fill the phantom with a flow rate between 1 and 30ml/min while monitoring its pressure and strain using the various sensors. I want to control the flow rate entering the bladder as well as the pressure inside the chamber. The sensors should send measurements every 33ms to the ESP32 and I should be able to store the measurements on my computer in a CSV file.
 
