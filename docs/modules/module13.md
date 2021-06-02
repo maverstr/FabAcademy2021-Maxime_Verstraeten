@@ -41,7 +41,7 @@ The good news is also that, as indicated in the datasheet of the SAMD11C, the UA
 
 
 ### The design
-The deign itself is relatively straightforward, here are the main components:
+The design itself is relatively straightforward, here are the main components:
 
 - An ATSAMD11C
 - A 3.3V regulator

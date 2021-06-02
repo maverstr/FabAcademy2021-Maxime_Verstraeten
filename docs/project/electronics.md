@@ -11,13 +11,7 @@
 Since the project is about doing a lot of different things, I will split the content of the final project in several different pages:
 
 - [Introduction, needs and initial ideas](./#intro)
-- [Bladder phantom](./../bladderPhantom)
-- [Pressure chamber](./../PressureChamber)
-- [Inputs, outputs and electronics](./../electronics)
-
-
-
-
+-
 ## Intro
 Because I'm doing my PhD full-time concurrently with the FabAcademy, I'll try to stay in the scope of my PhD subject.
 
