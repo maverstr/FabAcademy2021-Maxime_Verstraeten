@@ -133,3 +133,8 @@ To better represent the muscle fibers in a real bladder and therefore the mechan
   <img src="./../../img/finalProject/mold10.jpg" alt="phantomDrawing" width="80%" />
   <figcaption>Actual design with a pressure sensor</figcaption>
 </figure>
+
+### Possible improvements
+
+It would be nice to be able to create the bladder phantom based on DICOM (medical) imaging from CTscan for example.
+The bladder mold could be done in teflon to be a bit more smooth as well instead of relying on 3D printing.

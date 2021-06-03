@@ -19,6 +19,8 @@ The design is very simple, a rectangular box in plexiglass (PMMA) with some inpu
 The dimensions are: 250x300x350mm
 
 I use wood for the bottom plate in order to have a stable base that is high enough to be able to screw things in it.
+
+### Plexiglass
 The plexiglass is recycled from other various projects so there are multiple colors and multiple width.
 
 <figure> <center>
@@ -58,7 +60,14 @@ I cut it using the laser cutter (and Inkscape basic shapes like rectangles and a
   <figcaption>After</figcaption>
 </figure>
 
-To hold it all together, I designed and 3D-printed some very simple holders and used the Acrifix192 glue which is made for PMMA. It cures with UV light (about 20min outside in the sun). I tried to use a UV light machine to make it cure faster but it doesn't really work out because the UV spot is too small to be useful and because the light diffuses in the plexiglass.
+To hold it all together, I designed and 3D-printed some very simple holders with chamfers in which to slide the sheets and used the Acrifix192 glue which is made for PMMA.
+
+<figure> <center>
+  <img src="./../../img/finalProject/holder.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+The glue cures with UV light (about 20min outside in the sun). I tried to use a UV light machine to make it cure faster but it doesn't really work out because the UV spot is too small to be useful and because the light diffuses in the plexiglass.
 
 <figure> <center>
   <img src="./../../img/finalProject/acrifix1.jpg" alt="phantomDrawing" width="80%" />
@@ -77,5 +86,81 @@ To hold it all together, I designed and 3D-printed some very simple holders and 
 
 <figure> <center>
   <img src="./../../img/finalProject/acrifix4.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+
+<figure> <center>
+  <img src="./../../img/finalProject/collage0.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/finalProject/collage1.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+
+<figure> <center>
+  <img src="./../../img/finalProject/collage2.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/finalProject/collage3.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+Once everything is glued together ! I succeeded in finding a sheet of transparent plexiglass but it is 5mm thick instead of 3 so it is a bit hard to glue with the others.
+
+<figure> <center>
+  <img src="./../../img/finalProject/collage4.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+### Plexiglass window
+To be able to quickly change the connectors if needed and connect some wires, I made a window that is easily removable and airtight with some silicone. For the electronics, I use a D-sub25 connector with its sealing kit so I will need to draw it in my design. I also add some holes for the fluidic connectors and tubes.
+
+<figure> <center>
+  <img src="./../../img/finalProject/dsub.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/finalProject/windowPlexi.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+
+### Wood
+For the wood, I recycled a piece used for other projects, cut it and then I used the CNC (6mm flat end mill bit) to cut a channel in which the PMMA will slide.
+
+<figure> <center>
+  <img src="./../../img/finalProject/wood1.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/finalProject/wood2.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/finalProject/wood3.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/finalProject/wood4.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/finalProject/wood5.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/finalProject/wood6.jpg" alt="phantomDrawing" width="80%" />
   <figcaption></figcaption>
 </figure>
