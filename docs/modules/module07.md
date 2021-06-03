@@ -64,6 +64,7 @@ The surfacing speed and the diameter will have an impact of the rotation speed (
 
 The Kinetic-NC software is pretty easy to use and has two mains menus: jog and program. The first one allows to move the CNC around manually and zero the machine. The latter is used to load a CAM process and run. We can also slightly adjust the parameters once the program is running (0-150% spindle speed and feed per tooth).
 
+
 ### Safety
 A CNC machine can be a dangerous tool. The one at our lab cannot run whenever its doors are open and is automatically stopped whenever a door is opened. Moreover, one must always stay close to it when running in case something goes wrong. Cutting causes a lot of friction and heat and one must be extremely vigilant about it.
 
@@ -192,6 +193,12 @@ A lot of the options are also available. In particular, the 2D engraving too but
 
 #### Simulating
 The final step before exporting the CAM is to simulate it. This allows to see the time it will take and help detect any issues. I highly recommend to do it.
+
+
+### Testing the machine
+Jason and I tested the runout and the alignment of the machine by visually inspecting the axis of the tool when rotating. We also measured the horizontal distance between the end of the mill and the mill axis with a caliper at different points in the rotation, similarly to what is done in [this video](https://www.youtube.com/watch?v=QOkXa3OGUns).
+
+Christophe also indicated to us the best feed rates and spindle speed for cutting through the wood (see above).
 
 ## Making my guitar !
 ### Getting inspirations and references
