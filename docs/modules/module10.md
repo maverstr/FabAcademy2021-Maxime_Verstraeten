@@ -304,6 +304,8 @@ Your browser does not support the video tag.
 Your browser does not support the video tag.
 </video>
 
+*UPDATE:* I re-did almost the same circuit but on a PCB and with SMD component this time for the final project: [see here](./../project/electronics.md).
+
 ### 3. Hall effect
 Finally, the ESP32 also features a built-in hall effect sensor !
 I just had to use the hallRead() function to be able to read the value and light up the LED based on this value:
