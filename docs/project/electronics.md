@@ -1,4 +1,4 @@
-# Inputs, outputs and electronics
+# Inputs, outputs, electronics and encapsulation
 
 There are multiple inputs and outputs in this project.
 
@@ -24,6 +24,7 @@ They will be controlled like the chamber pump with the L293D.
 
 
 ## Data visualization
+### TFT Screen
 To output some data like the current flowrate or pressure, I initially wanted to use a LCD TFT screen. One of the most common LCD driver is the ILI9341. Multiple brands sell boards with this LCD as well as a touchscreen interface.
 
 I was hoping to be able to communicate with it through the SPI interface (the ILI9341 is capable of that) but I chose a wrong brand (AZdelivery) for the board that redirected the SPI to a SD card reader. It is then only possible to send data to it using the 8-bit parallel bus, which requires a total of 12 pins to make it work, which is a lot on a small ESP32, already dealing with other inputs and outputs.
@@ -32,6 +33,21 @@ I was hoping to be able to communicate with it through the SPI interface (the IL
   <img src="./../../img/finalProject/TFT.jpg" alt="phantomDrawing" width="80%" />
   <figcaption></figcaption>
 </figure>
+
+It works, but I won't be able to use it for this project. One solution would be to use a shift register to go from serial (one pin) to 8-bit parallel to the LCD screen but it would require a lot of additional work.
+<figure> <center>
+  <img src="./../../img/finalProject/TFT2.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+### Alphanumeric LCD
+I chose then to use an alphanumeric LCD screen (16x2 characters). It is a Batron BTHQ 21605AV-YETF. It communicates through I2C and the pinout is available in the datasheet.
+<figure> <center>
+  <img src="./../../img/finalProject/batronPinout.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+Its I2C address is 0x3B. The LCD driver is a PCF2119. Unfortunately, there are no libraries to make it work so I had to look at the various registers to send the correct commands to be able to output data on the screen.
 
 ## Control inputs
 To control some parameters like the pomp flow rate, I use a potentiometer and some push buttons that are connected to the ESP32.
@@ -72,8 +88,225 @@ The other possibilities would include:
 
 It does not seem perfectly waterproof but nothing in stock is waterproof. The pressure is going to be small and it should be able to resist that according to the datasheet.
 
+I made two "breakout" boards to use them with pins and decoupling capacitors.
+For the MPRL:
+<figure> <center>
+  <img src="./../../img/finalProject/mprlSchematic.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+<figure> <center>
+  <img src="./../../img/finalProject/mprlPCB.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+<figure> <center>
+  <img src="./../../img/finalProject/mprl3D.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+For the MS5837:
+<figure> <center>
+  <img src="./../../img/finalProject/MSSchematic.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+<figure> <center>
+  <img src="./../../img/finalProject/MSPCB.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+<figure> <center>
+  <img src="./../../img/finalProject/MS3D.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+To be more complete, I would need to add pull-up resistors on the I2C lines. I added them with a bit of hand-soldering afterwards.
+
+
+
 ## The microcontroller: ESP32
 I chose to use an ESP32 for multiple reasons. The first being the fact that it is a very high-end microcontroller, with a lot of memory and lot of IOs. It is also capable of Bluetooth and Wifi communication if I ever need them. I can program it using the UART pins.
+
+I made a board that features the ESP32, but also the 12V voltage regulator to +-5V and to 3.3V. I added an LED on the GPIO 23. There are two buttons to enter the programming mode of the ESP.
+There is an I2C multiplexer, as the two pressure sensors share the same address so I have to place them on two different I2C bus.
+Finally, there is a L293D motor driver and a CMOS logic inverter (NC7WZ04) to help control the motor by creating the opposite signals which reduces the number of outputs of the ESP required. Finally, a lot of headers are present to connect to various I2C, SPI and UART devices and to connect buttons, toggle switches, ...
+
+<figure> <center>
+  <img src="./../../img/finalProject/ESPSchematic.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/finalProject/ESPPCB.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+
+<figure> <center>
+  <img src="./../../img/finalProject/ESP3D.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+
+You can see the board is working well and I can program the ESP to make the LED blink on GPIO23.
+
+<video width="700" height="480" autoplay loop>
+  <source src="./../../img/finalProject/blink.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+
+The I2C multiplexer has the address fixed by the conections made to the A0 and A1 pins, in my case, the address is 0xE2h (8-bit), or 0x47h for the 7-bit address.
+<figure> <center>
+  <img src="./../../img/finalProject/PCA.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+To choose the channels on which to communicate, I send a byte containing 4 bits that indicate the active channels (out of the 4 available) to the PCA on the main I2C bus.
+
+<figure> <center>
+  <img src="./../../img/finalProject/PCA2.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+
+## Strain gauge acquisition chain
+
+To measure the strain gauge deformation, I use a wheatstone bridge made of 4 resistors an, potentiometer for bridge balancing, and an instrumenation amplifier (AD620). I supply my bridge with +2.5V and -2.5V coming from an initial 12V -> +-5V (IZ1205S) and then two LDOs (TPS72325 and AP7331-25). The reference of the amplifier comes from a potentiometer going through an op-amp buffer. The gain of the amplifier is set with a resistor and an additional potentiometer. Finally, I use a Sallen-key low-passs filter of order 2 to remove most of the signal noise.
+
+I initially thought about using digital potentiometer but the main issue with these is the non-zero wiper resistance and the limitation to being stuck between GND to VDD, which does not allow me a symmetrical choise of voltage like I did for the reference (-2.5V->+2.5V).
+
+<figure> <center>
+  <img src="./../../img/finalProject/strainSchematic.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/finalProject/strainPCB.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/finalProject/strain3D.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+You can see on this video how the voltage at the output of the acquisition chain changes with how I deform the beam held in the vice with a strain gauge glued on it.
+<video width="700" height="480" autoplay loop>
+  <source src="./../../img/finalProject/strain.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+
+## The PCBs
+I made all my boards using chemical etching because I didn't have any good mill bits left and no more FR1 copper plates. Also, for the ESP board, I could simplify my design by making it double-sided.
+
+<figure> <center>
+  <img src="./../../img/finalProject/board1.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption>After chemical etching</figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/finalProject/board2.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+
+<figure> <center>
+  <img src="./../../img/finalProject/board3.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption>Drilling some holes</figcaption>
+</figure>
+
+
+<figure> <center>
+  <img src="./../../img/finalProject/board4.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption>Holes drilled</figcaption>
+</figure>
+
+
+<figure> <center>
+  <img src="./../../img/finalProject/board5.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+
+<figure> <center>
+  <img src="./../../img/finalProject/board6.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+
+<figure> <center>
+  <img src="./../../img/finalProject/board7.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+
+<figure> <center>
+  <img src="./../../img/finalProject/board8.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption>ESP board</figcaption>
+</figure>
+
+
+<figure> <center>
+  <img src="./../../img/finalProject/board9.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption>MS5837 breakout boards</figcaption>
+</figure>
+
+
+<figure> <center>
+  <img src="./../../img/finalProject/board10.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption>Strain gauge board</figcaption>
+</figure>
+
+
+<figure> <center>
+  <img src="./../../img/finalProject/board11.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption>MPRL board</figcaption>
+</figure>
+
+
+## Encapsulation
+To be able to follow the bladder deformation, I encapsulated it into some Ecoflex0050 silicone. I made molds, poured the silicone and tried out different designs with pieces of plastic before encapsulating a real gauge.
+
+<figure> <center>
+  <img src="./../../img/finalProject/moldStrain0.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption>Initial idea</figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/finalProject/moldStrain1.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption>Making a mold</figcaption>
+</figure>
+
+
+<figure> <center>
+  <img src="./../../img/finalProject/moldStrain2.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption>Pouring the silicone</figcaption>
+</figure>
+
+
+<figure> <center>
+  <img src="./../../img/finalProject/moldStrain3.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption>Test plastic pieces</figcaption>
+</figure>
+
+
+<figure> <center>
+  <img src="./../../img/finalProject/moldStrain4.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption>Encapsulation results</figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/finalProject/moldStrain5.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption>Testing the resistance value of the gauge when fixed on the phantom</figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/finalProject/moldStrain6.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption>Different shapes</figcaption>
+</figure>
+
+
+
+
 
 ## Possible improvements
 I could add a solenoid valve to handle fast compression in the chamber by filling a pressure tank and releasing it in a short amount of time through the valve. This would allow the simulation of detrusor contractions.

@@ -1,4 +1,4 @@
-# Bladder phantom and encapsulation
+# Bladder phantom
 
 In my project, I need a bladder phantom, i.e. a model of a human bladder on which I can place multiple devices and sensors. I will detail how I made it and what it is capable of.
 
@@ -108,12 +108,74 @@ In order to make the phantom in a single piece, I chose to use soluble filament 
   <figcaption> Single-casting mold</figcaption>
 </figure>
 
+
+<figure> <center>
+  <img src="./../../img/finalProject/pva1.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption>Inner mold in water-soluble filament</figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/finalProject/pva2.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/finalProject/pva3.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/finalProject/pva4.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/finalProject/pva5.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption>degassing</figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/finalProject/pva6.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/finalProject/pva7.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/finalProject/pva8.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption>Placing it in water</figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/finalProject/pva9.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption>After one hour</figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/finalProject/pva10.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption>After 4 hours</figcaption>
+</figure>
+
+You can see the water with the dissolved filament pouring outside the phantom.
+<video width="700" height="480" autoplay loop>
+  <source src="./../../img/finalProject/phantomSoluble.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+This ensures a reliable phantom that can be used for many filling and emptying cycles !
+
 <figure> <center>
   <img src="./../../img/finalProject/mold7.jpg" alt="phantomDrawing" width="80%" />
   <figcaption></figcaption>
 </figure>
 
-This ensures a reliable phantom that can be used for many filling and emptying cycles !
+<figure> <center>
+  <img src="./../../img/finalProject/moldFinal.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
 
 ### Adding muscle fibers
 
@@ -138,3 +200,4 @@ To better represent the muscle fibers in a real bladder and therefore the mechan
 
 It would be nice to be able to create the bladder phantom based on DICOM (medical) imaging from CTscan for example.
 The bladder mold could be done in teflon to be a bit more smooth as well instead of relying on 3D printing.
+It would be possible to encapsulate some electronics boards in silicone or parylene, or even use the thermoforming machine.

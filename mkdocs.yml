@@ -15,7 +15,11 @@ edit_uri: "" #comment to get the edit button on each page
 
 nav:
     - Home: index.md
-    - Final Project: './project/final-project.md'
+    - Final Project:
+        - './project/final-project.md'
+        - './project/bladderPhantom.md'
+        - './project/PressureChamber.md'
+        - './project/electronics.md'
     - My FabAcademy Journey:
         - './modules/index.md'
         - './modules/module00.md'

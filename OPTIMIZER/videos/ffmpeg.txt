@@ -1,1 +1,3 @@
-ffmpeg -i -vcodec libx264 -crf 30 -vf scale=1024:576 -an out.mp4
+ffmpeg -i xxx -vcodec libx264 -crf 30 -vf scale=1024:576 -an out.mp4
+
+pour speed up: ffmpeg -i xxx -filter:v "setpts=0.1*PTS" -vcodec libx264 -crf 28 -an out.mp4
