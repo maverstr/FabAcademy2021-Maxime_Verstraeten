@@ -5,7 +5,7 @@
 <div class="objectivePanel">
   <ul>
     <li> Develop a plan for dissemination of your final project. </li>
-    <li> Prepare drafts of your summary slide (presentation.png, 1920x1080) and video clip (presentation.mp4, 1080p HTML5, < ~minute, < ~10 MB) and put them in your root directory. <\li>
+    <li> Prepare drafts of your summary slide (presentation.png, 1920x1080) and video clip (presentation.mp4, 1080p HTML5, < ~minute, < ~10 MB) and put them in your root directory. </li>
   </ul>
 </div>
 <div class="dottedLine"></div>

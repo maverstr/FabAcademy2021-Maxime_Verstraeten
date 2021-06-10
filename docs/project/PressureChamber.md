@@ -201,9 +201,49 @@ For the wood, I recycled a piece used for other projects, cut it and then I used
 </figure>
 
 
-## Final result
+## Assembly of the chamber
 Once everything is glued together, here is the final result:
 <figure> <center>
   <img src="./../../img/finalProject/collage4.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+
+## Final result
+
+With everything in place: electronics, the phantom, the chamber, here is how it looks like:
+<figure> <center>
+  <img src="./../../img/finalProject/collage4.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/finalProject/final1.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/finalProject/final2.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/finalProject/final3.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/finalProject/final4.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/finalProject/final5.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+
+<figure> <center>
+  <img src="./../../img/finalProject/final6.jpg" alt="phantomDrawing" width="80%" />
   <figcaption></figcaption>
 </figure>

@@ -41,7 +41,7 @@ It works, but I won't be able to use it for this project. One solution would be 
 </figure>
 
 ### Alphanumeric LCD
-I chose then to use an alphanumeric LCD screen (16x2 characters). It is a Batron BTHQ 21605AV-YETF. It communicates through I2C and the pinout is available in the datasheet.
+I chose then to use an alphanumeric LCD screen (16x2 characters). It is a Batron BTHQ21605AV-YETF-LED04-12C-5V. It communicates through I2C and the pinout is available in the datasheet.
 <figure> <center>
   <img src="./../../img/finalProject/batronPinout.jpg" alt="phantomDrawing" width="80%" />
   <figcaption></figcaption>
@@ -49,13 +49,63 @@ I chose then to use an alphanumeric LCD screen (16x2 characters). It is a Batron
 
 Its I2C address is 0x3B. The LCD driver is a PCF2119. Unfortunately, there are no libraries to make it work so I had to look at the various registers to send the correct commands to be able to output data on the screen.
 
+<figure> <center>
+  <img src="./../../img/finalProject/lcdScreen.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption></figcaption>
+</figure>
+
+````
+// Some functions that I made to communicate with the LCD screen
+void Display_init(void)
+{
+  Wire.begin();
+  Wire.beginTransmission(address);
+  Wire.write(0x00); // Control byte for Instruction
+  Wire.write(0x34); // DL: 8 bits, M: 16 by two line display, SL: 1:18, H: normal instruction set
+  Wire.write(0x0C); // D: Display on, C: curser off, B: blink off
+  Wire.write(0x06); // I/D: increment, S: no shift
+  Wire.write(0x35); // DL: 8 bits, M: 16 by two line, SL: 1:18, H: extended instruction set
+  Wire.write(0x04); // P: left to right, Q: top to bottom
+  Wire.write(0x10); // TC1: 0, TC2: 0
+  Wire.write(0x42); // HV Stages 3
+  Wire.write(0x9f); // set Vlcd, store to VA
+  Wire.write(0x34); // DL: 8 bits, M: two line, SL: 1:18, H: normal instruction set
+  Wire.write(0x80); // DDRAM Address set to 00hex
+  Wire.write(0x02); // return home
+  Wire.endTransmission();
+  delay(1000);
+}
+
+void lcdGoTo(int x, int y) {
+  Wire.beginTransmission(address);
+  Wire.write(0x00); // Control byte for Instruction
+  Wire.write(0x80 | (y * 0x40 + x)); // DDRAM Address set to 00hex
+  Wire.endTransmission();
+}
+
+void lcdClear() {
+  lcdGoTo(0,0);
+  lcdPrint("                ");
+  lcdGoTo(0,1);
+  lcdPrint("                ");
+}
+
+void lcdPrint(String s) {
+  Wire.beginTransmission(address);
+  Wire.write(0x40); // Control byte for Data
+  for (int i = 0; i < s.length(); i++)
+  {
+    Wire.write(s[i]|0x80); // Write ABCDE....
+  }
+  Wire.endTransmission();
+}
+````
+
 ## Control inputs
 To control some parameters like the pomp flow rate, I use a potentiometer and some push buttons that are connected to the ESP32.
 
 Initially, I also wanted to use the LCD touchscreen to be able to control some variables.
 
-## alphanumeric LCD
-BTHQ21605AV-YETF-LED04-12C-5V
 
 
 ##  Inputs: pressure measurements
@@ -302,6 +352,11 @@ To be able to follow the bladder deformation, I encapsulated it into some Ecofle
 <figure> <center>
   <img src="./../../img/finalProject/moldStrain6.jpg" alt="phantomDrawing" width="80%" />
   <figcaption>Different shapes</figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/finalProject/strainMeasurement.jpg" alt="phantomDrawing" width="80%" />
+  <figcaption>Close-up view</figcaption>
 </figure>
 
 

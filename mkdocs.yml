@@ -39,6 +39,7 @@ nav:
         - './modules/module14.md'
         - './modules/module15.md'
         - './modules/module16.md'
+        - './modules/module17.md'
     - About:
         - License: './about/license.md'
         - Release Notes: './about/release-notes.md'

@@ -120,7 +120,14 @@ Here are displayed my weekly assignments:
 <div class="moduleContainer">
   <a href="./module16">
     <img src="./../img/mod02/logo.png" alt="Week 02">
-    <div class="modulecontainerText"> Week 16: <br> Applicatins and implications</div>
+    <div class="modulecontainerText"> Week 16: <br> Applications and implications</div>
+  </a>
+</div>
+
+<div class="moduleContainer">
+  <a href="./module17">
+    <img src="./../img/mod17/CC.jpg" alt="Week 02">
+    <div class="modulecontainerText"> Week 17: <br> Invention, Intellectual Property and Business Models </div>
   </a>
 </div>
 
