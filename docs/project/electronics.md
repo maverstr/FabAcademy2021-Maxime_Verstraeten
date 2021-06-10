@@ -101,6 +101,12 @@ void lcdPrint(String s) {
 }
 ````
 
+
+<video width="700" height="480" autoplay loop>
+  <source src="./../../img/finalProject/lcd.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
 ## Control inputs
 To control some parameters like the pomp flow rate, I use a potentiometer and some push buttons that are connected to the ESP32.
 
@@ -241,6 +247,11 @@ I initially thought about using digital potentiometer but the main issue with th
 You can see on this video how the voltage at the output of the acquisition chain changes with how I deform the beam held in the vice with a strain gauge glued on it.
 <video width="700" height="480" autoplay loop>
   <source src="./../../img/finalProject/strain.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+<video width="700" height="480" autoplay loop>
+  <source src="./../../img/finalProject/strainMeasurements.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 

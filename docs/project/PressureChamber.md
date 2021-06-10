@@ -247,3 +247,9 @@ With everything in place: electronics, the phantom, the chamber, here is how it 
   <img src="./../../img/finalProject/final6.jpg" alt="phantomDrawing" width="80%" />
   <figcaption></figcaption>
 </figure>
+
+
+<video width="700" height="480" autoplay loop>
+  <source src="./../../img/finalProject/completeChamber.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>

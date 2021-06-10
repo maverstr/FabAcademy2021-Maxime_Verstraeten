@@ -196,6 +196,18 @@ To better represent the muscle fibers in a real bladder and therefore the mechan
   <figcaption>Actual design with a pressure sensor</figcaption>
 </figure>
 
+
+## Final result in the chamber
+<video width="700" height="480" autoplay loop>
+  <source src="./../../img/finalProject/airFilling.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+<video width="700" height="480" autoplay loop>
+  <source src="./../../img/finalProject/waterFiling.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
 ### Possible improvements
 
 It would be nice to be able to create the bladder phantom based on DICOM (medical) imaging from CTscan for example.
