@@ -47,14 +47,14 @@ Some models are more advanced but are especially dedicated to teaching surgery o
 
 <figure> <center>
   <img src="./../../img/mod16/stateoftheart.jpg" alt="neurogenic Bladder" width="80%" />
-  <figcaption>Current state-of-the-art model for ultrasonic techniques ) </figcaption>
+  <figcaption>Current state-of-the-art model for ultrasonic techniques</figcaption>
 </figure>
 
 Other people added a very simple pressure chamber around the rubber balloon to model the detrusor pressure ([Weaver, J. N., Alspaugh, J. C., & Behkam, B. (2010). Toward a minimally invasive bladder pressure monitoring system: Model bladder for in vitro testing. 2010 3rd IEEE RAS and EMBS International Conference on Biomedical Robotics and Biomechatronics, BioRob 2010, 638–643. https://doi.org/10.1109/BIOROB.2010.5625981](https://ieeexplore.ieee.org/document/5625981))
 
 <figure> <center>
   <img src="./../../img/finalProject/hermeticBox.jpg" alt="neurogenic Bladder" width="100%" />
-  <figcaption> Hermetic box to simulate homogenous pressure from the detrusor on the bladder (Weaver et al.) </figcaption>
+  <figcaption> Hermetic box to simulate homogenous pressure from the detrusor on the bladder</figcaption>
 </figure>
 
 
