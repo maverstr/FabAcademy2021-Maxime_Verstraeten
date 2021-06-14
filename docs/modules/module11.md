@@ -15,7 +15,7 @@
 Jason and I [reviewed the safety data sheets and we made some test casts](http://fabacademy.org/2021/labs/ulb/assignments/week11/) with each molding material (or at least each family). This is recapped below:
 
 ### Safety
-In particular, we tested (with the datasheets linked):
+In particular, we tested (**with the datasheets linked**):
 
 - [Sylgard 184 PDMS](https://www.wpiinc.com/media/wysiwyg/pdf/SDS/sylgard184-curing-agent.pdf)
 - [Oomoo-30](https://www.smooth-on.com/msds/files/BD_DS_Eco_Equ_EZB_EZS_Psy_MS_OOMOO_Reb_ST_SS_Soma_Sol_Sorta.pdf)
