@@ -43,7 +43,7 @@ We also wanted to make a "machine-day" where we built a machine in a single day!
 
 ## The Urumbu improvement
 ### Mechanical Design
-The Urumbu project is inspired from the flexures and in particular this [2004 thesis from Shorya Awtar](http://academy.cba.mit.edu/classes/computer_cutting/56836505.pdf) and has been later reworked by Denis Terwagne.
+The Urumbu project is inspired by the flexures and in particular this [2004 thesis from Shorya Awtar](http://academy.cba.mit.edu/classes/computer_cutting/56836505.pdf) and has been later reworked by Denis Terwagne.
 
 We re-designed the stage and several other parts in both SolidWorks and Fusion360.
 #### The stage
@@ -66,7 +66,7 @@ The motors are fixed on the side of the machine due to the spiral actuators (see
   <figcaption>Motor placement</figcaption>
 </figure>
 
-We initially took the wrong measurements so the motors were too high for our stage but with quick thinking we were able to add some parts to raise our stage higher.
+We initially took the wrong measurements so the motors were too high for our stage but with quick thinking, we were able to add some parts to raise our stage higher.
 
 <figure> <center>
   <img src="./../../img/mod09/patin.jpg" alt="logo text" width="80%" />
@@ -81,7 +81,7 @@ We initially took the wrong measurements so the motors were too high for our sta
 #### The actuators
 The Urumbu machine was already more or less working but it lacked actuators. [Quentin Bolsee](http://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/) added some motors last year but they were not working as easily as intended and they actually only made use of a quarter of the full range of motion.
 
-I decided to design new actuators based on a spiral shape. The idea of this design is to have actuators that are really easy and fast to make (laser cut or 3D-printed), have a high resolution and do not require specific material. Moreover, this kind of design does not need a lot of room. To be ideal, the spirals should be made of Teflon and bearings should be added (which we did) but they are not necessary for the machine to work.
+I decided to design new actuators based on a spiral shape. The idea of this design is to have actuators that are really easy and fast to make (laser cut or 3D-printed), have a high resolution, and do not require specific material. Moreover, this kind of design does not need a lot of room. To be ideal, the spirals should be made of Teflon and bearings should be added (which we did) but they are not necessary for the machine to work.
 
 The initial was to directly place the spiral on top of the motor:
 
@@ -111,11 +111,11 @@ This early design was just a test (_spiral management_ :smile:) but we ended kee
 
 One other advantage of the spiral design is that even though you are limited by the size of the pin that will insert into the spiral, you can add many revolutions, and the more revolutions there are, the smaller the displacement resolution is.
 
-We made several tests and in the end, to conserve some rigidity with the plexiglas and for this first version, we decided to use only a single revolution. Since we use stepper motors with 200 steps (see below) the resolution is still quite enough.
+We made several tests and in the end, to conserve some rigidity with the plexiglass and for this first version, we decided to use only a single revolution. Since we use stepper motors with 200 steps (see below) the resolution is still quite enough.
 
-We used to Teflon bearings to reduce the friction between the 3D-printed pin of the flexure design and the plexiglas.
+We used Teflon bearings to reduce the friction between the 3D-printed pin of the flexure design and the plexiglass.
 
-due to the fact that the spiral have to be centered initially, we had to offset the motor position on the stage.
+due to the fact that the spiral has to be centered initially, we had to offset the motor position on the stage.
 
 <figure> <center>
   <img src="./../../img/mod09/spiral4.jpg" alt="logo text" width="80%" />
@@ -127,7 +127,7 @@ due to the fact that the spiral have to be centered initially, we had to offset 
 Your browser does not support the video tag.
 </video>
 
-As it can be seen on the video, the spiral design is not very big, very simple and easy to make and assemble, has a nice resolution, features low backlash and are easily changeable to increase or reduce the resolution (number of revolutions, materials, ...).
+As it can be seen in the video, the spiral design is not very big, very simple and easy to make and assemble, has a nice resolution, features low backlash, and are easily changeable to increase or reduce the resolution (number of revolutions, materials, ...).
 
 Another mirrored spiral could be added on top to reduce the torsion and improve the rigidity of the mechanism. We did not find it necessary but it might be a way to improve the system response and increase the number of revolutions (and thus the resolution) without losing too much rigidity.
 
@@ -155,7 +155,7 @@ We decided to use Nema-17 stepper motors and Quentin's recent motor control boar
 
 #### Communication
 The way it works is pretty simple. The idea is to have several nodes, all identical that can be linked together. The first node will be the one the USB is connected to so we can send some orders to the motors.
-We used the I²C communication protocol. In this protocol, we have one master and several slaves (in practice there can be multiple masters as well but not in our case). Each node can sense (using pull-down resistors) whether a node is following or preceding it. Using this information, we can easily deduce the master as the node not being preceded (except by the alimentation board but it does not pull-down this pin). Then, each following node receives the current address offset, sets its address based on this value, and forwards the message to the next node with an incremented address. Once there are no node behind, the last node knows it is the last in the chain.
+We used the I²C communication protocol. In this protocol, we have one master and several slaves (in practice there can be multiple masters as well but not in our case). Each node can sense (using pull-down resistors) whether a node is following or preceding it. Using this information, we can easily deduce the master as the node not being preceded (except by the alimentation board but it does not pull down this pin). Then, each following node receives the current address offset, sets its address based on this value, and forwards the message to the next node with an incremented address. Once there are no nodes behind, the last node knows it is the last in the chain.
 
 <figure> <center>
   <img src="./../../img/mod09/soldering.jpg" alt="logo text" width="80%" />
@@ -169,20 +169,20 @@ We used the I²C communication protocol. In this protocol, we have one master an
 </figure>
 
 
-To communicate orders, we use the classical I²C, meaning we have a data and a clock lines. The clock is set by the master.
+To communicate orders, we use the classical I²C, meaning we have data and clock lines. The clock is set by the master.
 
-The master receives some orders through the Serial communication (either directly through a terminal or a Python script). If the orders are for him, then he does them, otherwise, he will broadcast the message over I²C (address first, followed by the message). The receiving node will then be able to acknowledge the message and reply if necessary.
+The master receives some orders through Serial communication (either directly through a terminal or a Python script). If the orders are for him, then he does them, otherwise, he will broadcast the message over I²C (address first, followed by the message). The receiving node will then be able to acknowledge the message and reply if necessary.
 
 Several orders can be defined using this syntax that we developed.
 
 `address:port=value`
 
-First, we specify the adress (i.e. the node) that we want to talk to. Then, we specify the port, i.e. the value that we want to set for this node. For the moment, this can be either 0 for the position and 1 for the movement speed. Finally, we specify the value.
+First, we specify the address (i.e. the node) that we want to talk to. Then, we specify the port, i.e. the value that we want to set for this node. For the moment, this can be either 0 for the position and 1 for the movement speed. Finally, we specify the value.
 
 For example:
 
 - `1:1:200` Will set the speed of the second node to 200steps/second.
-- `0:0:100` Will ask the first node (the master) to move to the position equal to a 100 steps from its initial position.
+- `0:0:100` Will ask the first node (the master) to move to the position equal to 100 steps from its initial position.
 
 
 The I²C communication protocol can be seen on the oscilloscope and has been tested up to 30cm of wire length, at 100kHz:
@@ -413,7 +413,7 @@ Your browser does not support the video tag.
 
 
 ### End result:
-In the end, using a Python code that sends the data over Serial, it was really easy to make a square shape.
+In the end, using Python code that sends the data over Serial, it was really easy to make a square shape.
 
 ````
 import serial
@@ -457,7 +457,7 @@ Your browser does not support the video tag.
 As Spring is finally coming around, the sun starts hiding our screens at the end of the day when the sun sets.
 Because of this, we also decided to design a machine in a single day that would be a prototype to avoid this kind of issue.
 
-The idea is really simple: having a shutter that moves with a motor, some fishing lines and a pulley and a pair of photoresistor to detect whether the light is present or not.
+The idea is really simple: having a shutter that moves with a motor, some fishing lines, and a pulley, and a pair of photoresistors to detect whether the light is present or not.
 
 ### Mechanical design
 We need only a few things:
@@ -467,7 +467,7 @@ We need only a few things:
 - A capstan to wrap these wires
 - Some cardboard to make our testing window prototype
 
-Using SolidWorks I designed these parts, making sure they were all designed parametrically so that changes could happen very fast if we needed to iterate !
+Using SolidWorks I designed these parts, making sure they were all designed parametrically so that changes could happen very fast if we needed to iterate!
 
 #### The motor case:
 The DC motor we found was not flat, mainly because it also features a gearbox (Oops forgot to take a pic...). So we needed to make it flat so that it is just easier to manipulate and place in our design. Nothing too difficult, here is the result
@@ -571,10 +571,10 @@ This time, we are much more happy ! In the end, it held the load extremely well,
 </figure>
 
 #### Capstan
-To wrap the wire (or rather the fishing lines that we used), I made a capstan really easily in SolidWorks using the revolution, helixes and linear patterns functions.
-Why the capstan you may ask ?
-Well, the critical influence of  friction on this kind of devices emphasizes the importance of how the motion is transmitted along the system. The selected design is a pulley-capstan system because this reduction technique introduces negligible friction forces in comparison to traditional gearboxes, avoid backlash and provide a reduction efficiency of nearly 100%.
-I chose of V-thread instead of smooth capstan to have two contact points between the cross-section of the cable and the thread which increases adhesion.
+To wrap the wire (or rather the fishing lines that we used), I made a capstan really easily in SolidWorks using the revolution, helixes, and linear patterns functions.
+Why the capstan you may ask?
+Well, the critical influence of friction on this kind of device emphasizes the importance of how the motion is transmitted along within the system. The selected design is a pulley-capstan system because this reduction technique introduces negligible friction forces in comparison to traditional gearboxes, avoids backlash, and provides a reduction efficiency of nearly 100%.
+I chose a V-thread instead of a smooth capstan to have two contact points between the cross-section of the cable and the thread which increases adhesion.
 To avoid slipping, we can do multiple turns and we know that wrap friction increases exponentially with the wrapping angle. 3 turns should be enough.
 Finally, it will prevent the cable to wrap around itself and therefore will limit the change in response to a specific command as the diameter of the capstan will always stay the same.
 <figure> <center>
@@ -601,14 +601,14 @@ We mounted everything on a cardboard box that was made to imitate the window in 
 
 ### Electronics design
 #### Motor control
-To control the DC motor, I used a circuit that uses a 7404 (inverter IC) and a L293. the L293D is a Half-H driver, with the D version already features some diodes to protect the circuit from the high voltage when switching the motor off (the role of a flyback diode is especially to prevent this overvoltage by providing a return path for the current to discharge in the motor inductor resistance, otherwise V = Ldi/dt... and boom!).
+To control the DC motor, I used a circuit that uses a 7404 (inverter IC) and an L293. the L293D is a Half-H driver, with the D version already features some diodes to protect the circuit from the high voltage when switching the motor off (the role of a flyback diode is especially to prevent this overvoltage by providing a return path for the current to discharge in the motor inductor resistance, otherwise V = Ldi/dt... and boom!).
 
 Here is a simple schematic that explains it.
 <figure> <center>
   <img src="./../../img/mod09/schematic.jpg" alt="logo text" width="80%" />
   <figcaption></figcaption>
 </figure>
-I have multiple wires at the end of board: I can control two motors, meaning I have 4 outputs (two per motor).
+I have multiple wires at the end of the board: I can control two motors, meaning I have 4 outputs (two per motor).
 The grey wire is the GND.
 Yellow and green = +12V motor supply.
 Orange and red = Enable (motor turning) (active low)
@@ -634,7 +634,7 @@ Your browser does not support the video tag.
 </video>
 
 #### Light information
-To get the information about the lighting, we used some phototransistors. Jason did the schematic but all in all, it is quite easy: we have two pull-down resistors and a 3.3V source. The phototransistor let the current flow more or less depending on the amount of light received so the value of the voltage just above the resistors vary depending on the amount of light !
+To get the information about the lighting, we used some phototransistors. Jason did the schematic but all in all, it is quite easy: we have two pull-down resistors and a 3.3V source. The phototransistor lets the current flow more or less depending on the amount of light received so the value of the voltage just above the resistors varies depending on the amount of light!
 
 we can then fix this little PCB inside our "cardboard box" and start experimenting:
 

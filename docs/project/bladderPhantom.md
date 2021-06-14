@@ -8,7 +8,7 @@ Rubber balloons are often used in the literature to model the human bladder. It 
 
 By making a model in silicone, it is possible to control the mechanical properties of the phantom as well as its shape.
 
-In particular, rubber balloons have an extremely thin wall that is not resembling to a real bladder. The mechanical properties like the Young modulus are also not relevant.
+In particular, rubber balloons have an extremely thin wall that is not resembling a real bladder. The mechanical properties like the Young modulus are also not relevant.
 
 
 <figure> <center>
@@ -33,11 +33,11 @@ stretch rate of 1.2/min </figcaption>
 </figure>
 
 
-The Young modulus of the silicone must be chosen in order to correspond to the modulus of the bladder.
+The Young modulus of the silicone must be chosen to correspond to the modulus of the bladder.
 
 Regarding a real bladder, the modulus is between 4 and 400kPa depending on the article or the reference. In practice, most bladders show a modulus of around 75kPa
 
-It is difficult to find the perfect silicone modulus as it depends on the strain. Only the modulus at a strain of 100% (called E100) is specified in the datasheet. It is also important to have a silicone that is easy to work with, i.e. with a sufficient pot life and curing time.
+It is difficult to find the perfect silicone modulus as it depends on the strain. Only the modulus at a strain of 100% (called E100) is specified in the datasheet. It is also important to have silicone that is easy to work with, i.e. with a sufficient pot life and curing time.
 Because of this, the Ecoflex00-50 has been chosen.
 
 <figure> <center>
@@ -52,11 +52,11 @@ In particular, the pot life is 18 minutes (quite sufficient to have a nice casti
 With the silicone now chosen, it was time to make the phantom.
 
 ### Making the mold and casting it
-Making the phantom is actually difficult as it must be hollow.
+Making the phantom is difficult as it must be hollow.
 
-Initially, I thought about rotocasting but for this to work, I had to create such a machine first and I was not confident about the potential results.
+Initially, I thought about roto casting but for this to work, I had to create such a machine first and I was not confident about the potential results.
 
-The next idea that came to my mind was to make a phantom in 2 parts, each part being made with 2 molds that link to each other. Basically, this is making two half spheres before joining them together.
+The next idea that came to my mind was to make a phantom in 2 parts, each part is made with 2 molds that link to each other. This is making two half-spheres before joining them together.
 
 I created the mold in SolidWorks:
 <figure> <center>
@@ -100,8 +100,8 @@ This also resulted in a lot fixing using Ecoflex FAST but the properties were ev
 </figure>
 
 
-### Mold improvement: water soluble filament
-In order to make the phantom in a single piece, I chose to use soluble filament to make an inner mold that I could easily dissolve in water. In used Verbatim BVOH filament. It prints with the same settings as PLA except for the nozzle temperature that must be lowered by 5°C for a total of 205°C.
+### Mold improvement: water-soluble filament
+To make the phantom in a single piece, I chose to use a soluble filament to make an inner mold that I could easily dissolve in water. In used Verbatim BVOH filament. It prints with the same settings as PLA except for the nozzle temperature that must be lowered by 5°C for a total of 205°C.
 
 <figure> <center>
   <img src="./../../img/finalProject/mold6.jpg" alt="phantomDrawing" width="80%" />
@@ -165,7 +165,7 @@ You can see the water with the dissolved filament pouring outside the phantom.
 Your browser does not support the video tag.
 </video>
 
-This ensures a reliable phantom that can be used for many filling and emptying cycles !
+This ensures a reliable phantom that can be used for many filling and emptying cycles!
 
 <figure> <center>
   <img src="./../../img/finalProject/mold7.jpg" alt="phantomDrawing" width="80%" />
@@ -211,5 +211,5 @@ Your browser does not support the video tag.
 ### Possible improvements
 
 It would be nice to be able to create the bladder phantom based on DICOM (medical) imaging from CTscan for example.
-The bladder mold could be done in teflon to be a bit more smooth as well instead of relying on 3D printing.
+The bladder mold could be done in Teflon to be a bit more smooth as well instead of relying on 3D printing.
 It would be possible to encapsulate some electronics boards in silicone or parylene, or even use the thermoforming machine.

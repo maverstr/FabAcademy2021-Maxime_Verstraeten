@@ -75,9 +75,9 @@ I will design a few different things:
 ## What materials and components will be used, where will they come from and how much will they cost?
 
 ### Sensor requirements
-The strain gauge used will be a commercially avaiable one that will be encapsulated in silicone before being anchored on the phantom.
+The strain gauge used will be a commercially available one that will be encapsulated in silicone before being anchored on the phantom.
 
-The phantom pressure sensor can reach a maximum of 200cmH2O (196mBar, 196kPa, 2.84psi) in addition to the external pressure. Note that since the sensor will be inside the pressurized chamber, it cannot be a gauge or differential sensor, it needs to be an absolute one (referred to a calibrated vacuum). Also, it must be waterproof. Based on these requirements, I chose the MS5837. Note that I will have 2 of them on the same I²C channel so I will need an I²C multiplexer. For the chamber pressure measurement, the maximum pressure can reach 2atm so I will use a slightly larger range sensor, the MPRLS0030.
+The phantom pressure sensor can reach a maximum of 200cmH2O (196mBar, 196kPa, 2.84psi) in addition to the external pressure. Note that since the sensor will be inside the pressurized chamber, it cannot be a gauge or differential sensor, it needs to be an absolute one (referred to as a calibrated vacuum). Also, it must be waterproof. Based on these requirements, I chose the MS5837. Note that I will have 2 of them on the same I²C channel so I will need an I²C multiplexer. For the chamber pressure measurement, the maximum pressure can reach 2atm so I will use a slightly larger range sensor, the MPRLS0030.
 
 The other requirements and choices will be explained in the full project documentation.
 
@@ -91,9 +91,9 @@ Here is the list of the various materials and components that I am going to use 
 ## What parts and systems will be made and what processes will be used?
 A said before, most of the parts will be handmade!
 
-- For the phantom bladder, I will mold it with silicone, using a vacuum bell. I intend to print the molds using PLA and PVA but the outer mold could be improved if made in teflon with the CNC. The silicone mix is chosen for its mechanical properties. Additional silicone fibers will be made in Sorta Clear 40 to model the detrusor muscular fibers around the bladder. These fibers should be highly modular and practical so that I can easily add or remove some, change their positions, ... Additionally, it would be a nice improvement to be able to start from a 3D scan of a real bladder to make the mold.
+- For the phantom bladder, I will mold it with silicone, using a vacuum bell. I intend to print the molds using PLA and PVA but the outer mold could be improved if made in Teflon with the CNC. The silicone mix is chosen for its mechanical properties. Additional silicone fibers will be made in Sorta Clear 40 to model the detrusor muscular fibers around the bladder. These fibers should be highly modular and practical so that I can easily add or remove some, change their positions, ... Additionally, it would be a nice improvement to be able to start from a 3D scan of a real bladder to make the mold.
 
-- For the pressure chamber, I will cut my PMMA sheets with the laser cutter and glue them strongly with the acrifix 192. If the system is fast enough, one could imagine trigger sudden increase in pressure to model contractions. This would require a solenoid valve and a pressure tank which will increase the cost and the complexity. 5 PMMA sheets will be glued together and a main board in wood at the bottom with some silicone sealing will hold everything together. Water tanks for the bladder filling will be placed near the chamber as well.
+- For the pressure chamber, I will cut my PMMA sheets with the laser cutter and glue them strongly with the acrifix 192. If the system is fast enough, one could imagine triggering a sudden increase in pressure to model contractions. This would require a solenoid valve and a pressure tank which will increase the cost and the complexity. 5 PMMA sheets will be glued together and a mainboard in wood at the bottom with some silicone sealing will hold everything together. Water tanks for the bladder filling will be placed near the chamber as well.
 
 - The electronics boards will be mainly made by chemical etching and assembled using SMD components.
 

@@ -29,7 +29,7 @@ Two weeks ago, I made this board:
 </figure>
 
 Which is basically a development board for the ESP-WROOM32 microcontroller.
-I chose to use a ESP32 for all the possibilities it offers. Mainly:
+I chose to use an ESP32 for all the possibilities it offers. Mainly:
 
 - Integrated WiFi and Bluetooth
 - 3.3V FPIO voltage, with intern regulator for 5V power supply
@@ -57,7 +57,7 @@ The main one being that I forgot adding two current limiting resistors on two LE
   <figcaption>Easy fix: add a resistor on the LED pads by making a pyramid</figcaption>
 </figure>
 
-Also, during production, I once again had the issue that ground pads are completely isolated like other pads instead of being connected to the ground plane... I though I fixed that issue in electronics design week but it seems that Bantam Tools CNC machine didn't remember the settings or something else gone wrong. Again, easy fix to add small pieces of wire to correct that.
+Also, during production, I once again had the issue that ground pads are completely isolated like other pads instead of being connected to the ground plane... I thought I fixed that issue in electronics design week but it seems that the Bantam Tools CNC machine didn't remember the settings or something else gone wrong. Again, easy fix to add small pieces of wire to correct that.
 
 More ground pins would be useful to add here and there, especially near the UART connector.
 
@@ -78,11 +78,11 @@ Soldering the ESP32 is not an easy task by itself as the package is almost like 
 All in all, the ESP32 can be programmed easily and works well so it's not as bad as it may look :smile:.
 
 ### Powering the board
-The ESP32 can be directly fed with 5V as it features a built-in voltage regulator but then you need to make sure to supply it on "Vin" pin. Otherwise, I implemented a voltage regulator and the 5V can come from a mini USB B connector. The 3.3V is then fed to the same name pin on the board (top left corner).
+The ESP32 can be directly fed with 5V as it features a built-in voltage regulator but then you need to make sure to supply it on the "Vin" pin. Otherwise, I implemented a voltage regulator and the 5V can come from a mini USB B connector. The 3.3V is then fed to the same name pin on the board (top left corner).
 
 ### Programming the board
-Dev kit usually features a CP2102 USB-UART converter chip that allows for direct programing using the USB connector.
-A ROM Bootloader is built-in on the ESP32. You cannot remove it neither deactivate it (though you can load a second bootloader on top of it if needed). This bootloader is able to look at incoming data to see if it is a programming hex file. If so, it will be possible to program it using UART or JTAG.
+Devkit usually features a CP2102 USB-UART converter chip that allows for direct programming using the USB connector.
+A ROM Bootloader is built-in on the ESP32. You cannot remove it either deactivate it (though you can load a second bootloader on top of it if needed). This bootloader is able to look at incoming data to see if it is a programming hex file. If so, it will be possible to program it using UART or JTAG.
 In my case, I chose to use the UART connection (RX and TX pins on the right-hand side of the ESP32). I still need to convert serial data (from the USB out of my computer) to UART. I used a TTl-RS232-3V3 which is a TTL to USB converter cable.
 <figure> <center>
   <img src="./../../img/mod10/converter2.jpg" alt="logo text" width="80%" />
@@ -96,14 +96,14 @@ By having a look at the ([datasheet](https://www.ftdichip.com/Support/Documents/
   <figcaption>Cable pinout</figcaption>
 </figure>
 
-We will therefore connect GND to GND, and make sure to connect RX_cable to TX_ESP and TX_Cable to RX_ESP ! **Do not connect VCC** as the USB is 5V and the ESP32 will already be powered by either its own USB or another supply. I did this mistake but luckily, nothing went bad as (I think) the ESP32 went into latch-up mode when it happened to prevent any damage. I noticed my mistake as soon as I turned on my power supply and it flickered between 3.3V and higher. I'm not completely sure as a latch-up mode can be destructive for the device and it worked well after that some maybe the current flowing was limited? In any case, everything was okay but I'll make sure not to do this mistake again.
+We will therefore connect GND to GND, and make sure to connect RX_cable to TX_ESP and TX_Cable to RX_ESP! **Do not connect VCC** as the USB is 5V and the ESP32 will already be powered by either its own USB or another supply. I did this mistake but luckily, nothing went bad as (I think) the ESP32 went into latch-up mode when it happened to prevent any damage. I noticed my mistake as soon as I turned on my power supply and it flickered between 3.3V and higher. I'm not completely sure as a latch-up mode can be destructive for the device and it worked well after that some maybe the current flowing was limited? In any case, everything was okay but I'll make sure not to do this mistake again.
 <figure> <center>
   <img src="./../../img/mod10/latchup.jpg" alt="logo text" width="80%" />
   <figcaption>Latch up mode probably triggered when connecting 5V to 3.3V</figcaption>
 </figure>
 
 
-Note that using this cable cable will require drivers for Windows and Linux that are available [here](https://ftdichip.com/drivers/).
+Note that using this cable will require drivers for Windows and Linux that are available [here](https://ftdichip.com/drivers/).
 
 
 To program the ESP32, you need to build the hex file and then feed it to the UART. You can do it either through the manufacturer tool: [esptool]( https://github.com/espressif/esptool) which is a Python utility to program the ESP32.
@@ -112,9 +112,9 @@ It can be installed easily with pip:
 
 Otherwise, you can use the Arduino IDE. You need to add the [ESP32 Arduino core](https://github.com/espressif/arduino-esp32) either from the Github link or through the board manager in Arduino (you need to add the repository URL https://dl.espressif.com/dl/package_esp32_index.json in the preferences tab and then install the ESP32 core from the board manager itself).
 
-In any case, you end up with hex files than can be sent to the COM serial port of the converter cable and into the UART. The ESPTool though is capable of triggering the GPIO0 and GPIO2 pins to enter the download boot mode by using the DTR (to EN, GPIO2 pin)and RTS (to GPIO0, boot mode pin). If you use the Arduino you need to toggle them manually.
+In any case, you end up with hex files that can be sent to the COM serial port of the converter cable and into the UART. The ESPTool though is capable of triggering the GPIO0 and GPIO2 pins to enter the download boot mode by using the DTR (to EN, GPIO2 pin)and RTS (to GPIO0, boot mode pin). If you use the Arduino you need to toggle them manually.
 
-Indeed, to enter the download boot mode (where the ESP32 is waiting for incoming data), the BOOT pin (or GPIO0) should be pulled LOW and held there while the GPIO2 (Enable "EN" pin) is toggled HIGH-LOW-HIGH before the BOOT pin can be released. The GPIO2 is pulled-down internally while GPIO0 is pulled-up but these are _extremely weak_. I highly recommend adding an external pull-up on GPIO0 at least. I also noticed that adding `pinMode(GPIO0,INPUT_PULLUP);` in the code helps a bit, but requires to upload the code at least once before.
+Indeed, to enter the download boot mode (where the ESP32 is waiting for incoming data), the BOOT pin (or GPIO0) should be pulled LOW and held there while the GPIO2 (Enable "EN" pin) is toggled HIGH-LOW-HIGH before the BOOT pin can be released. The GPIO2 is pulled down internally while GPIO0 is pulled up but these are _extremely weak_. I highly recommend adding an external pull-up on GPIO0 at least. I also noticed that adding `pinMode(GPIO0,INPUT_PULLUP);` in the code helps a bit, but requires uploading the code at least once before.
 
 I had two buttons in my design to do exactly this. So I need to:
 - Press&Hold BOOT button
@@ -128,7 +128,7 @@ In which case, the ESP should be programmed.
   <figcaption>Strapping pins: indicating that GPIO0 and 2 dictate the booting mode</figcaption>
 </figure>
 
-Also, the MTDO pin should be pulled-up (done by default) to enable verbose, it always helps when debugging. The MTDI on the other hand should be left as is.
+Also, the MTDO pin should be pulled up (done by default) to enable verbose, it always helps when debugging. The MTDI on the other hand should be left as is.
 
 this is all recapped [here](https://github.com/espressif/esptool/wiki/ESP32-Boot-Mode-Selection).
 
@@ -141,7 +141,7 @@ You can see in the picture below that I'm using a 3.3V power supply so that I ca
   <figcaption>Programming setup</figcaption>
 </figure>
 
-Then, let's open a Putty terminal and select "Serial". My cable is on COM9. Set the baudate to 115200 as this is the UART frequency of the ESP32.
+Then, let's open a Putty terminal and select "Serial". My cable is on COM9. Set the baud rate to 115200 as this is the UART frequency of the ESP32.
 
 <figure> <center>
   <img src="./../../img/mod10/putty.jpg" alt="logo text" width="80%" />
@@ -204,7 +204,7 @@ Your browser does not support the video tag.
 
 ### Input and output pins
 I chose my output and input pins based on their ADC channels and their capabilities (not all pins can be output nor have internal pull-ups !).
-However I noticed that using the Arduino's analogRead command, the pull-ups don't work at all as even approaching my finger would make the values completely erratic. I think this is because internally, the pins are linked to the ADC channels on analogRead function calls and they are obviously not pulled-up or pulled-down as it would create an internal voltage divider.... I found that connecting any unused input to ground was really the only way to avoid this behavior.
+However I noticed that using the Arduino's analogRead command, the pull-ups don't work at all as even approaching my finger would make the values completely erratic. I think this is because internally, the pins are linked to the ADC channels on analogRead function calls and they are obviously not pulled up or pulled-down as it would create an internal voltage divider.... I found that connecting any unused input to the ground was really the only way to avoid this behavior.
 
 To be able to output either an analog value or a duty-cycle varying PWM, I can either use the ESP ledC functions or use the wrapper library for analogWrite (not natively installed) available [here](https://github.com/ERROPiX/ESP32_AnalogWrite). You then need to include "AnalogWrite.h" and analogWrite() is now callable.
 
@@ -272,7 +272,7 @@ Your browser does not support the video tag.
 </video>
 
 ### 2. Strain
-I designed a circuit to measure the strain and the deformation. Unfortunately, I had no SMD components at hand so I did it on a breaboard but it works !
+I designed a circuit to measure the strain and the deformation. Unfortunately, I had no SMD components at hand so I did it on a breadboard but it works!
 It seems complex but is quite simple. It is made of:
 
 - A strain gauge, i.e. a resistance that varies with the strain

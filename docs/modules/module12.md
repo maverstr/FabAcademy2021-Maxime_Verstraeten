@@ -11,7 +11,7 @@
 <div class="dottedLine"></div>
 
 ## Group assignment
-For the group assignment, I had already measured to current consumption of an LED on my ESP32 board right [here](./../module10/#making-a-program).
+For the group assignment, I had already measured the current consumption of an LED on my ESP32 board right [here](./../module10/#making-a-program).
 
 <video width="854" height="480" autoplay loop>
   <source src="./../../img/mod10/blink2.mp4" type="video/mp4">
@@ -27,7 +27,7 @@ We can also compute it in another way. I have a current limiting resistor of 220
   <figcaption>Forward voltage Vs forward current for the LTST-C150 RED LED</figcaption>
 </figure>
 
-Also, for another project I powered another LED through inductive powering. I supply my class E amplifier with 9V DC and the current consumption is about 30mA (varies with the distance between the primary and the secondary of course). The power consumed is therefore about 270mW in the class E.
+Also, for another project, I powered another LED through inductive powering. I supply my class E amplifier with 9V DC and the current consumption is about 30mA (varies with the distance between the primary and the secondary of course). The power consumed is therefore about 270mW in the class E.
 
 
 <video width="854" height="480" autoplay loop>
@@ -35,7 +35,7 @@ Also, for another project I powered another LED through inductive powering. I su
 Your browser does not support the video tag.
 </video>
 
-## Output device 1 : LED 7 segments
+## Output device 1: LED 7 segments
 I found an LED 7 segment display KINGBRIGHT SA23-12SRWA. The datasheet is available [here](https://www.mouser.be/datasheet/2/216/SA23-12SRWA-57377.pdf) but is quite short.
 
 
@@ -138,7 +138,7 @@ Then when I knew it worked well, I connected it all to my own ESP32 board.
   <figcaption>Final result</figcaption>
 </figure>
 
-### Counting to 15 !
+### Counting to 15!
 Once I could get a simple zero to show up, I made a quick code to go from 0 to 15 (or F in hex) and blink the decimal point twice as fast.
 Pretty simple all in all. I first made my truth table for all the numbers and I then apply it in a function by reading the bits (by applying a mask) and selecting the correct segment to light based on the bit value:
 ````
@@ -209,9 +209,9 @@ Your browser does not support the video tag.
 </video>
 
 ### Possible improvement and extension
-With NPN transistors, it would also be possible to multiplex multiple display. We then link each display segments together (a's with a's, b's with b's, ...) and we select the display we want to light up by toggling the corresponding NPN transistor to allow current from the 12V supply to flow. The eye "low-pass filter" will simply let you see all displays light up together even though they toggle real fast. You therefore need 8(7 segments + DP-) +1 per display(selectDisplayPin) pins in total instead of 8 per display.
+With NPN transistors, it would also be possible to multiplex multiple displays. We then link each display segment together (a's with a's, b's with b's, ...) and we select the display we want to light up by toggling the corresponding NPN transistor to allow current from the 12V supply to flow. The eye "low-pass filter" will simply let you see all displays light up together even though they toggle real fast. You therefore need 8(7 segments + DP-) +1 per display(selectDisplayPin) pins in total instead of 8 per display.
 
-This requires NPN transitors, as it is impossible to do with PNP (VB should be close to 12V which I cannot supply) so I couldn't do it this week but it isn't difficult per se.
+This requires NPN transistors, as it is impossible to do with PNP (VB should be close to 12V which I cannot supply) so I couldn't do it this week but it isn't difficult per se.
 
 
 <figure> <center>
@@ -219,9 +219,9 @@ This requires NPN transitors, as it is impossible to do with PNP (VB should be c
   <figcaption>Final result</figcaption>
 </figure>
 
-## Output device 2 : speaker
+## Output device 2: speaker
 Finally, I had a speaker lying around so I gave it a try as well.
-To make it work, nothing complicated electrically as it is a simple coil that you make vibrate through a PWM at a set frequency for each note.
+To make it work, nothing is complicated electrically as it is a simple coil that you make vibrate through a PWM at a set frequency for each note.
 
 Obviously, I chose to power it from 12V as well (but it could work with 5V as well, without needing a resistor then) and the inner resistance of the speaker being 8ohms, I protected it with a 100Ohms resistor and the base resistor is again, like for the first project, 1k as well.
 <figure> <center>
@@ -277,6 +277,6 @@ And the nice result:
 Your browser does not support the video tag.
 </video>
 
-You can see I used my commercial devkit to test it out and then I later broke my USB-B connector on my own board without a mean to solder it back so it was good news I had the commercial board with me !
+You can see I used my commercial devkit to test it out and then I later broke my USB-B connector on my own board without a means to solder it back so it was good news I had the commercial board with me!
 ## My design files
 :material-download-box: [My Design files](http://academany.fabcloud.io/fabacademy/2021/labs/ulb/students/maxime-verstraeten/files/mod12.zip)

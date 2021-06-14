@@ -22,18 +22,18 @@ Microfluidics is something I encountered by reading several papers about soft ro
 </figure>
 
 
-It can be extremely complex so during this week I will simply try to make a few very small microfluidics channels and let liquid flow through them. Ideally, there should be some inlet reservoirs where liquid will stay before flowing through the channel but I can also inject it using a syringe.
+It can be extremely complex so during this week I will simply try to make a few very small microfluidic channels and let the liquid flow through them. Ideally, there should be some inlet reservoirs where the liquid will stay before flowing through the channel but I can also inject it using a syringe.
 
-The idea is to find "easy" ways to make microfluidics devices.
+The idea is to find "easy" ways to make microfluidic devices.
 
 
 ## My ideas
-There are several ways to make microfluidics. I thought about using a laser cutter or a CNC to cut very small channels in plexiglass. If using the lasercutter, I think it would be best to voluntarily put it out of focus but I did not have the time to try it out.
+There are several ways to make microfluidics. I thought about using a laser cutter or a CNC to cut very small channels in plexiglass. If using the laser cutter, I think it would be best to voluntarily put it out of focus but I did not have the time to try it out.
 
 I investigated two other ways that I will describe here:
 
 ### Plexiglass and parafinne
-My first idea is to use thin slides of plexiglass with drilled holes in one of them and place a small layer of parafinne film in between with a specific cutout for the channels.
+My first idea is to use thin slides of plexiglass with drilled holes in one of them and place a small layer of paraffine film in between with a specific cutout for the channels.
 
 
 <figure> <center>
@@ -74,7 +74,7 @@ I then tried to add some plastic parts that I could use to fill water:
   <figcaption></figcaption>
 </figure>
 
-But I did not have strong glue so actually it did not held up well over time.
+But I did not have strong glue so actually, it did not hold up well over time.
 
 Then I cut some parafinne films that I found in the lab and placed in on the first plexiglass slide:
 <figure> <center>
@@ -125,7 +125,7 @@ It was better but still not perfect. An epoxy glue would be, I guess, the best s
   <figcaption></figcaption>
 </figure>
 
-It was still not perfect in terms of holding but at least I tried !
+It was still not perfect in terms of holding but at least I tried!
 
 I then placed the second plate, attached it and tried to heat the parafinne up a bit to make an adhesion between the two slides.
 <figure> <center>
@@ -153,14 +153,14 @@ Final result:
   <source src="./../../img/mod15/plexiVideo.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
-The connectors still didn't hold up enough time for me to get a good video and therefore some water spills out of the device. Anyway, we can see a bit of water flowing through the very basic channel. Moreover, since it is not perfectly sealed at the top, air is flowing and the water will not flow through the channel by itself as it should. So... Far from perfect, but with very few material you can have a microfluidic chip.
+The connectors still didn't hold up enough time for me to get a good video and therefore some water spills out of the device. Anyway, we can see a bit of water flowing through the very basic channel. Moreover, since it is not perfectly sealed at the top, the air is flowing and the water will not flow through the channel by itself as it should. So... Far from perfect, but with very few materials you can have a microfluidic chip.
 
-Moreover, the biggest added value of this technique is, I think, the fact that you don't have to mill in the plexiglass and so the output result should be perfectly transparent and perfectly visible even with a microscope while the output of a laser cut or a CNC is not perfectly smooth and can hinder the view under a microscope.
+Moreover, the biggest added value of this technique is, I think, the fact that you don't have to mill in the plexiglass and so the output result should be perfectly transparent and perfectly visible even with a microscope while the output of a laser cutter or a CNC is not perfectly smooth and can hinder the view under a microscope.
 
 #### Possible improvements and solutions
-For holding the plastic connectors, an epoxy glue would be the best choice. Also, connectors with a large flat surface at their bottom would be ideal.
+For holding the plastic connectors, epoxy glue would be the best choice. Also, connectors with a large flat surface at their bottom would be ideal.
 I think that heating on a medium-heat plate would yield better results.
-One could cut the parafinne channels with a vynil cutter !
+One could cut the paraffine channels with a vinyl cutter!
 
 ### 3D-printed mold and silicone
 The second solution I thought about was designing a mold in 3D and then print it at a very high resolution, allowing for very small channels, and mold a silicone on it, before sealing it on a plexiglass slide.
@@ -300,7 +300,7 @@ With a bit of practice I could obtain this result:
  Your browser does not support the video tag.
  </video>
 
- We can clearly see the water follow the least resistance path and flowing in the surrounding channels to reach the output.
+ We can clearly see the water follows the least resistance path and flowing in the surrounding channels to reach the output.
  This demonstrates the feasibility to create microfluidic devices using 3D-printed molds and some silicone.
 
 

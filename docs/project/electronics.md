@@ -1,9 +1,9 @@
-# Inputs, outputs, electronics and encapsulation
+# Inputs, outputs, electronics, and encapsulation
 
 There are multiple inputs and outputs in this project.
 
 ## Chamber pressure
-To handle the chamber pressure, I chose a vacuum pomp from Digi-key for its low price and availability. It is a very simple DC pump (ROB-10398) that I will connect to a L293D motor driver and control via the ESP32 (see below).
+To handle the chamber pressure, I chose a vacuum pump from Digi-key for its low price and availability. It is a very simple DC pump (ROB-10398) that I will connect to an L293D motor driver and control via the ESP32 (see below).
 
 <figure> <center>
   <img src="./../../img/finalProject/ROB.jpg" alt="phantomDrawing" width="80%" />
@@ -11,7 +11,7 @@ To handle the chamber pressure, I chose a vacuum pomp from Digi-key for its low 
 </figure>
 
 ## Phantom filling
-To fill the phantom with air or water, I will use cheap no-name 12V DC peristaltic pump available from Amazon. Because they are cheap, I am going to use two of them to reach the correct flowrate (cystometric rate of 10-100mL/min and physiological filling rate of 1.4mL/min).
+To fill the phantom with air or water, I will use a cheap no-name 12V DC peristaltic pump available from Amazon. Because they are cheap, I am going to use two of them to reach the correct flow rate (cystometric rate of 10-100mL/min and physiological filling rate of 1.4mL/min).
 
 <figure> <center>
   <img src="./../../img/finalProject/peristaltic.jpg" alt="phantomDrawing" width="80%" />
@@ -25,9 +25,9 @@ They will be controlled like the chamber pump with the L293D.
 
 ## Data visualization
 ### TFT Screen
-To output some data like the current flowrate or pressure, I initially wanted to use a LCD TFT screen. One of the most common LCD driver is the ILI9341. Multiple brands sell boards with this LCD as well as a touchscreen interface.
+To output some data like the current flow rate or pressure, I initially wanted to use an LCD TFT screen. One of the most common LCD driver is the ILI9341. Multiple brands sell boards with this LCD as well as a touchscreen interface.
 
-I was hoping to be able to communicate with it through the SPI interface (the ILI9341 is capable of that) but I chose a wrong brand (AZdelivery) for the board that redirected the SPI to a SD card reader. It is then only possible to send data to it using the 8-bit parallel bus, which requires a total of 12 pins to make it work, which is a lot on a small ESP32, already dealing with other inputs and outputs.
+I was hoping to be able to communicate with it through the SPI interface (the ILI9341 is capable of that) but I chose the wrong brand (AZdelivery) for the board that redirected the SPI to an SD card reader. It is then only possible to send data to it using the 8-bit parallel bus, which requires a total of 12 pins to make it work, which is a lot on a small ESP32, already dealing with other inputs and outputs.
 
 <figure> <center>
   <img src="./../../img/finalProject/TFT.jpg" alt="phantomDrawing" width="80%" />
@@ -116,7 +116,7 @@ Initially, I also wanted to use the LCD touchscreen to be able to control some v
 
 ##  Inputs: pressure measurements
 To control the pressure inside the chamber, it is nice to have a measurement of this.
-To do so, I chose a pressure sensor that is able to measure up to 2 bars: the MPRLS0030PG0000SA. I wanted it be reachable using I2C but this version was not available on the vendors I checked, so I took the SPI version.
+To do so, I chose a pressure sensor that can measure up to 2 bars: the MPRLS0030PG0000SA. I wanted it to be reachable using I2C but this version was not available on the vendors I checked, so I took the SPI version.
 
 <figure> <center>
   <img src="./../../img/finalProject/MPRL.jpg" alt="phantomDrawing" width="80%" />
@@ -135,7 +135,7 @@ It is communicating through I2C but the address is fixed. I am going to need two
 The other possibilities would include:
 - selectively unpower the one we don't want to talk to: also adds additional hardware and is far from perfect.
 - having manual jumpers to change the configuration: not suitable for simultaneous acquisition
-- having a reprogrammable address would be nice but is not the case
+- having a reprogrammable address would be nice but this is not the case
 
 <figure> <center>
   <img src="./../../img/finalProject/ms58372.jpg" alt="phantomDrawing" width="80%" />
@@ -173,16 +173,16 @@ For the MS5837:
   <figcaption></figcaption>
 </figure>
 
-To be more complete, I would need to add pull-up resistors on the I2C lines. I added them with a bit of hand-soldering afterwards.
+To be more complete, I would need to add pull-up resistors on the I2C lines. I added them with a bit of hand-soldering afterward.
 
 
 
 ## The microcontroller: ESP32
-I chose to use an ESP32 for multiple reasons. The first being the fact that it is a very high-end microcontroller, with a lot of memory and lot of IOs. It is also capable of Bluetooth and Wifi communication if I ever need them. I can program it using the UART pins.
+I chose to use an ESP32 for multiple reasons. The first being the fact that it is a very high-end microcontroller, with a lot of memory and a lot of IOs. It is also capable of Bluetooth and Wifi communication if I ever need them. I can program it using the UART pins.
 
 I made a board that features the ESP32, but also the 12V voltage regulator to +-5V and to 3.3V. I added an LED on the GPIO 23. There are two buttons to enter the programming mode of the ESP.
-There is an I2C multiplexer, as the two pressure sensors share the same address so I have to place them on two different I2C bus.
-Finally, there is a L293D motor driver and a CMOS logic inverter (NC7WZ04) to help control the motor by creating the opposite signals which reduces the number of outputs of the ESP required. Finally, a lot of headers are present to connect to various I2C, SPI and UART devices and to connect buttons, toggle switches, ...
+There is an I2C multiplexer, as the two pressure sensors share the same address so I have to place them on two different I2C buses.
+Finally, there is an L293D motor driver and a CMOS logic inverter (NC7WZ04) to help control the motor by creating the opposite signals which reduce the number of outputs of the ESP required. Finally, a lot of headers are present to connect to various I2C, SPI, and UART devices and to connect buttons, toggle switches, ...
 
 <figure> <center>
   <img src="./../../img/finalProject/ESPSchematic.jpg" alt="phantomDrawing" width="80%" />
@@ -225,9 +225,9 @@ To choose the channels on which to communicate, I send a byte containing 4 bits 
 
 ## Strain gauge acquisition chain
 
-To measure the strain gauge deformation, I use a wheatstone bridge made of 4 resistors an, potentiometer for bridge balancing, and an instrumenation amplifier (AD620). I supply my bridge with +2.5V and -2.5V coming from an initial 12V -> +-5V (IZ1205S) and then two LDOs (TPS72325 and AP7331-25). The reference of the amplifier comes from a potentiometer going through an op-amp buffer. The gain of the amplifier is set with a resistor and an additional potentiometer. Finally, I use a Sallen-key low-passs filter of order 2 to remove most of the signal noise.
+To measure the strain gauge deformation, I use a Wheatstone bridge made of 4 resistors, a potentiometer for bridge balancing, and an instrumentation amplifier (AD620). I supply my bridge with +2.5V and -2.5V coming from an initial 12V -> +-5V (IZ1205S) and then two LDOs (TPS72325 and AP7331-25). The reference of the amplifier comes from a potentiometer going through an op-amp buffer. The gain of the amplifier is set with a resistor and an additional potentiometer. Finally, I use a Sallen-key low-pass filter of order 2 to remove most of the signal noise.
 
-I initially thought about using digital potentiometer but the main issue with these is the non-zero wiper resistance and the limitation to being stuck between GND to VDD, which does not allow me a symmetrical choise of voltage like I did for the reference (-2.5V->+2.5V).
+I initially thought about using a digital potentiometer but the main issue with these is the non-zero wiper resistance and the limitation to being stuck between GND to VDD, which does not allow me a symmetrical choice of voltage as I did for the reference (-2.5V->+2.5V).
 
 <figure> <center>
   <img src="./../../img/finalProject/strainSchematic.jpg" alt="phantomDrawing" width="80%" />
@@ -325,7 +325,7 @@ I made all my boards using chemical etching because I didn't have any good mill 
 
 
 ## Encapsulation
-To be able to follow the bladder deformation, I encapsulated it into some Ecoflex0050 silicone. I made molds, poured the silicone and tried out different designs with pieces of plastic before encapsulating a real gauge.
+To be able to follow the bladder deformation, I encapsulated it into some Ecoflex0050 silicone. I made molds, poured the silicone, and tried out different designs with pieces of plastic before encapsulating a real gauge.
 
 <figure> <center>
   <img src="./../../img/finalProject/moldStrain0.jpg" alt="phantomDrawing" width="80%" />
@@ -379,4 +379,4 @@ I could add a solenoid valve to handle fast compression in the chamber by fillin
 
 It would also be nice to be able to empty the phantom with a valve after the experiment.
 
-An humidity sensor would be interesting to add, especially in the strain gauge encapsulation.
+A humidity sensor would be interesting to add, especially in the strain gauge encapsulation.

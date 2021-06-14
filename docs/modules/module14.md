@@ -15,7 +15,7 @@
 Jason and I compared several possibilities when it comes to languages and interfaces on the [group page](http://fab.academany.org/2021/labs/ulb/assignments/week15/).
 
 ## Previous design
-During last week, I developed my network featuring three boards (one master, two slaves) that can communicate so I can switch on and off the LEDs on the boards using the Serial USB port with the master.
+Last week, I developed my network featuring three boards (one master, two slaves) that can communicate so I can switch on and off the LEDs on the boards using the Serial USB port with the master.
 Initially, I only had one slave and one master and I finally added a second slave:
 
 <figure> <center>
@@ -39,7 +39,7 @@ Your browser does not support the video tag.
 
 
 ## This week's objective
-This week, I intend to develop a Python interface using Kivy to command the LED on each board with this interface. Kivy is an open-source Python framework to develop mainly mobile apps and multitouch application software. I won't really be using these capabilities but it I will learn the basics and if I ever want to develop a mobile application, that will be useful.
+This week, I intend to develop a Python interface using Kivy to command the LED on each board with this interface. Kivy is an open-source Python framework to develop mainly mobile apps and multitouch application software. I won't really be using these capabilities but I will learn the basics and if I ever want to develop a mobile application, that will be useful.
 
 Moreover, initially, I wanted to use PyQt but I already know some of it as I used it for other projects so I wanted to try something else !
 <figure> <center>
@@ -50,7 +50,7 @@ Moreover, initially, I wanted to use PyQt but I already know some of it as I use
 ### 1. Talking with the board
 First, I needed to have a working Python script that allows me to communicate with my board. For the moment, I type the commands (like b21 to switch on the second led on the slave on address b) directly in the terminal with a Serial connection through Putty or the Arduino IDE.
 
-I installed PySerial (`pip install pyserial`), opened a new serial connection on the right port, with the right baudrate and then, using `serial.write()` I can automate the sending of the commands and light up the LEDs. The code itself is pretty easy but works well.
+I installed PySerial (`pip install pyserial`), opened a new serial connection on the right port, with the right baud rate, and then, using `serial.write()` I can automate the sending of the commands and light up the LEDs. The code itself is pretty easy but works well.
 
 <video width="700" height="480" autoplay loop>
   <source src="./../../img/mod14/blink.mp4" type="video/mp4">
@@ -110,7 +110,7 @@ When designing a Kivy app, the idea is to:
 
 I started by launching some examples from the documentation and I ran into an annoying issue with my Python IDE (Spyder 4.0): Whenever I want to close the window, it freezes and I need to shut down the kernel to make it quit and be able to launch a new instance of my app.
 
-I quickly realized that I was having issues with the built-in Spyder console so I changed the settings in the `run - Configuration per file` options to make this particular script run in an external window. I then added some shebang line to make sure my terminal understands it's a Python3 script.
+I quickly realized that I was having issues with the built-in Spyder console so I changed the settings in the `run - Configuration per file` options to make this particular script run in an external window. I then added some shebang lines to make sure my terminal understands it's a Python3 script.
 `#!/usr/bin/env python3`
 
 <figure> <center>
@@ -123,7 +123,7 @@ I quickly realized that I was having issues with the built-in Spyder console so 
   <figcaption>External console</figcaption>
 </figure>
 
-Now when I close the window, or the terminal, everything closes correctly.
+Now when I close the window or the terminal, everything closes correctly.
 
 ### 3. Kivy basics and Pong tutorial
 To learn Kivy basics, I follow the [Pong tutorial](https://kivy.org/doc/stable/tutorials/pong.html) in the documentation. I learned how to create the application, build it, add widgets, play with properties, ...

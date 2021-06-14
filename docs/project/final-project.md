@@ -7,6 +7,12 @@
   <figcaption> </figcaption>
 </figure>
 
+<figure> <center>
+  <img src="./../../../presentation.png" alt="neurogenic Bladder" width="80%" />
+  <figcaption> </figcaption>
+</figure>
+
+
 ## Index
 Since the project is about doing a lot of different things, I will split the content of the final project in several different pages:
 
@@ -14,9 +20,6 @@ Since the project is about doing a lot of different things, I will split the con
 - [Bladder phantom](./../bladderPhantom)
 - [Pressure chamber](./../PressureChamber)
 - [Inputs, outputs and electronics](./../electronics)
-
-
-
 
 ## Intro
 Because I'm doing my PhD full-time concurrently with the FabAcademy, I'll try to stay in the scope of my PhD subject.
