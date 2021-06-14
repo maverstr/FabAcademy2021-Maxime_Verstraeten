@@ -11,7 +11,7 @@
 <div class="dottedLine"></div>
 
 ## Group assignment
-Jason and I already used a logic analyzer and an oscilloscope in the past few weeks some inputs and outputs (see [here](http://fabacademy.org/2021/labs/ulb/assignments/week07/)).
+Jason and I already used a logic analyzer and an oscilloscope in the past few weeks some inputs and outputs (see [here](http://fabacademy.org/2021/labs/ulb/assignments/week10.html/)).
 
 ## Introduction
 I've had the opportunity to play with input devices already during the past few weeks so we'll dig a bit deeper. Moreover, I designed an [ESP32 board two weeks ago](./../module08/#esp32-development-board) but I couldn't finish it in time so it is the opportunity to do it now.

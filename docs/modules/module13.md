@@ -11,7 +11,7 @@
 <div class="dottedLine"></div>
 
 ## Group assignment
-During [Electronics production week, Jason and I already connected two of our own boards and communicated between them using UART](./../module04/#usb-updi-converter).
+During [Electronics production week, Jason and I already connected two of our own boards and communicated between them using UART](./../module04/#usb-updi-converter). We also made more progress on our[ group assignment page](http://fab.academany.org/2021/labs/ulb/assignments/week13.html).
 
 <figure> <center>
   <img src="./../../img/mod04/UART1.jpg" alt="logo text" width="80%" />

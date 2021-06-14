@@ -12,7 +12,7 @@
 
 ## Group assignment
 
-This is recapped on the [group page](http://fab.academany.org/2021/labs/ulb/assignments/week12).
+This is recapped on the [group page](http://fab.academany.org/2021/labs/ulb/assignments/week12.html).
 
 ### Consumption measured using the power supply
 For the group assignment, we measured the current consumption of an LED on my ESP32 board right [here](./../module10/#making-a-program).

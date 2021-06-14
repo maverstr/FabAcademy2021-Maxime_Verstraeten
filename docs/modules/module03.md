@@ -86,7 +86,7 @@ To complete my objective, I will personally be using FreeCAD (in sketcher workbe
 Getting a design is one thing but then you need to "inject" your design into the cutting machine. Each machine has its drivers so this is one way of doing it. But other tools exist like [Deepnest](https://deepnest.io/). Deepnest is an open-source software that will optimize the cuts and the parts so waste the least amount of material and time (merging common lines and so on). This also will improve the quality of the final results by avoiding heat warping (distortion in the material due to the heat of the laser) with every subsequent laser pass.
 
 ## 3. Machine setup and characterization
-As part of the group assignment, [Jason](http://fabacademy.org/2021/labs/ulb/students/jason-pettiaux/) and I had to characterize the laser cutter we were going to use.
+[As part of the group assignment](http://fab.academany.org/2021/labs/ulb/assignments/week04.html), [Jason](http://fabacademy.org/2021/labs/ulb/students/jason-pettiaux/) and I had to characterize the laser cutter we were going to use.
 We wanted to check a few things:
 
 1. Check the focus

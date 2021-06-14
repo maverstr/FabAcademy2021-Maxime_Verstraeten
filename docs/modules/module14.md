@@ -12,7 +12,7 @@
 
 
 ## Group assignment
-Jason and I compared several possibilities when it comes to languages and interfaces on the [group page](http://fab.academany.org/2021/labs/ulb/assignments/week15/).
+Jason and I compared several possibilities when it comes to languages and interfaces on the [group page](http://fab.academany.org/2021/labs/ulb/assignments/week15.html/).
 
 ## Previous design
 Last week, I developed my network featuring three boards (one master, two slaves) that can communicate so I can switch on and off the LEDs on the boards using the Serial USB port with the master.

@@ -35,7 +35,7 @@ Your browser does not support the video tag.
 
 
 ## Introduction
-Most of the work will be depicted as well in our [group assignment page](http://fabacademy.org/2021/labs/ulb/) and on [Jason's website](http://fabacademy.org/2021/labs/ulb/students/jason-pettiaux/).
+Most of the work will be depicted as well in our [group assignment page](http://fab.academany.org/2021/labs/ulb/assignments/week09.html) and on [Jason's website](http://fabacademy.org/2021/labs/ulb/students/jason-pettiaux/).
 
 This week, Jason and I decided to improve the [Urumbu project](https://gitlab.fabcloud.org/academany/fabacademy/2020/bootcamp/spicy/-/tree/master/Urumbu). The idea of this machine is to use flexure to decompose X and Y axis and to be able to actuate them with separate actuators that do not need to move with the other one (contrary to classical CNC machines for example).
 
