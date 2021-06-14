@@ -12,6 +12,10 @@
 </div>
 <div class="dottedLine"></div>
 
+## Group assignment
+
+See our [group page](http://fab.academany.org/2021/labs/ulb/assignments/Week8Bis/).
+
 ## Introduction
 Since I already did some embedded programming in the past week:
 
