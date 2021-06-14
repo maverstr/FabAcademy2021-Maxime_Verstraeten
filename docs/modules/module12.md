@@ -11,7 +11,11 @@
 <div class="dottedLine"></div>
 
 ## Group assignment
-For the group assignment, I had already measured the current consumption of an LED on my ESP32 board right [here](./../module10/#making-a-program).
+
+This is recapped on the [group page](http://fab.academany.org/2021/labs/ulb/assignments/week12).
+
+### Consumption measured using the power supply
+For the group assignment, we measured the current consumption of an LED on my ESP32 board right [here](./../module10/#making-a-program).
 
 <video width="854" height="480" autoplay loop>
   <source src="./../../img/mod10/blink2.mp4" type="video/mp4">
@@ -34,6 +38,62 @@ Also, for another project, I powered another LED through inductive powering. I s
   <source src="./../../img/mod12/inductive.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
+
+### Using a shunt resistor
+It also possible to use a very small value resistor (1 Ohm or less) to measure the current consumption. Indeed, the resistor must have a very small value to not affect the load and the correct behavior of the circuit.
+
+It can be very useful to see the transient power consumption, for example when a µ-C is processing a lot of information,.. which is something that can happen very fast and therefore will not appear on the power supply information.
+
+### Consumption of an op-amp in buffer configuration
+
+In fact, it is very interesting to see the difference between the theoretical circuit and the effects in practice.
+For example, wires have an non-negligible resistance value but also inductance value.
+
+Inductances will oppose themselves to current variation and therefore, when we have a high current-consumer in the circuit, if it is located far away from the voltage source, charges will see a lot of inductance and will not be able to reach the consumer very quickly. Therefore, due to Ohm's law, the voltage at the consumer pins will decrease.
+
+We can then compare the effect of wiring a circuit in "cascade" or in a "star" configuration.
+
+The "cascade" configuration is the most intuitive one.
+<figure> <center>
+  <img src="./../../img/mod12/cascade.jpg" alt="logo text" width="80%" />
+  <figcaption>"cascade" configuration</figcaption>
+</figure>
+
+That star configuration is when every wire starts from the power supply.
+<figure> <center>
+  <img src="./../../img/mod12/star.jpg" alt="logo text" width="80%" />
+  <figcaption>"Star" configuration</figcaption>
+</figure>
+
+
+Let's then input some  high frequency (10kHz) square signal at the input of the buffer op-amp and let's see the voltage at its pins but also at the pins on the second op-amp.
+
+<figure> <center>
+  <img src="./../../img/mod12/inputSignal.jpg" alt="logo text" width="80%" />
+  <figcaption>Input 10KHz signal</figcaption>
+</figure>
+
+<figure> <center>
+  <img src="./../../img/mod12/noiseCascade.jpg" alt="logo text" width="80%" />
+  <figcaption>Noise on the second op-amp in cascade configuration</figcaption>
+</figure>
+
+
+<figure> <center>
+  <img src="./../../img/mod12/noiseStar.jpg" alt="logo text" width="80%" />
+  <figcaption>Noise on the second op-amp in star configuration</figcaption>
+</figure>
+
+We can clearly see that the second op-amp is affected by the current consumed by the first. In a star configuration, the amount of wire in common is reduced and therefore, the second op-amp will be less impacted
+
+
+This problem can be mostly solved using capacitors that will hold charges near the consumer op-amp and will be able to deliver them at a very fast rate since the inductance (the amount of wire) between the capacitor and the op-amp is very low.
+
+<figure> <center>
+  <img src="./../../img/mod12/capacitor.jpg" alt="logo text" width="80%" />
+  <figcaption>Noise on the line without and with a capacitor</figcaption>
+</figure>
+
 
 ## Output device 1: LED 7 segments
 I found an LED 7 segment display KINGBRIGHT SA23-12SRWA. The datasheet is available [here](https://www.mouser.be/datasheet/2/216/SA23-12SRWA-57377.pdf) but is quite short.
