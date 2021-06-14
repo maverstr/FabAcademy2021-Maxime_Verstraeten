@@ -30,7 +30,7 @@ We thought a bit and decided to try to make a [14-segment display](https://en.wi
 
 ## Testing some circuits with lab equipment
 
-Some of it is repeated on the [group page](http://fab.academany.org/2021/labs/ulb/assignments/week07.html/).
+Some of it is repeated on the [group page](http://fab.academany.org/2021/labs/ulb/assignments/week07.html).
 
 ### SAMD21 and Logic Analyzer
 For the group assignment, we had a look at our instructor Quentin's new circuit which is using a SAMD21E18. This little chip is able to act as any device including keyboard, MIDI, serial device and so on...

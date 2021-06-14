@@ -14,7 +14,7 @@
 
 ## Group assignment
 
-See our [group page](http://fab.academany.org/2021/labs/ulb/assignments/week08Bis.html/).
+See our [group page](http://fab.academany.org/2021/labs/ulb/assignments/week08Bis.html).
 
 ## Introduction
 Since I already did some embedded programming in the past week:

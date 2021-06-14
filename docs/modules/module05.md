@@ -61,7 +61,7 @@ This has the lowest resolution (but still very high) but has the advantage that 
 
 ## The power of 3D-printing
 ### Printer characterization and design rules
-Some of this documentation is repeated on the [group page](http://fab.academany.org/2021/labs/ulb/assignments/week06.html/).
+Some of this documentation is repeated on the [group page](http://fab.academany.org/2021/labs/ulb/assignments/week06.html).
 
 At the lab, we have multiple Prusa I3MK3 and MK3S. With Jason, we started printing multiple test parts, and more specifically, we wanted to get a feel of what the different materials and nozzles change.
 

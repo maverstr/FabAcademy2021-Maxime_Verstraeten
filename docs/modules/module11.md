@@ -12,7 +12,7 @@
 <div class="dottedLine"></div>
 
 ## Group assignment
-Jason and I [reviewed the safety data sheets and we made some test casts](http://fabacademy.org/2021/labs/ulb/assignments/week11.html/) with each molding material (or at least each family). This is recapped below:
+Jason and I [reviewed the safety data sheets and we made some test casts](http://fabacademy.org/2021/labs/ulb/assignments/week11.html) with each molding material (or at least each family). This is recapped below:
 
 ### Safety
 In particular, we tested (**with the datasheets linked**):

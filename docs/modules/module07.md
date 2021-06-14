@@ -17,7 +17,7 @@ This week is about making something "big". It started with a lack of interesting
 Got it ! **Let's make an electric guitar** !
 
 ## Introduction to the CNC
-This is a recap of what is described in the [group assignment page](http://fab.academany.org/2021/labs/ulb/assignments/week08.html/).
+This is a recap of what is described in the [group assignment page](http://fab.academany.org/2021/labs/ulb/assignments/week08.html).
 Before I dive into the extremely complicated design of my guitar, I spent an afternoon with Christophe so that I could get an understanding of how the CNC works and what I can/cannot do with it.
 
 ### The CNC itself

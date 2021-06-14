@@ -21,7 +21,7 @@ I had some experience making my PCB using chemical processes and "industrial pro
 1206 SMD seems big but is so tiny when you need to make the soldering yourself.. I feel bad for my technician at the Uni which solders 0805 every time I ask him. Thanks Jof !
 
 ## Group assignment
-Jason and I described the process required to mill PCBs, cover them in tin and use the voltera on the [lab page](https://fabacademy.org/2021/labs/ulb/assignments/week05.html/).
+Jason and I described the process required to mill PCBs, cover them in tin and use the voltera on the [lab page](https://fabacademy.org/2021/labs/ulb/assignments/week05.html).
 
 ## Introduction to Electronics Production
 
