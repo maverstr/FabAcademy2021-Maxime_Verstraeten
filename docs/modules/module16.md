@@ -43,20 +43,22 @@ The state-of-the-art bladder phantom is, still today, a rubber balloon. It is, f
 ## Who has done what beforehand?
 Not many people tried to model the bladder As said before, the current state-ot-the-art model is a rubber balloon.
 
-Some models are more advanced but are especially dedicated to teaching surgery or endoscopic procedures and are not a good model of the bladder activity, pressure, or filling properties.
+Some models are more advanced but are especially dedicated to teaching surgery or endoscopic procedures and are not a good model of the bladder activity, pressure, or filling properties ([Shellikeri, S., Back, S. J., Poznick, L., & Darge, K. (2018). A Low-Cost, Durable and Re-Usable Bladder Phantom: Teaching Intravesical Ultrasound Contrast Administration. Ultrasound in Medicine and Biology, 44(8), 1918–1926. https://doi.org/10.1016/j.ultrasmedbio.2018.04.008](https://www.umbjournal.org/article/S0301-5629(18)))
 
 <figure> <center>
   <img src="./../../img/mod16/stateoftheart.jpg" alt="neurogenic Bladder" width="80%" />
-  <figcaption>Current state-of-the-art model for ultrasonic techniques </figcaption>
+  <figcaption>Current state-of-the-art model for ultrasonic techniques ) </figcaption>
 </figure>
 
-Other people added a very simple pressure chamber around the rubber balloon to model the detrusor pressure.
+Other people added a very simple pressure chamber around the rubber balloon to model the detrusor pressure ([Weaver, J. N., Alspaugh, J. C., & Behkam, B. (2010). Toward a minimally invasive bladder pressure monitoring system: Model bladder for in vitro testing. 2010 3rd IEEE RAS and EMBS International Conference on Biomedical Robotics and Biomechatronics, BioRob 2010, 638–643. https://doi.org/10.1109/BIOROB.2010.5625981](https://ieeexplore.ieee.org/document/5625981))
 
 <figure> <center>
   <img src="./../../img/finalProject/hermeticBox.jpg" alt="neurogenic Bladder" width="100%" />
-  <figcaption> Hermetic box to simulate homogenous pressure from the detrusor on the bladder (Weaver et al.)</figcaption>
+  <figcaption> Hermetic box to simulate homogenous pressure from the detrusor on the bladder (Weaver et al.) </figcaption>
 </figure>
 
+
+Finally, I was inspired by other people making pressure regulation system like [Gilles Decroly](http://fab.academany.org/2019/labs/ulb/students/gilles-decroly/projects/final-project.html).
 
 ## What will you design?
 I will design a few different things:
@@ -79,7 +81,7 @@ The strain gauge used will be a commercially available one that will be encapsul
 
 The phantom pressure sensor can reach a maximum of 200cmH2O (196mBar, 196kPa, 2.84psi) in addition to the external pressure. Note that since the sensor will be inside the pressurized chamber, it cannot be a gauge or differential sensor, it needs to be an absolute one (referred to as a calibrated vacuum). Also, it must be waterproof. Based on these requirements, I chose the MS5837. Note that I will have 2 of them on the same I²C channel so I will need an I²C multiplexer. For the chamber pressure measurement, the maximum pressure can reach 2atm so I will use a slightly larger range sensor, the MPRLS0030.
 
-The other requirements and choices will be explained in the full project documentation.
+The other requirements and choices will be explained in [the full project documentation.](./../project/final-projet.md)
 
 
 ### Bill of materials

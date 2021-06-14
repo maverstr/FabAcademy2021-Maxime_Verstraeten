@@ -45,7 +45,7 @@ I used [this nice website](https://choosealicense.com/) to find the most appropr
   <figcaption> CC-BY-SA-4.0 permissions, conditions, limitations</figcaption>
 </figure>
 
-To apply it, I need to add a LICENSE.txt file in the root directory of my work.
+To apply it, I need to add a [LICENSE.txt file in the root directory of my work.](https://gitlab.fabcloud.org/academany/fabacademy/2021/labs/ulb/students/maxime-verstraeten/-/blob/master/LICENSE.txt)
 
 <figure> <center>
   <img src="./../../img/mod17/CC2.jpg" alt="neurogenic Bladder" width="80%" />
@@ -54,8 +54,8 @@ To apply it, I need to add a LICENSE.txt file in the root directory of my work.
 
 
 ## Presentation slide
-I started making a presentation slide. I used Photoshop to remove the background picture of my devices and used Powerpoint and Inkscape to add text.
+I started making a presentation slide. I used Photoshop to remove the background picture of my devices and used PowerPoint and Inkscape to add text.
 <figure> <center>
-  <img src="./../../../presentation.png" alt="neurogenic Bladder" width="80%" />
+  <img src="./../../presentation.png" alt="neurogenic Bladder" width="80%" />
   <figcaption></figcaption>
 </figure>
