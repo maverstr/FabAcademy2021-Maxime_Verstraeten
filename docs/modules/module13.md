@@ -136,7 +136,7 @@ Note that using the ArduinoSAMDCore for Mattairtech, you can use the RX2, TX2 Se
 
 <figure> <center>
   <img src="./../../img/mod13/serial1.jpg" alt="logo text" width="80%" />
-  <figcaption>Pin PA09 is used for SERCOM1 as well/figcaption>
+  <figcaption>Pin PA09 is used for SERCOM1 as well</figcaption>
 </figure>
 
 <video width="700" height="480" autoplay loop>
