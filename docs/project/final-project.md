@@ -23,8 +23,11 @@ Since the project is about doing a lot of different things, I will split the con
 
 ## Design files
 The design files for the project, including the 3D designs in Solidworks, the schematic and board designs in Altium and the Arduino codes are available here:
+
 material-download-box: [Project Design Files: 3D CAD](http://academany.fabcloud.io/fabacademy/2021/labs/ulb/students/maxime-verstraeten/files/3D.zip)
+
 material-download-box: [Project Design Files: Altium](http://academany.fabcloud.io/fabacademy/2021/labs/ulb/students/maxime-verstraeten/files/Altium.zip)
+
 material-download-box: [Project Design Files: Arduino](http://academany.fabcloud.io/fabacademy/2021/labs/ulb/students/maxime-verstraeten/files/Arduino.zip)
 
 
