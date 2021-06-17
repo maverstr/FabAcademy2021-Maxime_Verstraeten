@@ -8,7 +8,7 @@
 </figure>
 
 <figure> <center>
-  <img src="./../../../presentation.png" alt="neurogenic Bladder" width="80%" />
+  <img src="./../../presentation.png" alt="neurogenic Bladder" width="80%" />
   <figcaption> </figcaption>
 </figure>
 
