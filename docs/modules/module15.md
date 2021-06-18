@@ -183,6 +183,10 @@ I first made the design in Solidworks. The design is quite simple: a basic recta
 </figure>
 
 I then printed the mold with the Stratasys Eden260VS printer. A very-high resolution printer. I think it could easily work with a cheap resin printer but I don't have one so I couldn't try that.
+
+The Eden is a "polyJet" technology printer, able to print ultra-thin layers, smooth surfaces and thin walls. A wide variety of materials are available. Contrary to "classical" 3D printers that I used in the 3D-printing week that use FDM (fused deposition modeling) technology, it is almost impossible to make bridges with this technology but since it is possible to use multiple materials, the support can be soluble.
+I chose to use it to be sure I'll have a high enough resolution for my _micro_ fluidic application.
+
 <figure> <center>
   <img src="./../../img/mod15/silicone4.jpg" alt="logo text" width="80%" />
   <figcaption></figcaption>
@@ -300,11 +304,11 @@ With a bit of practice I could obtain this result:
  Your browser does not support the video tag.
  </video>
 
- We can clearly see the water follows the least resistance path and flowing in the surrounding channels to reach the output.
- This demonstrates the feasibility to create microfluidic devices using 3D-printed molds and some silicone.
+ We can clearly see the water follows the least resistance path and flowing in the surrounding channels to reach the output. This is because paths that do not lead to a hole will contain air that will be compressed by the liquid and so it will not be able to go through it easily, preferring the path of least resistance, i.e. containing the hole.
+ This demonstrates the feasibility to create microfluidic devices using 3D-printed molds and some silicone, that, more or less, is capable of "path-finding". That could be used to find leakages for example !
 
 
-** Bonus: these videos shows how the fluid usually goes straight to the output.**
+** Bonus: these videos shows how the fluid usually goes straight to the hole.**
  <video width="700" height="480" autoplay loop>
    <source src="./../../img/mod15/siliconeOK1.mp4" type="video/mp4">
  Your browser does not support the video tag.
