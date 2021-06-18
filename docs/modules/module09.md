@@ -689,4 +689,5 @@ Finally, the motor we used a very simple DC motor but using servos or simply ste
 
 
 ## My design files
+This small zip file contains the relevant design files that I made for both projects.
 :material-download-box: [My Design files](http://academany.fabcloud.io/fabacademy/2021/labs/ulb/students/maxime-verstraeten/files/mod09.zip)
