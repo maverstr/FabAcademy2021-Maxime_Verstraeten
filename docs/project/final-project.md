@@ -12,6 +12,11 @@
   <figcaption> </figcaption>
 </figure>
 
+<video width="820" controls>
+  <source src="./../../presentation.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
 
 ## Index
 Since the project is about doing a lot of different things, I will split the content of the final project in several different pages:
