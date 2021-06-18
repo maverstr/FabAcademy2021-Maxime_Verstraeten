@@ -43,7 +43,7 @@ We also wanted to make a "machine-day" where we built a machine in a single day!
 
 ## The Urumbu improvement
 ### Mechanical Design
-The Urumbu project is inspired by the flexures and in particular this [2004 thesis from Shorya Awtar](http://academy.cba.mit.edu/classes/computer_cutting/56836505.pdf) and has been later reworked by Denis Terwagne.
+The Urumbu project is inspired by the flexures and in particular this [2004 thesis from Shorya Awtar](http://academy.cba.mit.edu/classes/computer_cutting/56836505.pdf) and has been later reworked by [Denis Terwagne and last year's group project](http://fabacademy.org/2020/labs/ulb/assignments/week18/).
 
 We re-designed the stage and several other parts in both SolidWorks and Fusion360.
 #### The stage
@@ -57,8 +57,6 @@ Most of this part has been done by Jason. He decided to redraw the Urumbu and op
 We decided to print the new design using PLA but ideally, it would be better to CNC it in Teflon or Polypropylene to reduce the friction.
 
 We also added a new stage for the motors and the new actuators.
-
-**add a pic**
 
 The motors are fixed on the side of the machine due to the spiral actuators (see below) and they are connected together using I²C.
 <figure> <center>
@@ -83,7 +81,7 @@ The Urumbu machine was already more or less working but it lacked actuators. [Qu
 
 I decided to design new actuators based on a spiral shape. The idea of this design is to have actuators that are really easy and fast to make (laser cut or 3D-printed), have a high resolution, and do not require specific material. Moreover, this kind of design does not need a lot of room. To be ideal, the spirals should be made of Teflon and bearings should be added (which we did) but they are not necessary for the machine to work.
 
-The initial was to directly place the spiral on top of the motor:
+The initial idea was to directly place the spiral on top of the motor:
 
 <figure> <center>
   <img src="./../../img/mod09/spiral1.jpg" alt="logo text" width="80%" />
@@ -148,10 +146,12 @@ Another mirrored spiral could be added on top to reduce the torsion and improve 
 </figure>
 
 
+The resolution is not very impressive :Nema17 stepper motors have 200 steps per turn, and one spiral turn is 3mm in the radial direction, so that makes a resolution of 3/200 = 0.015mm, not accounting for backlash and small errors. This can be increased through micro-stepping and by making more spiral turns with less radial distance between each turns.
+
 ### Electronics design
 To actuate our machine, we obviously needed some motors and some control.
 
-We decided to use Nema-17 stepper motors and Quentin's recent motor control boards. These were still in development so we spent some time troubleshooting them but, spoiler alert, it worked in the end.
+We decided to use Nema-17 stepper motors and [Quentin's recent motor control boards](http://fabacademy.org/2020/labs/ulb/students/quentin-bolsee/projects/fabstep-i2c/). These were still in development so we spent some time troubleshooting them but, spoiler alert, it worked in the end.
 
 #### Communication
 The way it works is pretty simple. The idea is to have several nodes, all identical that can be linked together. The first node will be the one the USB is connected to so we can send some orders to the motors.
@@ -181,8 +181,8 @@ First, we specify the address (i.e. the node) that we want to talk to. Then, we 
 
 For example:
 
-- `1:1:200` Will set the speed of the second node to 200steps/second.
-- `0:0:100` Will ask the first node (the master) to move to the position equal to 100 steps from its initial position.
+- `1:1=200` Will set the speed of the second node to 200steps/second.
+- `0:0=100` Will ask the first node (the master) to move to the position equal to 100 steps from its initial position.
 
 
 The I²C communication protocol can be seen on the oscilloscope and has been tested up to 30cm of wire length, at 100kHz:
@@ -457,10 +457,11 @@ Your browser does not support the video tag.
 As Spring is finally coming around, the sun starts hiding our screens at the end of the day when the sun sets.
 Because of this, we also decided to design a machine in a single day that would be a prototype to avoid this kind of issue.
 
-The idea is really simple: having a shutter that moves with a motor, some fishing lines, and a pulley, and a pair of photoresistors to detect whether the light is present or not.
+The idea is really simple: having a shutter that moves with a motor, some fishing lines, a pulley, and a pair of photoresistors to detect whether the light is present or not.
 
 ### Mechanical design
 We need only a few things:
+
 - A motor case.
 - A pulley system
 - Some wires or fishing lines
@@ -564,7 +565,7 @@ Let's try again but this time while specifying that we want to keep some materia
   <figcaption>New result</figcaption>
 </figure>
 
-This time, we are much more happy ! In the end, it held the load extremely well, while having a reduced printing time and material cost highly reduced !
+This time, we are much more happy ! In the end, it held the load extremely well, while having a similar printing time (31min VS 29 min) but material quantity being reduced (0.9m of PLA filament VS 1.25m) !
 <figure> <center>
   <img src="./../../img/mod09/topology.jpg" alt="logo text" width="80%" />
   <figcaption>Normal VS optimized topology</figcaption>
@@ -663,7 +664,9 @@ Your browser does not support the video tag.
 ### End result
 
 In the end, it was snowing the day we built it so... We were not really able to showcase its ability but we were able to:
-a. Detect the amount of light received (though it was really difficult as the weather was horrible and our photoresistor was not reactive to the LED light of our phones which was all we had)
+
+a. Detect the amount of light received (though it was really difficult as the weather was horrible and our photoresistor was not reactive to the LED light of our phones which was all we had).
+
 b. Move the shutter using the motor according to the amount of light perceived by each phototransistor.
 
 
