@@ -41,6 +41,13 @@ This week, Jason and I decided to improve the [Urumbu project](https://gitlab.fa
 
 We also wanted to make a "machine-day" where we built a machine in a single day!
 
+## Planning and collaboration
+To organize our work, Jason and I decided to split the work between "mechanical" and "electronics" stuff, while working in a spiral. In practice, that means that we brainstormed together, then developed features, tried to interface them, and discussed and iteratively improved them.
+We were both very busy so it was quite the rush at the end to make it perfectly work together but we successfully assembled both machines in two days.
+
+Usually, when we encountered issues, we simply took a step back to have a nice look at it, and simply went back to the design phase to improve the design where needed.
+
+
 ## The Urumbu improvement
 ### Mechanical Design
 The Urumbu project is inspired by the flexures and in particular this [2004 thesis from Shorya Awtar](http://academy.cba.mit.edu/classes/computer_cutting/56836505.pdf) and has been later reworked by [Denis Terwagne and last year's group project](http://fabacademy.org/2020/labs/ulb/assignments/week18/).
@@ -451,7 +458,12 @@ ser.close()
 Your browser does not support the video tag.
 </video>
 
+### Possible improvements
+This project could be further developed. Indeed, the spiral idea could be further researched to increase the resolution and reduce the backlash.
 
+The mechanical stage could be CNC'ed in Teflon to limit the stress on the PLA, which would probably reduce the fatigue wear on the design.
+
+Micro-stepping could probably be added to the motors to further increase the resolution of the motion.
 
 ## Automatic window shutter
 As Spring is finally coming around, the sun starts hiding our screens at the end of the day when the sun sets.
@@ -668,6 +680,12 @@ In the end, it was snowing the day we built it so... We were not really able to 
 a. Detect the amount of light received (though it was really difficult as the weather was horrible and our photoresistor was not reactive to the LED light of our phones which was all we had).
 
 b. Move the shutter using the motor according to the amount of light perceived by each phototransistor.
+
+
+### Possible improvements
+This is a very simple proof of concept.
+This idea should be realized in a much bigger scenario, i.e. to cover a real window. Also, the phototransistor used are a bit too close to one another so spreading them further apart would make the blinder more responsive. The pulley system is very simple and would beneficiate from an increased pulley to hold the cables very tight and to make the channels in the pulley a bit wider and deeper.
+Finally, the motor we used a very simple DC motor but using servos or simply stepper motors would make the control much more simple, rather than having to rely on H-bridges and an L293D.
 
 
 ## My design files
