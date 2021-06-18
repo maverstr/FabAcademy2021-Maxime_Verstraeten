@@ -42,8 +42,11 @@ This week, Jason and I decided to improve the [Urumbu project](https://gitlab.fa
 We also wanted to make a "machine-day" where we built a machine in a single day!
 
 ## Planning and collaboration
+We have two weeks to develop these machines. And we have two machines to make.
 To organize our work, Jason and I decided to split the work between "mechanical" and "electronics" stuff, while working in a spiral. In practice, that means that we brainstormed together, then developed features, tried to interface them, and discussed and iteratively improved them.
-We were both very busy so it was quite the rush at the end to make it perfectly work together but we successfully assembled both machines in two days.
+Jason will take the first week to develop the Mechanical design for the Urumbu machine while Maxime figures out how to use the electronics controls developped by Quentin.
+The second week was to assemble, program and test the first machine and build the second simple machine.
+We were both very busy so it was quite the rush at the end to make it perfectly work together but we successfully assembled both machines.
 
 Usually, when we encountered issues, we simply took a step back to have a nice look at it, and simply went back to the design phase to improve the design where needed.
 
@@ -459,11 +462,14 @@ Your browser does not support the video tag.
 </video>
 
 ### Possible improvements
-This project could be further developed. Indeed, the spiral idea could be further researched to increase the resolution and reduce the backlash.
+Future developments can focus on 2 aspects :
 
-The mechanical stage could be CNC'ed in Teflon to limit the stress on the PLA, which would probably reduce the fatigue wear on the design.
+* Stiffer material : Water jet cutting metal to have a stiffer the durable flexure, this will require some simulation to avoid wasted material. The mechanical stage could be CNC'ed in Teflon to limit the stress on the PLA, which would probably reduce the fatigue wear on the design.
+* Z-Axis : The machine currently lacks a Z-axis which would be necessary to make it a full cnc machine be it a pen plotter or something else.
+* Finer motion control : the spiral idea is interesting but does not allow for very fine movement so another design should be made to improve that. Maybe, the spiral idea could be further researched to increase the resolution and reduce the backlash.
+* Micro-stepping could probably be added to the motors to further increase the resolution of the motion
 
-Micro-stepping could probably be added to the motors to further increase the resolution of the motion.
+
 
 ## Automatic window shutter
 As Spring is finally coming around, the sun starts hiding our screens at the end of the day when the sun sets.
